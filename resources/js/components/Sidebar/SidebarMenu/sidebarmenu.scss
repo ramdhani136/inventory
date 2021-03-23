@@ -1,0 +1,19 @@
+.sidebarmenu{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 40px;
+    border-bottom: solid 1px rgb(228, 228, 228);
+    font-size: 13px;
+    cursor: pointer;
+    .sidebar_icon{
+        font-size: 12px;
+        margin:0px 10px 0px 20px;
+        color: rgb(58, 58, 58);
+    }
+}
+
+.sidebarmenu:hover{
+    background-color: rgb(247, 242, 242);
+    border-bottom: solid 1px rgb(235, 232, 232);
+}

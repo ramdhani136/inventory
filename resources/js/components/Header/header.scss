@@ -1,0 +1,99 @@
+
+.header {
+    top:0;
+    z-index: 999;
+    position: sticky;
+    background-color: #fff;
+    border-bottom: solid 1px #e1e2e2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 45px;
+    margin-left: 3px;
+    .header__logo{
+        background-color: rgb(243, 244, 245);
+        flex:0.187;
+        border-right: solid 1px #e1e2e2;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        margin:0px 0px 0px -7px;
+        img {
+            object-fit: contain;
+            width: 27px;
+        }
+    }
+    .header__burger{
+        color: #000;
+        :hover{
+            color: rgb(44, 44, 44);
+            cursor: pointer;
+        }
+    }
+    .header__menu {
+        flex: 0.8;
+        display: flex;
+        justify-content: flex-end;
+        .header__search {
+            flex: 0.4;
+            background-color: #fff;
+            border: solid 1px #e1e2e2;
+            padding-left: 10px;
+            margin-left: 170px;
+            input {
+                width: 92%;
+                border: none;
+                height: 30px;
+                font-size: 0.8em;
+                color: #666;
+                outline: none;
+                background: none;
+            }
+            ::placeholder {
+                color: #ccc;
+            }
+            .header_seacrhicon {
+                color: rgb(134, 134, 134);
+                width: 20px;
+            }
+        }
+        .header__settings {
+            font-size: 0.87em;
+            flex: 0.35;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 20px;
+            cursor: pointer;
+            .header__avatar {
+                height: 28px;
+                width: 28px;
+                margin-right: 5px;
+                margin-left: 10px;
+                border: solid 1.5px rgb(218, 216, 216);
+            }
+            .header__notif {
+                width: 18px;
+                color: #838e99;
+                margin-left: 5px;
+            }
+            a {
+                font-weight: bold;
+                color: #666;
+            }
+            .header__notif__on{
+                position:relative;
+                margin-top: -10px;
+                margin-left: -6px;
+                border:solid 1px rgb(206, 9, 49);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: crimson;
+            }
+            .header__caret{
+                color: #838e99;
+            }
+        }
+    }
+}
