@@ -3,10 +3,14 @@ import "./sidebar.scss";
 import { Avatar } from "@material-ui/core";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { Sidebarmenu } from "..";
-import NoteIcon from "@material-ui/icons/Note";
-import WorkIcon from "@material-ui/icons/Work";
-import AssessmentIcon from "@material-ui/icons/Assessment";
+import AssignmentIcon from "@material-ui/icons/Assignment";
+import CompareArrowsIcon from "@material-ui/icons/CompareArrows";
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import HistoryIcon from "@material-ui/icons/History";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import CategoryIcon from '@material-ui/icons/Category';
+import RecentActorsIcon from '@material-ui/icons/RecentActors';
+
 
 const Sidebar = () => {
     return (
@@ -27,20 +31,39 @@ const Sidebar = () => {
             <p>MAIN NAVIGATION</p>
             <div className="sidebar_menu">
                 <Sidebarmenu
-                    Icon={NoteIcon}
-                    nama="Daftar Notulen"
+                    Icon={AssignmentIcon}
+                    nama="Daftar Asset"
                     link="/notulen"
                 />
-                <Sidebarmenu Icon={WorkIcon} nama="List Tugas" link="/tugas" />
+                <Sidebarmenu
+                    Icon={CompareArrowsIcon}
+                    nama="Mutasi Asset"
+                    link="/tugas"
+                />
+                <Sidebarmenu
+                    Icon={AssignmentTurnedInIcon}
+                    nama="Stock Opname"
+                    link="/history"
+                />
                 <Sidebarmenu
                     Icon={HistoryIcon}
-                    nama="History"
+                    nama="History Asset"
                     link="/history"
                 />
                 <Sidebarmenu
                     Icon={AssessmentIcon}
-                    nama="Laporan"
+                    nama="Laporan Asset"
                     link="/laporan"
+                />
+                 <Sidebarmenu
+                    Icon={CategoryIcon}
+                    nama="Kategori Asset"
+                    link="/kategori"
+                />
+                 <Sidebarmenu
+                    Icon={RecentActorsIcon}
+                    nama="Data Users"
+                    link="/kategori"
                 />
             </div>
         </div>

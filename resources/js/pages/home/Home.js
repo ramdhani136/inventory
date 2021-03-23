@@ -1,21 +1,25 @@
 import React from "react";
 import { Listmenu } from "../../components";
 import "./home.scss";
-import NoteAddIcon from '@material-ui/icons/NoteAdd';
-import NoteIcon from '@material-ui/icons/Note';
-import WorkIcon from '@material-ui/icons/Work';
-import AssessmentIcon from '@material-ui/icons/Assessment';
-import HistoryIcon from '@material-ui/icons/History';
+import AssignmentIcon from "@material-ui/icons/Assignment";
+import CompareArrowsIcon from "@material-ui/icons/CompareArrows";
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import HistoryIcon from "@material-ui/icons/History";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import CategoryIcon from '@material-ui/icons/Category';
+import RecentActorsIcon from '@material-ui/icons/RecentActors';
 
 const Home = () => {
     return (
         <div className="home">
             <p>MODULES</p>
-                <Listmenu nama="Buat Notulen" Icon={NoteAddIcon} />
-                <Listmenu nama="List Notulen" Icon={NoteIcon} />
-                <Listmenu nama="List Tugas" Icon={WorkIcon} />
-                <Listmenu nama="Laporan" Icon={AssessmentIcon} />
+                <Listmenu nama="Daftar Asset" Icon={AssignmentIcon} />
+                <Listmenu nama="Mutasi Asset" Icon={CompareArrowsIcon} />
+                <Listmenu nama="Stock Opname" Icon={AssignmentTurnedInIcon} />
                 <Listmenu nama="History" Icon={HistoryIcon} />
+                <Listmenu nama="Laporan" Icon={AssessmentIcon} />
+                <Listmenu nama="Kategori" Icon={CategoryIcon} />
+                <Listmenu nama="Data Users" Icon={RecentActorsIcon} />
         </div>
     );
 };
