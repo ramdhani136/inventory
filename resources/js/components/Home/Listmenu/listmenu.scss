@@ -31,4 +31,8 @@
 .listmenu:hover {
     border: solid 1px #aeb2b6;
     cursor: pointer;
+    .listmenu__icon {
+        color: #666;
+        font-size: 22px;
+    }
 }
