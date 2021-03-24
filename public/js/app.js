@@ -16016,7 +16016,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".listmenu {\n  background-color: #fff;\n  width: 32%;\n  height: 62px;\n  border: solid 1px #cdd2d4;\n  border-radius: 5px;\n  float: left;\n  margin-right: 1.3%;\n  margin-bottom: 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  color: #3f3f3f;\n}\n.listmenu .listmenu__icon {\n  flex: 0, 1;\n  color: #868f99;\n  margin-left: 10px;\n  font-size: 19px;\n}\n.listmenu a {\n  flex: 0.8;\n  color: #838e99;\n}\n.listmenu .listmenu_caret {\n  flex: 0.1;\n  color: #838e99;\n  font-size: 19px;\n}\n\n.listmenu:hover {\n  border: solid 1px #aeb2b6;\n  cursor: pointer;\n}\n.listmenu:hover .listmenu__icon {\n  color: #666;\n  font-size: 22px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".listmenu {\n  background-color: #fff;\n  width: 32%;\n  height: 62px;\n  border: solid 1px #cdd2d4;\n  border-radius: 5px;\n  float: left;\n  margin-right: 1.3%;\n  margin-bottom: 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  color: #38434e;\n}\n.listmenu .listmenu__icon {\n  flex: 0, 1;\n  color: #868f99;\n  margin-left: 10px;\n  font-size: 19px;\n}\n.listmenu a {\n  flex: 0.8;\n  font-weight: bold;\n}\n.listmenu .listmenu_caret {\n  flex: 0.1;\n  color: #838e99;\n  font-size: 19px;\n}\n\n.listmenu:hover {\n  border: solid 1px #aeb2b6;\n  cursor: pointer;\n}\n.listmenu:hover .listmenu__icon {\n  color: #666;\n  font-size: 22px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: rgb(63, 63, 63);
+    color: #38434e;
     .listmenu__icon {
         flex: 0, 1;
         color: #868f99;
@@ -19,7 +19,7 @@
     }
     a {
         flex: 0.8;
-        color: #838e99;
+        font-weight: bold;
     }
     .listmenu_caret {
         flex: 0.1;
