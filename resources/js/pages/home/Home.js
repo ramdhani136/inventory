@@ -13,13 +13,13 @@ const Home = () => {
     return (
         <div className="home">
             <p>MODULES</p>
-            <Listmenu nama="Daftar Asset" Icon={AssignmentIcon} />
-            <Listmenu nama="Mutasi Asset" Icon={CompareArrowsIcon} />
-            <Listmenu nama="Stock Opname" Icon={AssignmentTurnedInIcon} />
-            <Listmenu nama="History" Icon={HistoryIcon} />
-            <Listmenu nama="Laporan" Icon={AssessmentIcon} />
-            <Listmenu nama="Kategori" Icon={CategoryIcon} />
-            <Listmenu nama="Data Users" Icon={RecentActorsIcon} />
+            <Listmenu nama="Daftar Asset" link="/asset" Icon={AssignmentIcon} />
+            <Listmenu nama="Mutasi Asset" link="/mutasiasset" Icon={CompareArrowsIcon} />
+            <Listmenu nama="Stock Opname" link="/stockoptanme" Icon={AssignmentTurnedInIcon} />
+            <Listmenu nama="History" link="/history" Icon={HistoryIcon} />
+            <Listmenu nama="Laporan" link="/laporan" Icon={AssessmentIcon} />
+            <Listmenu nama="Kategori" link="/kategori" Icon={CategoryIcon} />
+            <Listmenu nama="Data Users" link="/users" Icon={RecentActorsIcon} />
         </div>
     );
 };

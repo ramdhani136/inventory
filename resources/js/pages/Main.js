@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import store from "../app/store";
 import { Footer, Header, Sidebar } from "../components";
-import { Home } from "./index";
+import { Home, Listasset } from "./index";
 import "./main.scss";
 
 function Main() {
@@ -24,7 +24,7 @@ function Main() {
                     <Sidebar />
                     <Switch>
                         <Route path="/" component={Home} exact={true} />
-                        <Route path="/Aset" component={About} />
+                        <Route path="/asset" component={Listasset} />
                         <Route path="/users" component={Users} />
                     </Switch>
                     <Footer />

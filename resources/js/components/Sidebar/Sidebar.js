@@ -36,17 +36,17 @@ const Sidebar = () => {
                 <Sidebarmenu
                     Icon={AssignmentIcon}
                     nama="Daftar Asset"
-                    link="/notulen"
+                    link="/asset"
                 />
                 <Sidebarmenu
                     Icon={CompareArrowsIcon}
                     nama="Mutasi Asset"
-                    link="/tugas"
+                    link="/mutasiasset"
                 />
                 <Sidebarmenu
                     Icon={AssignmentTurnedInIcon}
                     nama="Stock Opname"
-                    link="/history"
+                    link="/stockopname"
                 />
                 <Sidebarmenu
                     Icon={HistoryIcon}
@@ -66,7 +66,7 @@ const Sidebar = () => {
                 <Sidebarmenu
                     Icon={RecentActorsIcon}
                     nama="Data Users"
-                    link="/kategori"
+                    link="/users"
                 />
             </div>
         </div>

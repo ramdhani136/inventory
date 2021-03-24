@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./header.scss";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
@@ -14,6 +14,11 @@ import { selectMain, toggleSlider } from "../../features/mainSlice";
 const Header = () => {
     const main = useSelector(selectMain);
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const home = () => {
+        history.push("/");
+    };
 
     const buttonSlider = () => {
         dispatch(
@@ -55,7 +60,10 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header__logo">
-                <img src="http://54.251.208.55/assets/erpnext/images/erp-icon.svg" />
+                <img
+                    src="http://54.251.208.55/assets/erpnext/images/erp-icon.svg"
+                    onClick={home}
+                />
             </div>
             {main.slider ? (
                 <CloseIcon onClick={buttonSlider} className="header__burger" />
