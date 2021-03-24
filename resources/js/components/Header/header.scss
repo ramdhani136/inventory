@@ -11,8 +11,9 @@
     margin-left: 3px;
     .header__logo {
         background-color: rgb(241, 241, 243);
-        flex: 0.187;
+        flex: 0.22.5;
         border-right: solid 1px #e1e2e2;
+        border-bottom: solid 1px #e1e2e2;
         height: 43px;
         display: flex;
         justify-content: center;
@@ -20,10 +21,12 @@
         img {
             object-fit: contain;
             width: 27px;
+            margin-left: -12%;
         }
     }
     .header__burger {
         color: #000;
+        margin-left: 0.5%;
         :hover {
             color: rgb(44, 44, 44);
             cursor: pointer;
@@ -84,7 +87,7 @@
             }
         }
         .header__settings {
-            font-size: 0.87em;
+            font-size: 0.75em;
             flex: 0.35;
             display: flex;
             flex-direction: row;

@@ -1,0 +1,40 @@
+.asset {
+    width: 100%;
+    height: auto;
+    .asset_title {
+        width: 100%;
+        height: auto;
+        display: flex;
+        border-bottom: solid 1px #c2cdda;
+        height: 70px;
+        flex-direction: row;
+        align-items: center;
+        .asset_title_left {
+            padding-left: 8%;
+            flex: 0.7;
+            color: #36414c;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .asset_title_right {
+            flex: 0.3;
+            display: flex;
+            height: auto;
+            justify-content: flex-end;
+            padding-right: 8.5%;
+            .btn-purple {
+                border: solid 1px #575dff;
+                background-color: #5e64ff;
+                color: #fff;
+                height: 32px;
+                border-radius: 5px;
+                padding: 0px 10px 0px 10px;
+                font-size: 0.8em;
+            }
+            .btn-purple:hover {
+                border: solid 1px #474dfd;
+                background-color: #5258fd;
+            }
+        }
+    }
+}

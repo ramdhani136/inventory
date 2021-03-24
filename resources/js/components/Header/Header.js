@@ -17,6 +17,12 @@ const Header = () => {
     const history = useHistory();
 
     const home = () => {
+        dispatch(
+            toggleSlider({
+                slider: false,
+                search: false,
+            })
+        );
         history.push("/");
     };
 
