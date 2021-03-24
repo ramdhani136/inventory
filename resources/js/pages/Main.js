@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import store from "../app/store";
 import { Footer, Header, Sidebar } from "../components";
 import { Home } from "./index";
 import "./main.scss";
@@ -17,14 +19,16 @@ function Main() {
     return (
         <div>
             <Router>
-                <Header />
-                <Sidebar/>
-                <Switch>
-                    <Route path="/" component={Home} exact={true} />
-                    <Route path="/about" component={About} />
-                    <Route path="/users" component={Users} />
-                </Switch>
-                <Footer/>
+                <Provider store={store}>
+                    <Header />
+                    <Sidebar />
+                    <Switch>
+                        <Route path="/" component={Home} exact={true} />
+                        <Route path="/Aset" component={About} />
+                        <Route path="/users" component={Users} />
+                    </Switch>
+                    <Footer />
+                </Provider>
             </Router>
         </div>
     );

@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./sidebar.scss";
 import { Avatar } from "@material-ui/core";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { Sidebarmenu } from "..";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import CompareArrowsIcon from "@material-ui/icons/CompareArrows";
-import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
+import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 import HistoryIcon from "@material-ui/icons/History";
 import AssessmentIcon from "@material-ui/icons/Assessment";
-import CategoryIcon from '@material-ui/icons/Category';
-import RecentActorsIcon from '@material-ui/icons/RecentActors';
-
+import CategoryIcon from "@material-ui/icons/Category";
+import RecentActorsIcon from "@material-ui/icons/RecentActors";
+import { useSelector } from "react-redux";
+import { selectMain } from "../../features/mainSlice";
 
 const Sidebar = () => {
+    const main = useSelector(selectMain);
+
     return (
-        <div className="sidebar">
+        <div className={main.slider ? "sidebar" : "sidebar sidebar__close"}>
             <nav className="sidebar__profile">
                 <Avatar
                     src="https://assets-a1.kompasiana.com/items/album/2020/07/08/zamazn-5f04cd42097f364494336094.jpg"
@@ -55,12 +58,12 @@ const Sidebar = () => {
                     nama="Laporan Asset"
                     link="/laporan"
                 />
-                 <Sidebarmenu
+                <Sidebarmenu
                     Icon={CategoryIcon}
                     nama="Kategori Asset"
                     link="/kategori"
                 />
-                 <Sidebarmenu
+                <Sidebarmenu
                     Icon={RecentActorsIcon}
                     nama="Data Users"
                     link="/kategori"

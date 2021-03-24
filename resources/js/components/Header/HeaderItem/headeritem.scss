@@ -1,0 +1,13 @@
+.headeritem{
+    display: flex;
+    min-height: 42px;
+    align-items: center;
+    padding-left: 4%;
+    color: rgb(77, 76, 76);
+}
+
+.headeritem:hover{
+    background-color: rgb(245, 246, 248);
+    border-top: solid 1px #eef0f1;
+    border-bottom: solid 1px #eef0f1;
+}
