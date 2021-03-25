@@ -3,12 +3,16 @@
     height: auto;
     .asset_title {
         width: 100%;
+        z-index: 889;
+        background-color: #fff;
         height: auto;
         display: flex;
         border-bottom: solid 1px #c2cdda;
         height: 70px;
         flex-direction: row;
         align-items: center;
+        position: sticky;
+        top: 42px;
         .asset_title_left {
             padding-left: 8%;
             flex: 0.7;
@@ -35,6 +39,20 @@
                 border: solid 1px #474dfd;
                 background-color: #5258fd;
             }
+        }
+    }
+    .asset_content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .asset_content_left {
+            flex: 0.209;
+        }
+        .asset_content_right {
+            flex: 0.7;
+            border-left: solid 1px #c2cdda;
+            height: 81.6vh;
+            overflow-y: scroll;
         }
     }
 }

@@ -618,9 +618,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/chainPropTypes.js");
-/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
-/* harmony import */ var _internal_svg_icons_Person__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../internal/svg-icons/Person */ "./node_modules/@material-ui/core/esm/internal/svg-icons/Person.js");
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/chainPropTypes.js");
+/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/withStyles */ "./node_modules/@material-ui/core/esm/styles/withStyles.js");
+/* harmony import */ var _internal_svg_icons_Person__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../internal/svg-icons/Person */ "./node_modules/@material-ui/core/esm/internal/svg-icons/Person.js");
 
 
 
@@ -770,7 +770,7 @@ var Avatar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function
   } else if (hasImg && alt) {
     children = alt[0];
   } else {
-    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_internal_svg_icons_Person__WEBPACK_IMPORTED_MODULE_5__.default, {
+    children = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_internal_svg_icons_Person__WEBPACK_IMPORTED_MODULE_6__.default, {
       className: classes.fallback
     });
   }
@@ -802,7 +802,7 @@ var Avatar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function
    * Override or extend the styles applied to the component.
    * See [CSS API](#css) below for more details.
    */
-  classes: (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_6__.default)((prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), function (props) {
+  classes: (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_7__.default)((prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), function (props) {
     var classes = props.classes;
 
     if (classes == null) {
@@ -853,7 +853,7 @@ var Avatar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function
   /**
    * The shape of the avatar.
    */
-  variant: (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_6__.default)(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['circle', 'circular', 'rounded', 'square']), function (props) {
+  variant: (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_7__.default)(prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['circle', 'circular', 'rounded', 'square']), function (props) {
     var variant = props.variant;
 
     if (variant === 'circle') {
@@ -863,7 +863,7 @@ var Avatar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function
     return null;
   })
 } : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_styles_withStyles__WEBPACK_IMPORTED_MODULE_7__.default)(styles, {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_styles_withStyles__WEBPACK_IMPORTED_MODULE_5__.default)(styles, {
   name: 'MuiAvatar'
 })(Avatar));
 
@@ -1803,16 +1803,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/deepmerge.js");
-/* harmony import */ var _createBreakpoints__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./createBreakpoints */ "./node_modules/@material-ui/core/esm/styles/createBreakpoints.js");
-/* harmony import */ var _createMixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./createMixins */ "./node_modules/@material-ui/core/esm/styles/createMixins.js");
-/* harmony import */ var _createPalette__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createPalette */ "./node_modules/@material-ui/core/esm/styles/createPalette.js");
-/* harmony import */ var _createTypography__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./createTypography */ "./node_modules/@material-ui/core/esm/styles/createTypography.js");
-/* harmony import */ var _shadows__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shadows */ "./node_modules/@material-ui/core/esm/styles/shadows.js");
-/* harmony import */ var _shape__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shape */ "./node_modules/@material-ui/core/esm/styles/shape.js");
-/* harmony import */ var _createSpacing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./createSpacing */ "./node_modules/@material-ui/core/esm/styles/createSpacing.js");
-/* harmony import */ var _transitions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./transitions */ "./node_modules/@material-ui/core/esm/styles/transitions.js");
-/* harmony import */ var _zIndex__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./zIndex */ "./node_modules/@material-ui/core/esm/styles/zIndex.js");
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/deepmerge.js");
+/* harmony import */ var _createBreakpoints__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createBreakpoints */ "./node_modules/@material-ui/core/esm/styles/createBreakpoints.js");
+/* harmony import */ var _createMixins__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./createMixins */ "./node_modules/@material-ui/core/esm/styles/createMixins.js");
+/* harmony import */ var _createPalette__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./createPalette */ "./node_modules/@material-ui/core/esm/styles/createPalette.js");
+/* harmony import */ var _createTypography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./createTypography */ "./node_modules/@material-ui/core/esm/styles/createTypography.js");
+/* harmony import */ var _shadows__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./shadows */ "./node_modules/@material-ui/core/esm/styles/shadows.js");
+/* harmony import */ var _shape__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shape */ "./node_modules/@material-ui/core/esm/styles/shape.js");
+/* harmony import */ var _createSpacing__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./createSpacing */ "./node_modules/@material-ui/core/esm/styles/createSpacing.js");
+/* harmony import */ var _transitions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./transitions */ "./node_modules/@material-ui/core/esm/styles/transitions.js");
+/* harmony import */ var _zIndex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./zIndex */ "./node_modules/@material-ui/core/esm/styles/zIndex.js");
 
 
 
@@ -1840,24 +1840,24 @@ function createMuiTheme() {
       typographyInput = _options$typography === void 0 ? {} : _options$typography,
       other = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__.default)(options, ["breakpoints", "mixins", "palette", "spacing", "typography"]);
 
-  var palette = (0,_createPalette__WEBPACK_IMPORTED_MODULE_2__.default)(paletteInput);
-  var breakpoints = (0,_createBreakpoints__WEBPACK_IMPORTED_MODULE_3__.default)(breakpointsInput);
-  var spacing = (0,_createSpacing__WEBPACK_IMPORTED_MODULE_4__.default)(spacingInput);
-  var muiTheme = (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_5__.default)({
+  var palette = (0,_createPalette__WEBPACK_IMPORTED_MODULE_4__.default)(paletteInput);
+  var breakpoints = (0,_createBreakpoints__WEBPACK_IMPORTED_MODULE_2__.default)(breakpointsInput);
+  var spacing = (0,_createSpacing__WEBPACK_IMPORTED_MODULE_8__.default)(spacingInput);
+  var muiTheme = (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_11__.default)({
     breakpoints: breakpoints,
     direction: 'ltr',
-    mixins: (0,_createMixins__WEBPACK_IMPORTED_MODULE_6__.default)(breakpoints, spacing, mixinsInput),
+    mixins: (0,_createMixins__WEBPACK_IMPORTED_MODULE_3__.default)(breakpoints, spacing, mixinsInput),
     overrides: {},
     // Inject custom styles
     palette: palette,
     props: {},
     // Provide default props
-    shadows: _shadows__WEBPACK_IMPORTED_MODULE_7__.default,
-    typography: (0,_createTypography__WEBPACK_IMPORTED_MODULE_8__.default)(palette, typographyInput),
+    shadows: _shadows__WEBPACK_IMPORTED_MODULE_6__.default,
+    typography: (0,_createTypography__WEBPACK_IMPORTED_MODULE_5__.default)(palette, typographyInput),
     spacing: spacing,
-    shape: _shape__WEBPACK_IMPORTED_MODULE_9__.default,
-    transitions: _transitions__WEBPACK_IMPORTED_MODULE_10__.default,
-    zIndex: _zIndex__WEBPACK_IMPORTED_MODULE_11__.default
+    shape: _shape__WEBPACK_IMPORTED_MODULE_7__.default,
+    transitions: _transitions__WEBPACK_IMPORTED_MODULE_9__.default,
+    zIndex: _zIndex__WEBPACK_IMPORTED_MODULE_10__.default
   }, other);
 
   for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -1865,7 +1865,7 @@ function createMuiTheme() {
   }
 
   muiTheme = args.reduce(function (acc, argument) {
-    return (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_5__.default)(acc, argument);
+    return (0,_material_ui_utils__WEBPACK_IMPORTED_MODULE_11__.default)(acc, argument);
   }, muiTheme);
 
   if (true) {
@@ -1923,13 +1923,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/utils */ "./node_modules/@material-ui/utils/esm/deepmerge.js");
 /* harmony import */ var _colors_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../colors/common */ "./node_modules/@material-ui/core/esm/colors/common.js");
 /* harmony import */ var _colors_grey__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../colors/grey */ "./node_modules/@material-ui/core/esm/colors/grey.js");
-/* harmony import */ var _colors_indigo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../colors/indigo */ "./node_modules/@material-ui/core/esm/colors/indigo.js");
-/* harmony import */ var _colors_pink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../colors/pink */ "./node_modules/@material-ui/core/esm/colors/pink.js");
-/* harmony import */ var _colors_red__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../colors/red */ "./node_modules/@material-ui/core/esm/colors/red.js");
-/* harmony import */ var _colors_orange__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../colors/orange */ "./node_modules/@material-ui/core/esm/colors/orange.js");
-/* harmony import */ var _colors_blue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../colors/blue */ "./node_modules/@material-ui/core/esm/colors/blue.js");
-/* harmony import */ var _colors_green__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../colors/green */ "./node_modules/@material-ui/core/esm/colors/green.js");
-/* harmony import */ var _colorManipulator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
+/* harmony import */ var _colors_indigo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../colors/indigo */ "./node_modules/@material-ui/core/esm/colors/indigo.js");
+/* harmony import */ var _colors_pink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../colors/pink */ "./node_modules/@material-ui/core/esm/colors/pink.js");
+/* harmony import */ var _colors_red__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../colors/red */ "./node_modules/@material-ui/core/esm/colors/red.js");
+/* harmony import */ var _colors_orange__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../colors/orange */ "./node_modules/@material-ui/core/esm/colors/orange.js");
+/* harmony import */ var _colors_blue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../colors/blue */ "./node_modules/@material-ui/core/esm/colors/blue.js");
+/* harmony import */ var _colors_green__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../colors/green */ "./node_modules/@material-ui/core/esm/colors/green.js");
+/* harmony import */ var _colorManipulator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./colorManipulator */ "./node_modules/@material-ui/core/esm/styles/colorManipulator.js");
 
 
 
@@ -2019,9 +2019,9 @@ function addLightOrDark(intent, direction, shade, tonalOffset) {
     if (intent.hasOwnProperty(shade)) {
       intent[direction] = intent[shade];
     } else if (direction === 'light') {
-      intent.light = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_4__.lighten)(intent.main, tonalOffsetLight);
+      intent.light = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_10__.lighten)(intent.main, tonalOffsetLight);
     } else if (direction === 'dark') {
-      intent.dark = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_4__.darken)(intent.main, tonalOffsetDark);
+      intent.dark = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_10__.darken)(intent.main, tonalOffsetDark);
     }
   }
 }
@@ -2029,39 +2029,39 @@ function addLightOrDark(intent, direction, shade, tonalOffset) {
 function createPalette(palette) {
   var _palette$primary = palette.primary,
       primary = _palette$primary === void 0 ? {
-    light: _colors_indigo__WEBPACK_IMPORTED_MODULE_5__.default[300],
-    main: _colors_indigo__WEBPACK_IMPORTED_MODULE_5__.default[500],
-    dark: _colors_indigo__WEBPACK_IMPORTED_MODULE_5__.default[700]
+    light: _colors_indigo__WEBPACK_IMPORTED_MODULE_4__.default[300],
+    main: _colors_indigo__WEBPACK_IMPORTED_MODULE_4__.default[500],
+    dark: _colors_indigo__WEBPACK_IMPORTED_MODULE_4__.default[700]
   } : _palette$primary,
       _palette$secondary = palette.secondary,
       secondary = _palette$secondary === void 0 ? {
-    light: _colors_pink__WEBPACK_IMPORTED_MODULE_6__.default.A200,
-    main: _colors_pink__WEBPACK_IMPORTED_MODULE_6__.default.A400,
-    dark: _colors_pink__WEBPACK_IMPORTED_MODULE_6__.default.A700
+    light: _colors_pink__WEBPACK_IMPORTED_MODULE_5__.default.A200,
+    main: _colors_pink__WEBPACK_IMPORTED_MODULE_5__.default.A400,
+    dark: _colors_pink__WEBPACK_IMPORTED_MODULE_5__.default.A700
   } : _palette$secondary,
       _palette$error = palette.error,
       error = _palette$error === void 0 ? {
-    light: _colors_red__WEBPACK_IMPORTED_MODULE_7__.default[300],
-    main: _colors_red__WEBPACK_IMPORTED_MODULE_7__.default[500],
-    dark: _colors_red__WEBPACK_IMPORTED_MODULE_7__.default[700]
+    light: _colors_red__WEBPACK_IMPORTED_MODULE_6__.default[300],
+    main: _colors_red__WEBPACK_IMPORTED_MODULE_6__.default[500],
+    dark: _colors_red__WEBPACK_IMPORTED_MODULE_6__.default[700]
   } : _palette$error,
       _palette$warning = palette.warning,
       warning = _palette$warning === void 0 ? {
-    light: _colors_orange__WEBPACK_IMPORTED_MODULE_8__.default[300],
-    main: _colors_orange__WEBPACK_IMPORTED_MODULE_8__.default[500],
-    dark: _colors_orange__WEBPACK_IMPORTED_MODULE_8__.default[700]
+    light: _colors_orange__WEBPACK_IMPORTED_MODULE_7__.default[300],
+    main: _colors_orange__WEBPACK_IMPORTED_MODULE_7__.default[500],
+    dark: _colors_orange__WEBPACK_IMPORTED_MODULE_7__.default[700]
   } : _palette$warning,
       _palette$info = palette.info,
       info = _palette$info === void 0 ? {
-    light: _colors_blue__WEBPACK_IMPORTED_MODULE_9__.default[300],
-    main: _colors_blue__WEBPACK_IMPORTED_MODULE_9__.default[500],
-    dark: _colors_blue__WEBPACK_IMPORTED_MODULE_9__.default[700]
+    light: _colors_blue__WEBPACK_IMPORTED_MODULE_8__.default[300],
+    main: _colors_blue__WEBPACK_IMPORTED_MODULE_8__.default[500],
+    dark: _colors_blue__WEBPACK_IMPORTED_MODULE_8__.default[700]
   } : _palette$info,
       _palette$success = palette.success,
       success = _palette$success === void 0 ? {
-    light: _colors_green__WEBPACK_IMPORTED_MODULE_10__.default[300],
-    main: _colors_green__WEBPACK_IMPORTED_MODULE_10__.default[500],
-    dark: _colors_green__WEBPACK_IMPORTED_MODULE_10__.default[700]
+    light: _colors_green__WEBPACK_IMPORTED_MODULE_9__.default[300],
+    main: _colors_green__WEBPACK_IMPORTED_MODULE_9__.default[500],
+    dark: _colors_green__WEBPACK_IMPORTED_MODULE_9__.default[700]
   } : _palette$success,
       _palette$type = palette.type,
       type = _palette$type === void 0 ? 'light' : _palette$type,
@@ -2075,10 +2075,10 @@ function createPalette(palette) {
 
 
   function getContrastText(background) {
-    var contrastText = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_4__.getContrastRatio)(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
+    var contrastText = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_10__.getContrastRatio)(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
 
     if (true) {
-      var contrast = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_4__.getContrastRatio)(background, contrastText);
+      var contrast = (0,_colorManipulator__WEBPACK_IMPORTED_MODULE_10__.getContrastRatio)(background, contrastText);
 
       if (contrast < 3) {
         console.error(["Material-UI: The contrast ratio of ".concat(contrast, ":1 for ").concat(contrastText, " on ").concat(background), 'falls below the WCAG recommended absolute minimum contrast ratio of 3:1.', 'https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-contrast'].join('\n'));
@@ -3513,6 +3513,72 @@ var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/crea
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
   d: "M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"
 }), 'CompareArrows');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/DeleteForeverTwoTone.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@material-ui/icons/DeleteForeverTwoTone.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M16 9H8v10h8V9zm-.47 7.12l-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12z",
+  opacity: ".3"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"
+})), 'DeleteForeverTwoTone');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/EditTwoTone.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/EditTwoTone.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
+  d: "M5 18.08V19h.92l9.06-9.06-.92-.92z",
+  opacity: ".3"
+}), /*#__PURE__*/React.createElement("path", {
+  d: "M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29s-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19z"
+})), 'EditTwoTone');
 
 exports.default = _default;
 
@@ -6578,8 +6644,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var _responsivePropType__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./responsivePropType */ "./node_modules/@material-ui/system/esm/responsivePropType.js");
-/* harmony import */ var _breakpoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./breakpoints */ "./node_modules/@material-ui/system/esm/breakpoints.js");
+/* harmony import */ var _responsivePropType__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./responsivePropType */ "./node_modules/@material-ui/system/esm/responsivePropType.js");
+/* harmony import */ var _breakpoints__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./breakpoints */ "./node_modules/@material-ui/system/esm/breakpoints.js");
 
 
 
@@ -6632,10 +6698,10 @@ function style(options) {
       return (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)({}, cssProperty, value);
     };
 
-    return (0,_breakpoints__WEBPACK_IMPORTED_MODULE_1__.handleBreakpoints)(props, propValue, styleFromPropValue);
+    return (0,_breakpoints__WEBPACK_IMPORTED_MODULE_2__.handleBreakpoints)(props, propValue, styleFromPropValue);
   };
 
-  fn.propTypes =  true ? (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)({}, prop, _responsivePropType__WEBPACK_IMPORTED_MODULE_2__.default) : 0;
+  fn.propTypes =  true ? (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)({}, prop, _responsivePropType__WEBPACK_IMPORTED_MODULE_1__.default) : 0;
   fn.filterProps = [prop];
   return fn;
 }
@@ -10858,16 +10924,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header.scss */ "./resources/js/components/Header/header.scss");
-/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
-/* harmony import */ var _material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/icons/Notifications */ "./node_modules/@material-ui/icons/Notifications.js");
-/* harmony import */ var _material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/icons/ArrowDropDown */ "./node_modules/@material-ui/icons/ArrowDropDown.js");
-/* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Menu */ "./node_modules/@material-ui/icons/Menu.js");
+/* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Search */ "./node_modules/@material-ui/icons/Search.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
+/* harmony import */ var _material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Notifications */ "./node_modules/@material-ui/icons/Notifications.js");
+/* harmony import */ var _material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/ArrowDropDown */ "./node_modules/@material-ui/icons/ArrowDropDown.js");
+/* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Menu */ "./node_modules/@material-ui/icons/Menu.js");
 /* harmony import */ var _material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/Close */ "./node_modules/@material-ui/icons/Close.js");
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! .. */ "./resources/js/components/index.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../features/mainSlice */ "./resources/js/features/mainSlice.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! .. */ "./resources/js/components/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../features/mainSlice */ "./resources/js/features/mainSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -10884,12 +10950,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Header = function Header() {
-  var main = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.selectMain);
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useDispatch)();
+  var main = (0,react_redux__WEBPACK_IMPORTED_MODULE_9__.useSelector)(_features_mainSlice__WEBPACK_IMPORTED_MODULE_10__.selectMain);
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_9__.useDispatch)();
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useHistory)();
 
   var home = function home() {
-    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.toggleSlider)({
+    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_10__.toggleSlider)({
       slider: false,
       search: false
     }));
@@ -10897,14 +10963,14 @@ var Header = function Header() {
   };
 
   var buttonSlider = function buttonSlider() {
-    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.toggleSlider)({
+    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_10__.toggleSlider)({
       slider: !main.slider,
       seacrh: false
     }));
   };
 
   var inputSeacrh = function inputSeacrh() {
-    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.toggleSlider)({
+    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_10__.toggleSlider)({
       slider: false,
       search: !main.search
     }));
@@ -10913,7 +10979,7 @@ var Header = function Header() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var handleEsc = function handleEsc(event) {
       if (event.keyCode === 27) {
-        dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.toggleSlider)({
+        dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_10__.toggleSlider)({
           slider: false,
           search: false
         }));
@@ -10925,60 +10991,60 @@ var Header = function Header() {
       window.removeEventListener("keydown", handleEsc);
     };
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
     className: "header",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       className: "header__logo",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
         src: "http://54.251.208.55/assets/erpnext/images/erp-icon.svg",
         onClick: home
       })
-    }), main.slider ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_7__.default, {
+    }), main.slider ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_7__.default, {
       onClick: buttonSlider,
       className: "header__burger"
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_8__.default, {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_6__.default, {
       onClick: buttonSlider,
       className: "header__burger"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
       className: "header__menu",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: "header__mid",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: "header__search",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("input", {
             onClick: inputSeacrh,
             placeholder: "Search or Type a command"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_9__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_3__.default, {
             className: "header_seacrhicon"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: main.search ? "header__search_item" : "header__search_item header__item__close",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "Daftar Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "Mutasi Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "Stock Opname"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "History Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "Laporan Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Headeritem, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(___WEBPACK_IMPORTED_MODULE_8__.Headeritem, {
             nama: "Data Users"
           })]
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
         className: "header__settings",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_10__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_12__.default, {
           src: "https://assets-a1.kompasiana.com/items/album/2020/07/08/zamazn-5f04cd42097f364494336094.jpg",
           className: "header__avatar"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("a", {
           children: "Ilham Ramdhani"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_11__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_5__.default, {
           className: "header__caret"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_12__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_material_ui_icons_Notifications__WEBPACK_IMPORTED_MODULE_4__.default, {
           className: "header__notif"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
           className: "header__notif__on"
         })]
       })]
@@ -11036,10 +11102,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _listmenu_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listmenu.scss */ "./resources/js/components/Home/Listmenu/listmenu.scss");
 /* harmony import */ var _material_ui_icons_KeyboardArrowDown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/KeyboardArrowDown */ "./node_modules/@material-ui/icons/KeyboardArrowDown.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../features/mainSlice */ "./resources/js/features/mainSlice.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../features/mainSlice */ "./resources/js/features/mainSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -11053,25 +11119,25 @@ var Listmenu = function Listmenu(_ref) {
   var nama = _ref.nama,
       link = _ref.link,
       Icon = _ref.Icon;
-  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
 
   var clickLink = function clickLink() {
-    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_4__.toggleSlider)({
+    dispatch((0,_features_mainSlice__WEBPACK_IMPORTED_MODULE_3__.toggleSlider)({
       slider: false,
       search: false
     }));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
     onClick: clickLink,
     to: link,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "listmenu",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Icon, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(Icon, {
         className: "listmenu__icon"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
         children: nama
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_icons_KeyboardArrowDown__WEBPACK_IMPORTED_MODULE_6__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_material_ui_icons_KeyboardArrowDown__WEBPACK_IMPORTED_MODULE_6__.default, {
         className: "listmenu_caret"
       })]
     })
@@ -11079,6 +11145,884 @@ var Listmenu = function Listmenu(_ref) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Listmenu);
+
+/***/ }),
+
+/***/ "./resources/js/components/Listasset/Itemasset/Itemasset.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/Listasset/Itemasset/Itemasset.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _itemasset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./itemasset.scss */ "./resources/js/components/Listasset/Itemasset/itemasset.scss");
+/* harmony import */ var _material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/EditTwoTone */ "./node_modules/@material-ui/icons/EditTwoTone.js");
+/* harmony import */ var _material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/DeleteForeverTwoTone */ "./node_modules/@material-ui/icons/DeleteForeverTwoTone.js");
+/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+var Itemasset = function Itemasset() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    className: "itemasset",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "No"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Kode Asset"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Item"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Satuan"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Kategori"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Tgl Asset"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Status"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+            children: "Aksi"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tbody", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MNT-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Monitor LQ83"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Monitor"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "31 November 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status_none"
+            }), "Buruk"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status_none"
+            }), "Buruk"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status_none"
+            }), "Buruk"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              paddingLeft: 20
+            },
+            children: "1"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "checkbox",
+              name: "selectitem"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "MJ-0001"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            style: {
+              fontWeight: 'bolder',
+              fontSize: '0.95em',
+              color: 'rgb(77, 76, 76)'
+            },
+            children: "Meja Kerja"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Unit"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "Meja Kayu"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+            children: "12 Maret 2020"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+              className: "itemasset_status"
+            }), "Baik"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+            style: {
+              cursor: 'pointer',
+              color: 'rgb(131, 130, 130)'
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: 19
+              }
+            }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+              style: {
+                fontSize: 19
+              }
+            })]
+          })]
+        })]
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Itemasset);
 
 /***/ }),
 
@@ -11095,19 +12039,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _sidebar_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar.scss */ "./resources/js/components/Sidebar/sidebar.scss");
-/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/Avatar/index.js");
 /* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! .. */ "./resources/js/components/index.js");
-/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
-/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
-/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
-/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
-/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
-/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
-/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../features/mainSlice */ "./resources/js/features/mainSlice.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
+/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
+/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
+/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
+/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
+/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
+/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _features_mainSlice__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../features/mainSlice */ "./resources/js/features/mainSlice.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -11126,59 +12070,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Sidebar = function Sidebar() {
-  var main = (0,react_redux__WEBPACK_IMPORTED_MODULE_4__.useSelector)(_features_mainSlice__WEBPACK_IMPORTED_MODULE_5__.selectMain);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  var main = (0,react_redux__WEBPACK_IMPORTED_MODULE_11__.useSelector)(_features_mainSlice__WEBPACK_IMPORTED_MODULE_12__.selectMain);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
     className: main.slider ? "sidebar" : "sidebar sidebar__close",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("nav", {
       className: "sidebar__profile",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__.default, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_material_ui_core__WEBPACK_IMPORTED_MODULE_14__.default, {
         src: "https://assets-a1.kompasiana.com/items/album/2020/07/08/zamazn-5f04cd42097f364494336094.jpg",
         className: "sidebar__avatar"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
         className: "sidebar__profle_right",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("a", {
           children: "Ilham Ramdhani"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("a", {
           style: {
             fontSize: "0.8em"
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
             className: "sidebar__online"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("b", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("b", {
             children: "Online"
           })]
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("p", {
       children: "MAIN NAVIGATION"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)("div", {
       className: "sidebar_menu",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_8__.default,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__.default,
         nama: "Daftar Asset",
         link: "/asset"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_9__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__.default,
         nama: "Mutasi Asset",
         link: "/mutasiasset"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_10__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__.default,
         nama: "Stock Opname",
         link: "/stockopname"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_11__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__.default,
         nama: "History Asset",
         link: "/history"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_12__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__.default,
         nama: "Laporan Asset",
         link: "/laporan"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_13__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__.default,
         nama: "Kategori Asset",
         link: "/kategori"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
-        Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_14__.default,
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Sidebarmenu, {
+        Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__.default,
         nama: "Data Users",
         link: "/users"
       })]
@@ -11258,17 +12202,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Header": () => (/* reexport safe */ _Header_Header__WEBPACK_IMPORTED_MODULE_1__.default),
 /* harmony export */   "Listmenu": () => (/* reexport safe */ _Home_Listmenu_Listmenu__WEBPACK_IMPORTED_MODULE_3__.default),
-/* harmony export */   "Sidebar": () => (/* reexport safe */ _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_4__.default),
-/* harmony export */   "Sidebarmenu": () => (/* reexport safe */ _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_5__.default),
+/* harmony export */   "Sidebar": () => (/* reexport safe */ _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_5__.default),
+/* harmony export */   "Sidebarmenu": () => (/* reexport safe */ _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_6__.default),
 /* harmony export */   "Footer": () => (/* reexport safe */ _Footer_Footer__WEBPACK_IMPORTED_MODULE_0__.default),
-/* harmony export */   "Headeritem": () => (/* reexport safe */ _Header_HeaderItem_Headeritem__WEBPACK_IMPORTED_MODULE_2__.default)
+/* harmony export */   "Headeritem": () => (/* reexport safe */ _Header_HeaderItem_Headeritem__WEBPACK_IMPORTED_MODULE_2__.default),
+/* harmony export */   "Itemasset": () => (/* reexport safe */ _Listasset_Itemasset_Itemasset__WEBPACK_IMPORTED_MODULE_4__.default)
 /* harmony export */ });
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer/Footer */ "./resources/js/components/Footer/Footer.js");
 /* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header/Header */ "./resources/js/components/Header/Header.js");
 /* harmony import */ var _Header_HeaderItem_Headeritem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header/HeaderItem/Headeritem */ "./resources/js/components/Header/HeaderItem/Headeritem.js");
 /* harmony import */ var _Home_Listmenu_Listmenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Home/Listmenu/Listmenu */ "./resources/js/components/Home/Listmenu/Listmenu.js");
-/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/Sidebar/Sidebar.js");
-/* harmony import */ var _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Sidebar/SidebarMenu/Sidebarmenu */ "./resources/js/components/Sidebar/SidebarMenu/Sidebarmenu.js");
+/* harmony import */ var _Listasset_Itemasset_Itemasset__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Listasset/Itemasset/Itemasset */ "./resources/js/components/Listasset/Itemasset/Itemasset.js");
+/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/Sidebar/Sidebar.js");
+/* harmony import */ var _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Sidebar/SidebarMenu/Sidebarmenu */ "./resources/js/components/Sidebar/SidebarMenu/Sidebarmenu.js");
+
 
 
 
@@ -11406,14 +12353,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
 /* harmony import */ var _home_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.scss */ "./resources/js/pages/home/home.scss");
-/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
-/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
-/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
-/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
-/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
-/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
-/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
+/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
+/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
+/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
+/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
+/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
+/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -11428,38 +12375,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
     className: "home",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
       children: "MODULES"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Daftar Asset",
       link: "/asset",
-      Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_3__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Mutasi Asset",
       link: "/mutasiasset",
-      Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_4__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Stock Opname",
       link: "/stockoptanme",
-      Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_5__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "History",
       link: "/history",
-      Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_6__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Laporan",
       link: "/laporan",
-      Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_7__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Kategori",
       link: "/kategori",
-      Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_8__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Data Users",
       link: "/users",
-      Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__.default
+      Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_9__.default
     })]
   });
 };
@@ -11500,29 +12447,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _listasset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listasset.scss */ "./resources/js/pages/listasset/listasset.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
+/* harmony import */ var _listasset_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./listasset.scss */ "./resources/js/pages/listasset/listasset.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 var Listasset = function Listasset() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "asset",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "asset_title",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "asset_title_left",
         children: "List Asset"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "asset_title_right",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
           className: "btn-purple",
           children: "Input Asset"
         })
       })]
-    })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "asset_content",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "asset_content_left"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "asset_content_right",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Itemasset, {})
+      })]
+    })]
   });
 };
 
@@ -16043,7 +17000,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer {\n  width: 100%;\n  height: auto;\n  position: fixed;\n  bottom: 0;\n  text-align: center;\n  color: #a1a0a0;\n  padding: 5px 0px 5px 0px;\n  z-index: 100;\n  font-size: 0.9em;\n  bottom: 5px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".footer {\n  width: 100%;\n  height: auto;\n  position: fixed;\n  text-align: center;\n  color: #a1a0a0;\n  padding: 5px 0px 5px 0px;\n  z-index: 1;\n  font-size: 0.9em;\n  bottom: 0;\n  background-color: #fff;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16091,7 +17048,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".header {\n  top: 0;\n  z-index: 999;\n  position: sticky;\n  background-color: #f5f6f8;\n  border-bottom: solid 1px #e1e2e2;\n  display: flex;\n  align-items: center;\n  justify-content: space-evenly;\n  height: 42px;\n  margin-left: 3px;\n}\n.header .header__logo {\n  background-color: #f1f1f3;\n  flex: 0.22 0.5;\n  border-right: solid 1px #e1e2e2;\n  border-bottom: solid 1px #e1e2e2;\n  height: 43px;\n  display: flex;\n  justify-content: center;\n  margin: 0px 0px 0px -7px;\n}\n.header .header__logo img {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 27px;\n  margin-left: -12%;\n}\n.header .header__burger {\n  color: #000;\n  margin-left: 0.5%;\n}\n.header .header__burger :hover {\n  color: #2c2c2c;\n  cursor: pointer;\n}\n.header .header__menu {\n  flex: 0.8;\n  display: flex;\n  justify-content: flex-end;\n}\n.header .header__menu .header__mid {\n  flex: 0.37;\n  display: flex;\n  margin-left: 170px;\n  flex-direction: column;\n  height: auto;\n  position: relative;\n}\n.header .header__menu .header__mid .header__search {\n  flex: 1;\n  background-color: #fff;\n  border: solid 1px #cac9c9;\n}\n.header .header__menu .header__mid .header__search input {\n  width: 92%;\n  border: none;\n  height: 30px;\n  font-size: 0.8em;\n  color: #666;\n  outline: none;\n  background: none;\n  padding-left: 4%;\n}\n.header .header__menu .header__mid .header__search ::-moz-placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search :-ms-input-placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search ::placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search .header_seacrhicon {\n  color: #868686;\n  width: 20px;\n}\n.header .header__menu .header__mid .header__search_item {\n  border: solid 1px #d6d3d3;\n  border-top: none;\n  width: 100%;\n  position: absolute;\n  top: 32.3px;\n  background-color: #fff;\n  height: 220px;\n  box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  -webkit-box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  -moz-box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  font-size: 0.8em;\n  overflow-y: scroll;\n}\n.header .header__menu .header__mid .header__item__close {\n  display: none;\n}\n.header .header__menu .header__settings {\n  font-size: 0.75em;\n  flex: 0.35;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.header .header__menu .header__settings .header__avatar {\n  height: 28px;\n  width: 28px;\n  margin-right: 5px;\n  margin-left: 10px;\n  border: solid 1.5px #dad8d8;\n}\n.header .header__menu .header__settings .header__notif {\n  width: 18px;\n  color: #838e99;\n  margin-left: 5px;\n}\n.header .header__menu .header__settings a {\n  font-weight: bold;\n  color: #666;\n}\n.header .header__menu .header__settings .header__notif__on {\n  position: relative;\n  margin-top: -10px;\n  margin-left: -6px;\n  border: solid 1px #ce0931;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background-color: crimson;\n}\n.header .header__menu .header__settings .header__caret {\n  color: #838e99;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".header {\n  top: 0;\n  z-index: 999;\n  position: sticky;\n  background-color: #f5f6f8;\n  border-bottom: solid 1px #e1e2e2;\n  display: flex;\n  align-items: center;\n  justify-content: space-evenly;\n  height: 42px;\n  margin-left: 3px;\n}\n.header .header__logo {\n  background-color: #f1f1f3;\n  flex: 0.22 0.5;\n  border-right: solid 1px #e1e2e2;\n  border-bottom: solid 1px #e1e2e2;\n  height: 43px;\n  display: flex;\n  justify-content: center;\n  margin: 0px 0px 0px -7px;\n}\n.header .header__logo img {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 27px;\n  margin-left: -12%;\n  cursor: pointer;\n}\n.header .header__burger {\n  color: #000;\n  margin-left: 0.5%;\n}\n.header .header__burger :hover {\n  color: #2c2c2c;\n  cursor: pointer;\n}\n.header .header__menu {\n  flex: 0.8;\n  display: flex;\n  justify-content: flex-end;\n}\n.header .header__menu .header__mid {\n  flex: 0.37;\n  display: flex;\n  margin-left: 170px;\n  flex-direction: column;\n  height: auto;\n  position: relative;\n}\n.header .header__menu .header__mid .header__search {\n  flex: 1;\n  background-color: #fff;\n  border: solid 1px #cac9c9;\n}\n.header .header__menu .header__mid .header__search input {\n  width: 92%;\n  border: none;\n  height: 30px;\n  font-size: 0.8em;\n  color: #666;\n  outline: none;\n  background: none;\n  padding-left: 4%;\n}\n.header .header__menu .header__mid .header__search ::-moz-placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search :-ms-input-placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search ::placeholder {\n  color: #ccc;\n}\n.header .header__menu .header__mid .header__search .header_seacrhicon {\n  color: #868686;\n  width: 20px;\n}\n.header .header__menu .header__mid .header__search_item {\n  border: solid 1px #d6d3d3;\n  border-top: none;\n  width: 100%;\n  position: absolute;\n  top: 32.3px;\n  background-color: #fff;\n  height: 220px;\n  box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  -webkit-box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  -moz-box-shadow: 2px 8px 14px -3px rgba(233, 230, 230, 0.83);\n  display: flex;\n  flex-direction: column;\n  cursor: pointer;\n  font-size: 0.8em;\n  overflow-y: scroll;\n}\n.header .header__menu .header__mid .header__item__close {\n  display: none;\n}\n.header .header__menu .header__settings {\n  font-size: 0.75em;\n  flex: 0.35;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  margin-left: 20px;\n  cursor: pointer;\n}\n.header .header__menu .header__settings .header__avatar {\n  height: 28px;\n  width: 28px;\n  margin-right: 5px;\n  margin-left: 10px;\n  border: solid 1.5px #dad8d8;\n}\n.header .header__menu .header__settings .header__notif {\n  width: 18px;\n  color: #838e99;\n  margin-left: 5px;\n}\n.header .header__menu .header__settings a {\n  font-weight: bold;\n  color: #666;\n}\n.header .header__menu .header__settings .header__notif__on {\n  position: relative;\n  margin-top: -10px;\n  margin-left: -6px;\n  border: solid 1px #ce0931;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  background-color: crimson;\n}\n.header .header__menu .header__settings .header__caret {\n  color: #838e99;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16116,6 +17073,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".listmenu {\n  background-color: #fff;\n  width: 32%;\n  height: 62px;\n  border: solid 1px #cdd2d4;\n  border-radius: 5px;\n  float: left;\n  margin-right: 1.3%;\n  margin-bottom: 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  color: #38434e;\n}\n.listmenu .listmenu__icon {\n  flex: 0, 1;\n  color: #868f99;\n  margin-left: 10px;\n  font-size: 19px;\n}\n.listmenu a {\n  flex: 0.8;\n  font-weight: bold;\n}\n.listmenu .listmenu_caret {\n  flex: 0.1;\n  color: #838e99;\n  font-size: 19px;\n}\n\n.listmenu:hover {\n  border: solid 1px #aeb2b6;\n  cursor: pointer;\n}\n.listmenu:hover .listmenu__icon {\n  color: #666;\n  font-size: 22px;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/Listasset/Itemasset/itemasset.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/Listasset/Itemasset/itemasset.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".itemasset {\n  border-right: solid 1px #c2cdda;\n  width: 100%;\n  min-height: 81.6vh;\n  height: auto;\n}\n.itemasset table {\n  width: 100%;\n}\n.itemasset table thead tr {\n  height: 40px;\n  font-size: 0.9em;\n  color: #606061;\n}\n.itemasset table thead tr th {\n  position: sticky;\n  top: 0;\n  z-index: 5;\n  background-color: #f7fafc;\n  height: 40px;\n  border-bottom: solid 1px #e8eff7;\n  box-shadow: 1px 0px 0px 1px #cad3dd;\n}\n.itemasset table tbody {\n  background-color: #fbfdff;\n}\n.itemasset table tbody tr {\n  border-bottom: solid 1px #e1e4e7;\n  height: 40px;\n}\n.itemasset table tbody tr td {\n  font-size: 0.88em;\n  vertical-align: middle;\n  cursor: pointer;\n}\n.itemasset table tbody tr td .itemasset_status {\n  color: #98d85b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\n.itemasset table tbody tr td .itemasset_status_none {\n  color: #f85b5b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16211,7 +17192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".asset {\n  width: 100%;\n  height: auto;\n}\n.asset .asset_title {\n  width: 100%;\n  height: auto;\n  display: flex;\n  border-bottom: solid 1px #c2cdda;\n  height: 70px;\n  flex-direction: row;\n  align-items: center;\n}\n.asset .asset_title .asset_title_left {\n  padding-left: 8%;\n  flex: 0.7;\n  color: #36414c;\n  font-weight: bold;\n  font-size: 1.5em;\n}\n.asset .asset_title .asset_title_right {\n  flex: 0.3;\n  display: flex;\n  height: auto;\n  justify-content: flex-end;\n  padding-right: 8.5%;\n}\n.asset .asset_title .asset_title_right .btn-purple {\n  border: solid 1px #575dff;\n  background-color: #5e64ff;\n  color: #fff;\n  height: 32px;\n  border-radius: 5px;\n  padding: 0px 10px 0px 10px;\n  font-size: 0.8em;\n}\n.asset .asset_title .asset_title_right .btn-purple:hover {\n  border: solid 1px #474dfd;\n  background-color: #5258fd;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".asset {\n  width: 100%;\n  height: auto;\n}\n.asset .asset_title {\n  width: 100%;\n  z-index: 889;\n  background-color: #fff;\n  height: auto;\n  display: flex;\n  border-bottom: solid 1px #c2cdda;\n  height: 70px;\n  flex-direction: row;\n  align-items: center;\n  position: sticky;\n  top: 42px;\n}\n.asset .asset_title .asset_title_left {\n  padding-left: 8%;\n  flex: 0.7;\n  color: #36414c;\n  font-weight: bold;\n  font-size: 1.5em;\n}\n.asset .asset_title .asset_title_right {\n  flex: 0.3;\n  display: flex;\n  height: auto;\n  justify-content: flex-end;\n  padding-right: 8.5%;\n}\n.asset .asset_title .asset_title_right .btn-purple {\n  border: solid 1px #575dff;\n  background-color: #5e64ff;\n  color: #fff;\n  height: 32px;\n  border-radius: 5px;\n  padding: 0px 10px 0px 10px;\n  font-size: 0.8em;\n}\n.asset .asset_title .asset_title_right .btn-purple:hover {\n  border: solid 1px #474dfd;\n  background-color: #5258fd;\n}\n.asset .asset_content {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.asset .asset_content .asset_content_left {\n  flex: 0.209;\n}\n.asset .asset_content .asset_content_right {\n  flex: 0.7;\n  border-left: solid 1px #c2cdda;\n  height: 81.6vh;\n  overflow-y: scroll;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -86992,6 +87973,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_listmenu_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/Listasset/Itemasset/itemasset.scss":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Listasset/Itemasset/itemasset.scss ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_itemasset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./itemasset.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/Listasset/Itemasset/itemasset.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_itemasset_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_itemasset_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
