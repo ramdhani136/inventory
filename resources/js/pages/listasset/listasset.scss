@@ -39,6 +39,19 @@
                 border: solid 1px #474dfd;
                 background-color: #5258fd;
             }
+            input{
+                flex:1;
+                margin-right: 2%;
+                padding-left: 3%;
+                color: #666;
+                font-size: 0.8em;
+                outline-color: #757afd;
+                border: solid 1px #cac9c9;
+            }
+            ::placeholder {
+                color: #ccc;
+               
+            }
         }
     }
     .asset_content {

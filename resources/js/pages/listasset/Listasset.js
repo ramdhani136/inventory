@@ -8,6 +8,7 @@ const Listasset = () => {
             <div className="asset_title">
                 <div className="asset_title_left">List Asset</div>
                 <div className="asset_title_right">
+                    <input type="text" placeholder="Pencarian data .."></input>
                     <button className="btn-purple">Input Asset</button>
                 </div>
             </div>

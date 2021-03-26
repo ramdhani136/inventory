@@ -1,8 +1,9 @@
 import React from "react";
 import "./itemasset.scss";
-import EditTwoToneIcon from '@material-ui/icons/EditTwoTone';
-import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
+import EditTwoToneIcon from "@material-ui/icons/EditTwoTone";
+import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import { Itemassetlist } from "../..";
 
 const Itemasset = () => {
     return (
@@ -24,258 +25,36 @@ const Itemasset = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MNT-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Monitor LQ83</td>
-                        <td>Unit</td>
-                        <td>Monitor</td>
-                        <td>31 November 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status_none"/>Buruk</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status_none"/>Buruk</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status_none"/>Buruk</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
-                    <tr>
-                        <td style={{ paddingLeft: 20 }}>1</td>
-                        <td>
-                            <input type="checkbox" name="selectitem" />
-                        </td>
-                        <td>MJ-0001</td>
-                        <td style={{fontWeight:'bolder',fontSize:'0.95em',color:'rgb(77, 76, 76)'}}>Meja Kerja</td>
-                        <td>Unit</td>
-                        <td>Meja Kayu</td>
-                        <td>12 Maret 2020</td>
-                        <td><FiberManualRecordIcon className="itemasset_status"/>Baik</td>
-                        <td style={{cursor:'pointer',color:'rgb(131, 130, 130)'}}><EditTwoToneIcon style={{fontSize:19}}/> 
-                        &nbsp;<DeleteForeverTwoToneIcon style={{fontSize:19}}/></td>
-                    </tr>
+                    <Itemassetlist
+                        nomor="1"
+                        kode="MJ-0001"
+                        item="Meja Kayu"
+                        satuan="Unit"
+                        kategori="Meja"
+                        tgl="25 Desember 2009"
+                        status="Baik"
+                        id="1"
+                    />
+                    <Itemassetlist
+                        nomor="2"
+                        kode="PRT-0001"
+                        item="Printer Laser Jet"
+                        satuan="Unit"
+                        kategori="Printer"
+                        tgl="30 Desember 2010"
+                        status="Rusak"
+                        id="2"
+                    />
+                    <Itemassetlist
+                        nomor="3"
+                        kode="LPT-0001"
+                        item="Toshiba MD24A"
+                        satuan="Unit"
+                        kategori="Laptop"
+                        tgl="20 Maret 2021"
+                        status="Baik"
+                        id="3"
+                    />
                 </tbody>
             </table>
         </div>
