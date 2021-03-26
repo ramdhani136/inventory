@@ -11162,7 +11162,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _itemasset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./itemasset.scss */ "./resources/js/components/Listasset/Itemasset/itemasset.scss");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../.. */ "./resources/js/components/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils_Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../utils/Utils */ "./resources/js/utils/Utils.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -11173,66 +11187,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Itemasset = function Itemasset() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      items = _useState2[0],
+      setItems = _useState2[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    axios__WEBPACK_IMPORTED_MODULE_3___default().get(_utils_Utils__WEBPACK_IMPORTED_MODULE_4__.API_URL + "items").then(function (res) {
+      setItems(res.data.data);
+    });
+  }, [items]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
     className: "itemasset",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("table", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("thead", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("table", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             style: {
               paddingLeft: 20
             },
             children: "No"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
               type: "checkbox",
               name: "selectitem"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Kode Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Item"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Satuan"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Kategori"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Tgl Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Status"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
             children: "Aksi"
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tbody", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(___WEBPACK_IMPORTED_MODULE_2__.Itemassetlist, {
-          nomor: "1",
-          kode: "MJ-0001",
-          item: "Meja Kayu",
-          satuan: "Unit",
-          kategori: "Meja",
-          tgl: "25 Desember 2009",
-          status: "Baik",
-          id: "1"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(___WEBPACK_IMPORTED_MODULE_2__.Itemassetlist, {
-          nomor: "2",
-          kode: "PRT-0001",
-          item: "Printer Laser Jet",
-          satuan: "Unit",
-          kategori: "Printer",
-          tgl: "30 Desember 2010",
-          status: "Rusak",
-          id: "2"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(___WEBPACK_IMPORTED_MODULE_2__.Itemassetlist, {
-          nomor: "3",
-          kode: "LPT-0001",
-          item: "Toshiba MD24A",
-          satuan: "Unit",
-          kategori: "Laptop",
-          tgl: "20 Maret 2021",
-          status: "Baik",
-          id: "3"
-        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tbody", {
+        children: items.map(function (item, index) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(___WEBPACK_IMPORTED_MODULE_2__.Itemassetlist, {
+            nomor: index + 1,
+            kode: item.kode,
+            item: item.item,
+            satuan: item.id_satuan,
+            kategori: item.id_kategori,
+            tgl: item.tanggal,
+            status: item.kondisi,
+            id: item.id
+          }, index);
+        })
       })]
     })
   });
@@ -11257,8 +11265,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _itemassetlist_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./itemassetlist.scss */ "./resources/js/components/Listasset/Itemasset/itemassetlist/itemassetlist.scss");
 /* harmony import */ var _material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/EditTwoTone */ "./node_modules/@material-ui/icons/EditTwoTone.js");
 /* harmony import */ var _material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/DeleteForeverTwoTone */ "./node_modules/@material-ui/icons/DeleteForeverTwoTone.js");
-/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -11276,46 +11284,46 @@ var Itemassetlist = function Itemassetlist(_ref) {
       tgl = _ref.tgl,
       status = _ref.status,
       id = _ref.id;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("tr", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         style: {
           paddingLeft: 20
         },
         children: nomor
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
           type: "checkbox",
           name: "selectitem"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         children: kode
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         style: {
           fontSize: "0.95em",
           color: "rgb(77, 76, 76)"
         },
         children: item
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         children: satuan
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         children: kategori
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
         children: tgl
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__.default, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
           className: status === "Baik" ? "itemasset_status" : "itemasset_status_none"
         }), status]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
         style: {
           cursor: "pointer",
           color: "rgb(131, 130, 130)"
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_EditTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
           style: {
             fontSize: 19
           }
-        }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
+        }), "\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_5__.default, {
           style: {
             fontSize: 19
           }
@@ -11755,7 +11763,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
 /* harmony import */ var _listasset_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./listasset.scss */ "./resources/js/pages/listasset/listasset.scss");
+/* harmony import */ var _material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/ArrowDropDown */ "./node_modules/@material-ui/icons/ArrowDropDown.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -11782,8 +11792,87 @@ var Listasset = function Listasset() {
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "asset_content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "asset_content_left"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "asset_content_left",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "asset_content_left_item",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+            children: "VIEW"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Reports", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "asset_content_left_item",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("b", {
+            children: "FILTER BY"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Kategori", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h6", {
+              style: {
+                fontSize: "1em",
+                fontStyle: "italic",
+                color: "#757afd"
+              },
+              children: "Laptop"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Tgl_asset", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Satuan", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Status", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h6", {
+              style: {
+                fontSize: "1em",
+                fontStyle: "italic",
+                color: "#757afd"
+              },
+              children: "Baik"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+            children: ["Users", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-1%"
+              }
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "asset_content_left_item",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("b", {
+            children: ["TAGS", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_4__.default, {
+              style: {
+                fontSize: "18px",
+                marginLeft: "-2%",
+                color: "black",
+                cursor: 'pointer'
+              }
+            })]
+          })
+        })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "asset_content_right",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Itemasset, {})
@@ -11793,6 +11882,22 @@ var Listasset = function Listasset() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Listasset);
+
+/***/ }),
+
+/***/ "./resources/js/utils/Utils.js":
+/*!*************************************!*\
+  !*** ./resources/js/utils/Utils.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "API_URL": () => (/* binding */ API_URL)
+/* harmony export */ });
+var API_URL = "/api/";
+
 
 /***/ }),
 
@@ -16525,7 +16630,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".asset {\n  width: 100%;\n  height: auto;\n}\n.asset .asset_title {\n  width: 100%;\n  z-index: 889;\n  background-color: #fff;\n  height: auto;\n  display: flex;\n  border-bottom: solid 1px #c2cdda;\n  height: 70px;\n  flex-direction: row;\n  align-items: center;\n  position: sticky;\n  top: 42px;\n}\n.asset .asset_title .asset_title_left {\n  padding-left: 8%;\n  flex: 0.7;\n  color: #36414c;\n  font-weight: bold;\n  font-size: 1.5em;\n}\n.asset .asset_title .asset_title_right {\n  flex: 0.3;\n  display: flex;\n  height: auto;\n  justify-content: flex-end;\n  padding-right: 8.5%;\n}\n.asset .asset_title .asset_title_right .btn-purple {\n  border: solid 1px #575dff;\n  background-color: #5e64ff;\n  color: #fff;\n  height: 32px;\n  border-radius: 5px;\n  padding: 0px 10px 0px 10px;\n  font-size: 0.8em;\n}\n.asset .asset_title .asset_title_right .btn-purple:hover {\n  border: solid 1px #474dfd;\n  background-color: #5258fd;\n}\n.asset .asset_title .asset_title_right input {\n  flex: 1;\n  margin-right: 2%;\n  padding-left: 3%;\n  color: #666;\n  font-size: 0.8em;\n  outline-color: #757afd;\n  border: solid 1px #cac9c9;\n}\n.asset .asset_title .asset_title_right ::-moz-placeholder {\n  color: #ccc;\n}\n.asset .asset_title .asset_title_right :-ms-input-placeholder {\n  color: #ccc;\n}\n.asset .asset_title .asset_title_right ::placeholder {\n  color: #ccc;\n}\n.asset .asset_content {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.asset .asset_content .asset_content_left {\n  flex: 0.209;\n}\n.asset .asset_content .asset_content_right {\n  flex: 0.7;\n  border-left: solid 1px #c2cdda;\n  height: 81.6vh;\n  overflow-y: scroll;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".asset {\n  width: 100%;\n  height: auto;\n}\n.asset .asset_title {\n  width: 100%;\n  z-index: 889;\n  background-color: #fff;\n  height: auto;\n  display: flex;\n  border-bottom: solid 1px #c2cdda;\n  height: 70px;\n  flex-direction: row;\n  align-items: center;\n  position: sticky;\n  top: 42px;\n}\n.asset .asset_title .asset_title_left {\n  padding-left: 8%;\n  flex: 0.7;\n  color: #36414c;\n  font-weight: bold;\n  font-size: 1.5em;\n}\n.asset .asset_title .asset_title_right {\n  flex: 0.3;\n  display: flex;\n  height: auto;\n  justify-content: flex-end;\n  padding-right: 8.5%;\n}\n.asset .asset_title .asset_title_right .btn-purple {\n  border: solid 1px #575dff;\n  background-color: #5e64ff;\n  color: #fff;\n  height: 32px;\n  border-radius: 5px;\n  padding: 0px 10px 0px 10px;\n  font-size: 0.8em;\n}\n.asset .asset_title .asset_title_right .btn-purple:hover {\n  border: solid 1px #474dfd;\n  background-color: #5258fd;\n}\n.asset .asset_title .asset_title_right input {\n  flex: 1;\n  margin-right: 2%;\n  padding-left: 3%;\n  color: #666;\n  font-size: 0.8em;\n  outline-color: #757afd;\n  border: solid 1px #cac9c9;\n}\n.asset .asset_title .asset_title_right ::-moz-placeholder {\n  color: #ccc;\n}\n.asset .asset_title .asset_title_right :-ms-input-placeholder {\n  color: #ccc;\n}\n.asset .asset_title .asset_title_right ::placeholder {\n  color: #ccc;\n}\n.asset .asset_content {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n}\n.asset .asset_content .asset_content_left {\n  flex: 0.209;\n}\n.asset .asset_content .asset_content_left .asset_content_left_item {\n  margin-top: 10px;\n  display: flex;\n  margin-bottom: 20px;\n  flex-direction: column;\n  padding-left: 38%;\n}\n.asset .asset_content .asset_content_left .asset_content_left_item b {\n  margin-bottom: 5px;\n  color: #666;\n  font-size: 0.7em;\n}\n.asset .asset_content .asset_content_left .asset_content_left_item a {\n  font-size: 0.82em;\n  margin-bottom: 10px;\n  cursor: pointer;\n}\n.asset .asset_content .asset_content_right {\n  flex: 0.7;\n  border-left: solid 1px #c2cdda;\n  height: 81.6vh;\n  overflow-y: scroll;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

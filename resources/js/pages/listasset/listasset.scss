@@ -39,8 +39,8 @@
                 border: solid 1px #474dfd;
                 background-color: #5258fd;
             }
-            input{
-                flex:1;
+            input {
+                flex: 1;
                 margin-right: 2%;
                 padding-left: 3%;
                 color: #666;
@@ -50,7 +50,6 @@
             }
             ::placeholder {
                 color: #ccc;
-               
             }
         }
     }
@@ -60,6 +59,23 @@
         flex-direction: row;
         .asset_content_left {
             flex: 0.209;
+            .asset_content_left_item {
+                margin-top: 10px;
+                display: flex;
+                margin-bottom: 20px;
+                flex-direction: column;
+                padding-left: 38%;
+                b {
+                    margin-bottom: 5px;
+                    color: #666;
+                    font-size: 0.7em;
+                }
+                a {
+                    font-size: 0.82em;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+            }
         }
         .asset_content_right {
             flex: 0.7;
