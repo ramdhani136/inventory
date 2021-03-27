@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Itemasset } from "../../components";
 import "./listasset.scss";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const Listasset = () => {
+    const [search, setSearch] = useState("");
+
     return (
         <div className="asset">
             <div className="asset_title">
                 <div className="asset_title_left">List Asset</div>
                 <div className="asset_title_right">
-                    <input type="text" placeholder="Pencarian data .."></input>
+                    <input type="text" value={search} placeholder="Pencarian data .." onChange={(e)=>setSearch(e.target.value)}></input>
                     <button className="btn-purple">Input Asset</button>
                 </div>
             </div>
@@ -83,14 +85,14 @@ const Listasset = () => {
                                     fontSize: "18px",
                                     marginLeft: "-2%",
                                     color: "black",
-                                    cursor:'pointer'
+                                    cursor: "pointer",
                                 }}
                             />
                         </b>
                     </div>
                 </div>
                 <div className="asset_content_right">
-                    <Itemasset />
+                    <Itemasset value={search} />
                 </div>
             </div>
         </div>

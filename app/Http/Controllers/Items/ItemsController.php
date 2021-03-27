@@ -17,7 +17,7 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        return ItemsResource::collection(Items::where('status','1')->orderBy('item','ASC')->get());
+        return ItemsResource::collection(Items::where('status', '1')->orderBy('kode', 'ASC')->get());
     }
 
     /**
@@ -38,7 +38,16 @@ class ItemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // $this->validate($request, [
+        //     'kode' => 'required|min:4',
+        //     'nama' => 'required',
+        //     'qty' => 'required',
+        //     'satuan' => 'required',
+        // ]);
+
+        $data = Items::create($request->all());
+        return response(new ItemsResource($data), response::HTTP_CREATED);
     }
 
     /**
@@ -49,7 +58,7 @@ class ItemsController extends Controller
      */
     public function show($id)
     {
-        //
+        return ItemsResource::collection(Items::where('kode', $id)->get());
     }
 
     /**
@@ -72,7 +81,8 @@ class ItemsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Items::where('kode', $id)->update($request->all());
+        return response('update', response::HTTP_CREATED);
     }
 
     /**
@@ -83,6 +93,7 @@ class ItemsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Items::where('kode', $id)->delete();
+        return response('deleted', response::HTTP_OK);
     }
 }

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Items\ItemsController;
+use App\Http\Controllers\Kategori\KategoriController;
+use App\Http\Controllers\Satuan\SatuanController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('/items', ItemsController::class);
+Route::resource('/kategori', KategoriController::class);
+Route::resource('/satuan', SatuanController::class);

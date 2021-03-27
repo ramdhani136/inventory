@@ -4,7 +4,7 @@ import { Itemassetlist } from "../..";
 import axios from "axios";
 import { API_URL } from "../../../utils/Utils";
 
-const Itemasset = () => {
+const Itemasset = ({ value }) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -12,6 +12,14 @@ const Itemasset = () => {
             setItems(res.data.data);
         });
     }, [items]);
+
+    function search(rows) {
+        return rows.filter(
+            (row) =>
+                row.item.toLowerCase().indexOf(value.toLowerCase()) > -1 ||
+                row.kode.toLowerCase().indexOf(value.toLowerCase()) > -1
+        );
+    }
 
     return (
         <div className="itemasset">
@@ -32,21 +40,21 @@ const Itemasset = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {items.map((item, index) => (
-                        <Itemassetlist
-                            key={index}
-                            nomor={index + 1}
-                            kode={item.kode}
-                            item={item.item}
-                            satuan={item.id_satuan}
-                            kategori={item.id_kategori}
-                            tgl={item.tanggal}
-                            status={item.kondisi}
-                            id={item.id}
-                        />
-                    ))}
+                    <Itemassetlist data={search(items)} />
                 </tbody>
             </table>
+            {items.length < 0 || search(items).length ? null : (
+                <p
+                    style={{
+                        textAlign: "center",
+                        padding: "140px 0px 0px 0px",
+                        color: "rgb(202, 200, 200)",
+                        fontSize: "0.9em",
+                    }}
+                >
+                    Data tidak ditemukan
+                </p>
+            )}
         </div>
     );
 };
