@@ -21,7 +21,7 @@ const Listmenu = ({ nama, link, Icon }) => {
         <Link onClick={clickLink} to={link}>
             <div className="listmenu">
                 <Icon className="listmenu__icon" />
-                <a>{nama}</a>
+                <b className="listmenu_nama">{nama}</b>
                 <KeyboardArrowDownIcon className="listmenu_caret" />
             </div>
         </Link>

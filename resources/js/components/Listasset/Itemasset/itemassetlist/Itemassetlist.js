@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./itemassetlist.scss";
 import EditTwoToneIcon from "@material-ui/icons/EditTwoTone";
 import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
-const Itemassetlist = ({ data }) => {
+const Itemassetlist = ({ data, check }) => {
     return (
         <React.Fragment>
             {data.map((item, index) => (
                 <tr key={index}>
-                    <td style={{ paddingLeft: 20 }}>{index+1}</td>
+                    <td style={{ paddingLeft: 20 }}>{index + 1}</td>
                     <td>
-                        <input type="checkbox" name="selectitem" />
+                        <input type="checkbox" name="checkbox" />
                     </td>
                     <td>{item.kode}</td>
                     <td

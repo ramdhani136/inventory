@@ -4,13 +4,19 @@ import { Itemassetlist } from "../..";
 import axios from "axios";
 import { API_URL } from "../../../utils/Utils";
 
-const Itemasset = ({ value }) => {
+const Itemasset = ({ value, filter, allvalue }) => {
     const [items, setItems] = useState([]);
+    const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        axios.get(API_URL + "items").then((res) => {
-            setItems(res.data.data);
-        });
+        if (mounted) {
+            axios.get(API_URL + "items").then((res) => {
+                setItems(res.data.data);
+            });
+        }
+        return () => {
+            setMounted(false);
+        };
     }, [items]);
 
     function search(rows) {

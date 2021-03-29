@@ -75,6 +75,27 @@
                     margin-bottom: 10px;
                     cursor: pointer;
                 }
+                .asset_select {
+                    width: 14%;
+                    position: absolute;
+                    max-height: 200px;
+                    overflow-y: scroll;
+                    height: auto;
+                    background-color: #fff;
+                    border: solid 1px #d6d3d3;
+                    padding-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    h5 {
+                        width: 100%;
+                        height: 20px;
+                        font-size: 1em;
+                        padding-left: 5%;
+                    }
+                    a:hover {
+                        color: #8b8b8b;
+                    }
+                }
             }
         }
         .asset_content_right {
