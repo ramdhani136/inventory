@@ -4,7 +4,7 @@ import EditTwoToneIcon from "@material-ui/icons/EditTwoTone";
 import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
-const Itemassetlist = ({ data, check }) => {
+const Itemassetlist = ({ data }) => {
     return (
         <React.Fragment>
             {data.map((item, index) => (

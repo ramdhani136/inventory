@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { toggleSlider } from "../../../features/mainSlice";
 import "./sidebarmenu.scss";
 
@@ -13,6 +13,7 @@ const Sidebarmenu = ({ Icon, nama, link }) => {
             toggleSlider({
                 slider: false,
                 search: false,
+                searchheader: "",
             })
         );
         history.push(link);

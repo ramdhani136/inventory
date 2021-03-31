@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./itemasset.scss";
 import { Itemassetlist } from "../..";
-import axios from "axios";
 import { API_URL } from "../../../utils/Utils";
 
 const Itemasset = ({ value, filter, allvalue }) => {
     const [items, setItems] = useState([]);
-    const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        if (mounted) {
-            axios.get(API_URL + "items").then((res) => {
-                setItems(res.data.data);
-            });
-        }
+        const control = new AbortController();
+        const getItems = async () => {
+            const api = API_URL + "items";
+            const result = await fetch(api, { signal: control.signal });
+            const getResult = await result.json();
+            setItems(getResult.data);
+        };
+        getItems();
         return () => {
-            setMounted(false);
+            control.abort();
         };
     }, [items]);
 

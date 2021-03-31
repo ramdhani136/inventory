@@ -1,13 +1,28 @@
-.headeritem{
+
+
+.headeritem {
     display: flex;
-    min-height: 42px;
     align-items: center;
     padding-left: 4%;
     color: rgb(77, 76, 76);
+    height: 38px;
+    text-decoration: none;
+   
 }
 
-.headeritem:hover{
+.headeritem:hover {
     background-color: rgb(245, 246, 248);
     border-top: solid 1px #eef0f1;
     border-bottom: solid 1px #eef0f1;
+   text-decoration: none;
+}
+
+
+.headerClik{
+    text-decoration: none;
+     color: rgb(77, 76, 76);
+}
+.headerClik:hover{
+    text-decoration: none;
+     color: rgb(77, 76, 76);
 }

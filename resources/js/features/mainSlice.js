@@ -6,6 +6,7 @@ export const mainSlice = createSlice({
         main: {
             slider: false,
             search: false,
+            searchheader: "",
         },
     },
     reducers: {

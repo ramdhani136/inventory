@@ -24,25 +24,32 @@ const Listasset = () => {
     const [satuan, setSatuan] = useState([]);
     const [value, setValue] = useState(defaultvalue);
     const [filter, setFilter] = useState(defaultfilter);
-    const [mounted, setMounted] = useState(true);
 
     useEffect(() => {
-        if (mounted) {
-            axios
-                .get(API_URL + "kategori")
-                .then((res) => {
-                    setKategories(res.data.data);
-                })
-                .then((res) => {
-                    axios.get(API_URL + "satuan").then((res) => {
-                        setSatuan(res.data.data);
-                    });
-                });
-        }
-        return () => {
-            setMounted(false);
+        const control = new AbortController();
+
+        
+        const getKategories = async () => {
+            const api = API_URL+"kategori";
+            const result = await fetch(api, { signal: control.signal });
+            const getResult = await result.json();
+            setKategories(getResult.data);
         };
-    }, [kategories, satuan]);
+
+        const getSatuan = async () => {
+            const api =  API_URL+"satuan";
+            const result = await fetch(api, { signal: control.signal });
+            const getResult = await result.json();
+            setSatuan(getResult.data);
+        };
+
+        getKategories();
+        getSatuan();
+
+        return () => {
+            control.abort();
+        };
+    }, [kategories, satuan,value ]);
 
     return (
         <div className="asset">

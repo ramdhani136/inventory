@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./header.scss";
 import SearchIcon from "@material-ui/icons/Search";
@@ -15,12 +15,14 @@ const Header = () => {
     const main = useSelector(selectMain);
     const dispatch = useDispatch();
     const history = useHistory();
+    // const [value, Setvalue] = useState(main.searchheader);
 
     const home = () => {
         dispatch(
             toggleSlider({
                 slider: false,
                 search: false,
+                searchheader: "",
             })
         );
         history.push("/");
@@ -30,7 +32,8 @@ const Header = () => {
         dispatch(
             toggleSlider({
                 slider: !main.slider,
-                seacrh: false,
+                search: false,
+                searchheader: "",
             })
         );
     };
@@ -40,9 +43,24 @@ const Header = () => {
             toggleSlider({
                 slider: false,
                 search: !main.search,
+                searchheader: "",
             })
         );
     };
+
+    function search(rows) {
+        return rows.filter((row) => row.nama.toLowerCase().indexOf(main.searchheader.toLowerCase()) > -1);
+    }
+
+    const menuHeader = [
+        { id: "1", nama: "Daftar Asset", link: "/asset" },
+        { id: "2", nama: "Mutasi Asset", link: "/mutasiasset" },
+        { id: "3", nama: "Stock Opname", link: "/stockopname" },
+        { id: "4", nama: "History Asset", link: "/history" },
+        { id: "5", nama: "Laporan Asset", link: "/laporan" },
+        { id: "6", nama: "Kategori Asset", link: "/kategori" },
+        { id: "7", nama: "Data Users", link: "/users" },
+    ];
 
     useEffect(() => {
         const handleEsc = (event) => {
@@ -51,6 +69,7 @@ const Header = () => {
                     toggleSlider({
                         slider: false,
                         search: false,
+                        searchheader: "",
                     })
                 );
             }
@@ -82,6 +101,16 @@ const Header = () => {
                         <input
                             onClick={inputSeacrh}
                             placeholder="Search or Type a command"
+                            onChange={(e) =>
+                                dispatch(
+                                    toggleSlider({
+                                        slider: false,
+                                        search: true,
+                                        searchheader: e.target.value,
+                                    })
+                                )
+                            }
+                            value={main.searchheader}
                         />
                         <SearchIcon className="header_seacrhicon" />
                     </div>
@@ -92,12 +121,7 @@ const Header = () => {
                                 : "header__search_item header__item__close"
                         }
                     >
-                        <Headeritem nama="Daftar Asset" />
-                        <Headeritem nama="Mutasi Asset" />
-                        <Headeritem nama="Stock Opname" />
-                        <Headeritem nama="History Asset" />
-                        <Headeritem nama="Laporan Asset" />
-                        <Headeritem nama="Data Users" />
+                        <Headeritem data={search(menuHeader)} />
                     </div>
                 </div>
 

@@ -13,6 +13,7 @@ const Listmenu = ({ nama, link, Icon }) => {
             toggleSlider({
                 slider: false,
                 search: false,
+                searchheader: "",
             })
         );
     };
