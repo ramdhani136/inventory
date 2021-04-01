@@ -1,3 +1,13 @@
+.item_select {
+    background-color: #fffdf4;
+    border-bottom: solid 1px #faf5dd;
+}
+
+// .item_select:hover {
+//     background-color: #fffdf4;
+//     border-bottom: solid 1px #faf5dd;
+// }
+
 tr {
     border-bottom: solid 1px #e1e4e7;
     height: 40px;
@@ -18,7 +28,7 @@ tr {
     }
 }
 
-tr:hover{
+tr:hover {
     background-color: #f0f2f5;
     border-bottom: solid 1px #dededf;
 }

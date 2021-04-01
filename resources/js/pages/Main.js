@@ -25,6 +25,7 @@ function Main() {
                     <Switch>
                         <Route path="/" component={Home} exact={true} />
                         <Route path="/asset" component={Listasset} />
+                        <Route path="/form/asset" component={About} />
                         <Route path="/users" component={Users} />
                     </Switch>
                     <Footer />

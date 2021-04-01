@@ -12,13 +12,21 @@ const Itemasset = ({ value, filter, allvalue }) => {
             const api = API_URL + "items";
             const result = await fetch(api, { signal: control.signal });
             const getResult = await result.json();
-            setItems(getResult.data);
+            setItems(
+                getResult.data.map((item) => {
+                    return {
+                        select: false,
+                        ...item,
+                    };
+                })
+            );
         };
+
         getItems();
         return () => {
             control.abort();
         };
-    }, [items]);
+    }, []);
 
     function search(rows) {
         return rows.filter(
@@ -35,7 +43,19 @@ const Itemasset = ({ value, filter, allvalue }) => {
                     <tr>
                         <th style={{ paddingLeft: 20 }}>No</th>
                         <th>
-                            <input type="checkbox" name="selectitem" />
+                            <input
+                                type="checkbox"
+                                name="selectitem"
+                                onChange={(e) => {
+                                    let checked = e.target.checked;
+                                    setItems(
+                                        items.map((item) => {
+                                            item.select = checked;
+                                            return item;
+                                        })
+                                    );
+                                }}
+                            />
                         </th>
                         <th>Kode Asset</th>
                         <th>Item</th>

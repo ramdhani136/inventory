@@ -1,17 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./itemassetlist.scss";
-import EditTwoToneIcon from "@material-ui/icons/EditTwoTone";
 import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 const Itemassetlist = ({ data }) => {
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        setItems(data);
+    }, [data,items]);
+
     return (
         <React.Fragment>
-            {data.map((item, index) => (
-                <tr key={index}>
+            {items.map((item, index) => (
+                <tr className={item.select ? "item_select" : null} key={index}>
                     <td style={{ paddingLeft: 20 }}>{index + 1}</td>
                     <td>
-                        <input type="checkbox" name="checkbox" />
+                        <input
+                            onChange={(event) => {
+                                let checked = event.target.checked;
+                                setItems(
+                                    items.map((d) => {
+                                        if (item.id === d.id) {
+                                            d.select = checked;
+                                        }
+                                        return d;
+                                    })
+                                );
+                            }}
+                            type="checkbox"
+                            name="checkbox"
+                            checked={item.select}
+                        />
                     </td>
                     <td>{item.kode}</td>
                     <td
@@ -41,8 +61,6 @@ const Itemassetlist = ({ data }) => {
                             color: "rgb(131, 130, 130)",
                         }}
                     >
-                        <EditTwoToneIcon style={{ fontSize: 19 }} />
-                        &nbsp;
                         <DeleteForeverTwoToneIcon style={{ fontSize: 19 }} />
                     </td>
                 </tr>

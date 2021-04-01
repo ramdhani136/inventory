@@ -26,30 +26,45 @@ const Listasset = () => {
     const [filter, setFilter] = useState(defaultfilter);
 
     useEffect(() => {
-        const control = new AbortController();
-
-        
-        const getKategories = async () => {
-            const api = API_URL+"kategori";
-            const result = await fetch(api, { signal: control.signal });
-            const getResult = await result.json();
-            setKategories(getResult.data);
-        };
+        const controlSatuan = new AbortController();
+        const controlCategories = new AbortController();
 
         const getSatuan = async () => {
-            const api =  API_URL+"satuan";
-            const result = await fetch(api, { signal: control.signal });
-            const getResult = await result.json();
-            setSatuan(getResult.data);
+            try {
+                const api = API_URL + "satuan";
+                const resultSatuan = await fetch(api, { signal: controlSatuan.signal });
+                const getSatuan = await resultSatuan.json();
+                setSatuan(getSatuan.data);
+            } catch (error) {
+                if (error.name === "AbortError") {
+                    return null;
+                } else {
+                    throw error;
+                }
+            }
         };
-
+        const getKategories = async () => {
+            try {
+                const api = API_URL + "kategori";
+                const resultCategories = await fetch(api, { signal: controlCategories.signal });
+                const getCategories = await resultCategories.json();
+                setKategories(getCategories.data);
+            } catch (error) {
+                if (error.name === "AbortError") {
+                    return null;
+                } else {
+                    throw error;
+                }
+            }
+        };
         getKategories();
         getSatuan();
 
         return () => {
-            control.abort();
+            controlSatuan.abort();
+            controlCategories.abort();
         };
-    }, [kategories, satuan,value ]);
+    }, [kategories, satuan, value]);
 
     return (
         <div className="asset">
