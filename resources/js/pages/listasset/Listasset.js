@@ -3,6 +3,7 @@ import { Itemasset } from "../../components";
 import "./listasset.scss";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import { API_URL } from "../../utils/Utils";
+import { useHistory } from "react-router";
 
 const Listasset = () => {
     const defaultfilter = {
@@ -18,6 +19,8 @@ const Listasset = () => {
         kondisi: "",
         users: {},
     };
+
+    const history= useHistory();
 
     const [search, setSearch] = useState("");
     const [kategories, setKategories] = useState([]);
@@ -77,7 +80,7 @@ const Listasset = () => {
                         placeholder="Pencarian data .."
                         onChange={(e) => setSearch(e.target.value)}
                     ></input>
-                    <button className="btn-purple">Input Asset</button>
+                    <button onClick={()=>history.push('/form/asset')} className="btn-purple">Input Asset</button>
                 </div>
             </div>
             <div className="asset_content">

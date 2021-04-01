@@ -6,6 +6,7 @@ import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
 import Sidebar from "./Sidebar/Sidebar";
 import Sidebarmenu from "./Sidebar/SidebarMenu/Sidebarmenu";
+import TitleComponent from "./template/TitleComponent/TitleComponent";
 
 export {
     Header,
@@ -15,7 +16,9 @@ export {
     Footer,
     Headeritem,
     Itemasset,
-    Itemassetlist
+    Itemassetlist,
+    TitleComponent
 };
+
 
 

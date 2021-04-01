@@ -56,6 +56,7 @@ const Header = () => {
         { id: "1", nama: "Daftar Asset", link: "/asset" },
         { id: "2", nama: "Mutasi Asset", link: "/mutasiasset" },
         { id: "3", nama: "Stock Opname", link: "/stockopname" },
+        { id: "3", nama: "Input Asset", link: "/form/asset" },
         { id: "4", nama: "History Asset", link: "/history" },
         { id: "5", nama: "Laporan Asset", link: "/laporan" },
         { id: "6", nama: "Kategori Asset", link: "/kategori" },
