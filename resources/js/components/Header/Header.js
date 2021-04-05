@@ -87,7 +87,7 @@ const Header = () => {
         <div className="header">
             <div className="header__logo">
                 <img
-                    src="http://54.251.208.55/assets/erpnext/images/erp-icon.svg"
+                    src="http://etm.digitalasiasolusindo.com/assets/erpnext/images/erp-icon.svg"
                     onClick={home}
                 />
             </div>
