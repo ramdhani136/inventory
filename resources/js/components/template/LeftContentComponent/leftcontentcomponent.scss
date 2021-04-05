@@ -1,0 +1,42 @@
+.leftContent {
+    flex: 0.209;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    b {
+        margin-bottom: 5px;
+        color: #666;
+        font-size: 0.7em;
+    }
+    .leftvalue {
+        margin-left: 38%;
+        a {
+            font-size: 0.82em;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .leftContent_list {
+            width: 14%;
+            position: absolute;
+            max-height: 200px;
+            overflow-y: scroll;
+            height: auto;
+            background-color: #fff;
+            border: solid 1px #d6d3d3;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            h5 {
+                width: 100%;
+                height: 20px;
+                font-size: 0.8em;
+                padding-left: 5%;
+                cursor: pointer;
+            }
+            h5:hover{
+                color: #8b8b8b;
+            }
+        }
+    }
+}

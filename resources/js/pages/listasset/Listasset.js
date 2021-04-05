@@ -109,7 +109,6 @@ const Listasset = () => {
                                             setFilter(defaultfilter);
                                         }}
                                     >
-                                        {" "}
                                         Semua Kategori
                                     </h5>
                                     {kategories.map((item, index) => (

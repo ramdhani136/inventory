@@ -6,7 +6,10 @@ import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
 import Sidebar from "./Sidebar/Sidebar";
 import Sidebarmenu from "./Sidebar/SidebarMenu/Sidebarmenu";
+import CenterContentComponent from "./template/CenterContentComponent/CenterContentComponent";
+import LeftContentComponent from "./template/LeftContentComponent/LeftContentComponent";
 import TitleComponent from "./template/TitleComponent/TitleComponent";
+import Wrapper from "./template/Wrapper";
 
 export {
     Header,
@@ -17,8 +20,10 @@ export {
     Headeritem,
     Itemasset,
     Itemassetlist,
-    TitleComponent
+    TitleComponent,
+    LeftContentComponent,
+    CenterContentComponent,
+    Wrapper
+    
 };
-
-
 
