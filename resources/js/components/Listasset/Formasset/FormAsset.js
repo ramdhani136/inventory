@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { now } from "jquery";
+import React, { useEffect, useRef, useState } from "react";
 import { Formautofill } from "../..";
 import { API_URL } from "../../../utils/Utils";
 import "./formasset.scss";
@@ -8,13 +9,12 @@ const FormAsset = () => {
     const [satuan, setSatuan] = useState([]);
     const [kategori, setKategori] = useState([]);
 
+    const namaRef = useRef();
 
     const merk = [
         { id: 1, nama: "LG" },
         { id: 2, nama: "Acer" },
     ];
-
-
 
     useEffect(() => {
         const controlSatuan = new AbortController();
@@ -58,7 +58,7 @@ const FormAsset = () => {
             controlSatuan.abort();
             controlCategories.abort();
         };
-    }, [satuan,kategori]);
+    }, [satuan, kategori]);
 
     function handleSatuan(e) {
         setValue({ ...value, satuan: e.id });
@@ -128,6 +128,7 @@ const FormAsset = () => {
                         <div className="formasset_input">
                             <label>Nama</label>
                             <input
+                                ref={namaRef}
                                 onChange={(e) =>
                                     setValue({ ...value, nama: e.target.value })
                                 }

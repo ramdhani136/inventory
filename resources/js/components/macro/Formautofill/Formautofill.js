@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Formautofill.scss";
 
-const Formautofill = ({ data,handle }) => {
+const Formautofill = ({ data, handle }) => {
     const [value, setValue] = useState({});
     const [toggle, setToggle] = useState(false);
-    const [select, setSelect] = useState([]);
 
     const seacrinput = (e) => {
         setValue({ nama: e });
     };
+    
 
     return (
         <React.Fragment>
@@ -29,7 +29,7 @@ const Formautofill = ({ data,handle }) => {
                                 onClick={() => {
                                     setValue(list);
                                     setToggle(false);
-                                    handle(list)
+                                    handle(list);
                                 }}
                             >
                                 {list.nama}
