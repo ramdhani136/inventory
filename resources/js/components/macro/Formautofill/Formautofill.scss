@@ -1,0 +1,50 @@
+.formautofill {
+    .formautofill_input {
+        border: solid 1px rgb(202, 203, 204);
+        background-color: #fff;
+        height: 40px;
+        input {
+            height: 32px;
+            font-size: 0.9em;
+            color: rgb(92, 92, 92);
+            width: 99%;
+            z-index: 2;
+            margin-top:3px;
+            margin-left: 0.5%;
+        }
+    }
+
+    .formautofill_option {
+        position: relative;
+        border: solid 1px rgb(202, 203, 204);
+        max-height: 200px;
+        height: auto;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        border-top: none;
+
+        a {
+            padding: 9px 0px 9px 3%;
+            font-size: 0.85em;
+            cursor: pointer;
+            color: rgb(99, 97, 97);
+        }
+        a:hover {
+            background-color: rgb(246, 247, 251);
+            border-top: solid 1px rgb(235, 235, 235);
+            border-bottom: solid 1px rgb(235, 235, 235);
+            color: rgb(99, 97, 97);
+        }
+        .select {
+            background-color: rgb(246, 247, 251);
+            border-top: solid 1px rgb(235, 235, 235);
+            border-bottom: solid 1px rgb(235, 235, 235);
+            color: rgb(99, 97, 97);
+            text-decoration: none;
+            font-style: none;
+        }
+    }
+}

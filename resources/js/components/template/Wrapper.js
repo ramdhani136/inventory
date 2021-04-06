@@ -1,11 +1,11 @@
 import React from "react";
 import { CenterContentComponent, LeftContentComponent } from "..";
 
-const Wrapper = () => {
+const Wrapper = ({type}) => {
     return (
         <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
             <LeftContentComponent />
-            <CenterContentComponent />
+            <CenterContentComponent type={type} />
         </div>
     );
 };

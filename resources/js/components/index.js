@@ -2,8 +2,10 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import Headeritem from "./Header/HeaderItem/Headeritem";
 import Listmenu from "./Home/Listmenu/Listmenu";
+import FormAsset from "./Listasset/Formasset/FormAsset";
 import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
+import Formautofill from "./macro/Formautofill/Formautofill";
 import Sidebar from "./Sidebar/Sidebar";
 import Sidebarmenu from "./Sidebar/SidebarMenu/Sidebarmenu";
 import CenterContentComponent from "./template/CenterContentComponent/CenterContentComponent";
@@ -23,7 +25,8 @@ export {
     TitleComponent,
     LeftContentComponent,
     CenterContentComponent,
-    Wrapper
-    
+    Wrapper,
+    FormAsset,
+    Formautofill
 };
 

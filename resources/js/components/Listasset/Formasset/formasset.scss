@@ -1,0 +1,60 @@
+.formasset {
+    nav {
+        height: 40px;
+        background-color: #f7fafc;
+        border-bottom: solid 1px rgb(202, 203, 204);
+    }
+    .formasset_wrapper {
+        margin-top: 20px;
+        width: 92%;
+        margin-left: 4%;
+        display: flex;
+        justify-content: space-between;
+        .formasset_form {
+            flex: 0.48;
+            display: flex;
+            flex-direction: column;
+            .formasset_input {
+                height: 40px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                label {
+                    font-size: 0.9em;
+                    color: rgb(141, 141, 143);
+                }
+                input {
+                    border: solid 1px rgb(202, 203, 204);
+                    border-radius: 5px;
+                    height: 32px;
+                    font-size: 0.9em;
+                    color: rgb(92, 92, 92);
+                    padding-left: 2%;
+                    outline-color: #757afd;
+                }
+                .wajib{
+                    border:solid 1px red;
+                }
+                select {
+                    border: solid 1px rgb(202, 203, 204);
+                    border-radius: 5px;
+                    height: 32px;
+                    font-size: 0.9em;
+                    color: rgb(92, 92, 92);
+                    padding-left: 2%;
+                    outline-color: #757afd;
+                }
+                textarea {
+                    border: solid 1px rgb(202, 203, 204);
+                    border-radius: 5px;
+                    font-size: 0.9em;
+                    color: rgb(92, 92, 92);
+                    padding-left: 2%;
+                    outline-color: #757afd;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
