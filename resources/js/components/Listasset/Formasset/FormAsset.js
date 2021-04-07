@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
-import { Formautofill, Input } from "../..";
+import { Formautofill, Input, SelectOption, Textarea } from "../..";
 import { API_URL, Datenow, Setnomor } from "../../../utils/Utils";
 import "./formasset.scss";
 
@@ -117,6 +117,18 @@ const FormAsset = () => {
         setValue({ ...value, tgl_garansi: e });
     }
 
+    function handleGaransi(e) {
+        setValue({ ...value, garansi: e });
+    }
+
+    function handleCatatan(e) {
+        setValue({ ...value, keterangan: e });
+    }
+
+    function handleKondisi(e) {
+        setValue({ ...value, kondisi: e });
+    }
+
     const kode = () => {
         const filterItem = items.filter(
             (item) => item.id_kategori === dataKategori.id
@@ -190,20 +202,11 @@ const FormAsset = () => {
                             }}
                             handle={handleType}
                         />
-                        <div className="formasset_input">
-                            <label>Kondisi</label>
-                            <select
-                                onChange={(e) =>
-                                    setValue({
-                                        ...value,
-                                        kondisi: e.target.value,
-                                    })
-                                }
-                            >
-                                <option>Baik</option>
-                                <option>Buruk</option>
-                            </select>
-                        </div>
+                        <SelectOption
+                            nama="Kondisi"
+                            data={[{ status: "Baik" }, { status: "Buruk" }]}
+                            handle={handleKondisi}
+                        />
                         <Input
                             value={{
                                 nama: "PIC",
@@ -212,17 +215,7 @@ const FormAsset = () => {
                                 value: "Gudang",
                             }}
                         />
-                        <div className="formasset_input">
-                            <label>Catatan</label>
-                            <textarea
-                                onChange={(e) =>
-                                    setValue({
-                                        ...value,
-                                        keterangan: e.target.value,
-                                    })
-                                }
-                            ></textarea>
-                        </div>
+                        <Textarea nama="Catatan" handle={handleCatatan} />
                     </div>
                     <div className="formasset_form">
                         <Input
@@ -265,17 +258,10 @@ const FormAsset = () => {
                             }}
                             handle={handleTglGaransi}
                         />
-                        <div className="formasset_input">
-                            <label>Keterangan Garansi</label>
-                            <textarea
-                                onChange={(e) =>
-                                    setValue({
-                                        ...value,
-                                        garansi: e.target.value,
-                                    })
-                                }
-                            ></textarea>
-                        </div>
+                        <Textarea
+                            nama="Keterangan Garansi"
+                            handle={handleGaransi}
+                        />
                     </div>
                 </div>
             </div>

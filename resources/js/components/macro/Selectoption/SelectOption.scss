@@ -1,0 +1,24 @@
+.selectoption {
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    label {
+        font-size: 0.9em;
+        color: rgb(141, 141, 143);
+    }
+    .wajib {
+        background-color: rgb(255, 245, 245);
+    }
+    select {
+        border: solid 1px rgb(202, 203, 204);
+        border-radius: 5px;
+        height: 32px;
+        font-size: 0.9em;
+        color: black;
+        padding-left: 2%;
+        outline-color: #757afd;
+        font-weight: bold;
+    }
+}

@@ -11528,6 +11528,24 @@ var FormAsset = function FormAsset() {
     }));
   }
 
+  function handleGaransi(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      garansi: e
+    }));
+  }
+
+  function handleCatatan(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      keterangan: e
+    }));
+  }
+
+  function handleKondisi(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      kondisi: e
+    }));
+  }
+
   var kode = function kode() {
     var filterItem = items.filter(function (item) {
       return item.id_kategori === dataKategori.id;
@@ -11597,22 +11615,14 @@ var FormAsset = function FormAsset() {
               type: "text"
             },
             handle: handleType
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "formasset_input",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-              children: "Kondisi"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("select", {
-              onChange: function onChange(e) {
-                return setValue(_objectSpread(_objectSpread({}, value), {}, {
-                  kondisi: e.target.value
-                }));
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-                children: "Baik"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("option", {
-                children: "Buruk"
-              })]
-            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.SelectOption, {
+            nama: "Kondisi",
+            data: [{
+              status: "Baik"
+            }, {
+              status: "Buruk"
+            }],
+            handle: handleKondisi
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Input, {
             value: {
               nama: "PIC",
@@ -11620,17 +11630,9 @@ var FormAsset = function FormAsset() {
               type: "text",
               value: "Gudang"
             }
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "formasset_input",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-              children: "Catatan"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("textarea", {
-              onChange: function onChange(e) {
-                return setValue(_objectSpread(_objectSpread({}, value), {}, {
-                  keterangan: e.target.value
-                }));
-              }
-            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Textarea, {
+            nama: "Catatan",
+            handle: handleCatatan
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "formasset_form",
@@ -11668,17 +11670,9 @@ var FormAsset = function FormAsset() {
               type: "date"
             },
             handle: handleTglGaransi
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-            className: "formasset_input",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
-              children: "Keterangan Garansi"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("textarea", {
-              onChange: function onChange(e) {
-                return setValue(_objectSpread(_objectSpread({}, value), {}, {
-                  garansi: e.target.value
-                }));
-              }
-            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Textarea, {
+            nama: "Keterangan Garansi",
+            handle: handleGaransi
           })]
         })]
       })]
@@ -12148,19 +12142,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Header": () => (/* reexport safe */ _Header_Header__WEBPACK_IMPORTED_MODULE_1__.default),
 /* harmony export */   "Listmenu": () => (/* reexport safe */ _Home_Listmenu_Listmenu__WEBPACK_IMPORTED_MODULE_3__.default),
-/* harmony export */   "Sidebar": () => (/* reexport safe */ _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__.default),
-/* harmony export */   "Sidebarmenu": () => (/* reexport safe */ _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_10__.default),
+/* harmony export */   "Sidebar": () => (/* reexport safe */ _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_11__.default),
+/* harmony export */   "Sidebarmenu": () => (/* reexport safe */ _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_12__.default),
 /* harmony export */   "Footer": () => (/* reexport safe */ _Footer_Footer__WEBPACK_IMPORTED_MODULE_0__.default),
 /* harmony export */   "Headeritem": () => (/* reexport safe */ _Header_HeaderItem_Headeritem__WEBPACK_IMPORTED_MODULE_2__.default),
 /* harmony export */   "Itemasset": () => (/* reexport safe */ _Listasset_Itemasset_Itemasset__WEBPACK_IMPORTED_MODULE_5__.default),
 /* harmony export */   "Itemassetlist": () => (/* reexport safe */ _Listasset_Itemasset_itemassetlist_Itemassetlist__WEBPACK_IMPORTED_MODULE_6__.default),
-/* harmony export */   "TitleComponent": () => (/* reexport safe */ _template_TitleComponent_TitleComponent__WEBPACK_IMPORTED_MODULE_13__.default),
-/* harmony export */   "LeftContentComponent": () => (/* reexport safe */ _template_LeftContentComponent_LeftContentComponent__WEBPACK_IMPORTED_MODULE_12__.default),
-/* harmony export */   "CenterContentComponent": () => (/* reexport safe */ _template_CenterContentComponent_CenterContentComponent__WEBPACK_IMPORTED_MODULE_11__.default),
-/* harmony export */   "Wrapper": () => (/* reexport safe */ _template_Wrapper__WEBPACK_IMPORTED_MODULE_14__.default),
+/* harmony export */   "TitleComponent": () => (/* reexport safe */ _template_TitleComponent_TitleComponent__WEBPACK_IMPORTED_MODULE_15__.default),
+/* harmony export */   "LeftContentComponent": () => (/* reexport safe */ _template_LeftContentComponent_LeftContentComponent__WEBPACK_IMPORTED_MODULE_14__.default),
+/* harmony export */   "CenterContentComponent": () => (/* reexport safe */ _template_CenterContentComponent_CenterContentComponent__WEBPACK_IMPORTED_MODULE_13__.default),
+/* harmony export */   "Wrapper": () => (/* reexport safe */ _template_Wrapper__WEBPACK_IMPORTED_MODULE_16__.default),
 /* harmony export */   "FormAsset": () => (/* reexport safe */ _Listasset_Formasset_FormAsset__WEBPACK_IMPORTED_MODULE_4__.default),
 /* harmony export */   "Formautofill": () => (/* reexport safe */ _macro_Formautofill_Formautofill__WEBPACK_IMPORTED_MODULE_7__.default),
-/* harmony export */   "Input": () => (/* reexport safe */ _macro_Input_Input__WEBPACK_IMPORTED_MODULE_8__.default)
+/* harmony export */   "Input": () => (/* reexport safe */ _macro_Input_Input__WEBPACK_IMPORTED_MODULE_8__.default),
+/* harmony export */   "Textarea": () => (/* reexport safe */ _macro_Textarea_Textarea__WEBPACK_IMPORTED_MODULE_10__.default),
+/* harmony export */   "SelectOption": () => (/* reexport safe */ _macro_Selectoption_SelectOption__WEBPACK_IMPORTED_MODULE_9__.default)
 /* harmony export */ });
 /* harmony import */ var _Footer_Footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer/Footer */ "./resources/js/components/Footer/Footer.js");
 /* harmony import */ var _Header_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header/Header */ "./resources/js/components/Header/Header.js");
@@ -12171,12 +12167,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Listasset_Itemasset_itemassetlist_Itemassetlist__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Listasset/Itemasset/itemassetlist/Itemassetlist */ "./resources/js/components/Listasset/Itemasset/itemassetlist/Itemassetlist.js");
 /* harmony import */ var _macro_Formautofill_Formautofill__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./macro/Formautofill/Formautofill */ "./resources/js/components/macro/Formautofill/Formautofill.js");
 /* harmony import */ var _macro_Input_Input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./macro/Input/Input */ "./resources/js/components/macro/Input/Input.js");
-/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/Sidebar/Sidebar.js");
-/* harmony import */ var _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Sidebar/SidebarMenu/Sidebarmenu */ "./resources/js/components/Sidebar/SidebarMenu/Sidebarmenu.js");
-/* harmony import */ var _template_CenterContentComponent_CenterContentComponent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./template/CenterContentComponent/CenterContentComponent */ "./resources/js/components/template/CenterContentComponent/CenterContentComponent.js");
-/* harmony import */ var _template_LeftContentComponent_LeftContentComponent__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./template/LeftContentComponent/LeftContentComponent */ "./resources/js/components/template/LeftContentComponent/LeftContentComponent.js");
-/* harmony import */ var _template_TitleComponent_TitleComponent__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./template/TitleComponent/TitleComponent */ "./resources/js/components/template/TitleComponent/TitleComponent.js");
-/* harmony import */ var _template_Wrapper__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template/Wrapper */ "./resources/js/components/template/Wrapper.js");
+/* harmony import */ var _macro_Selectoption_SelectOption__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./macro/Selectoption/SelectOption */ "./resources/js/components/macro/Selectoption/SelectOption.js");
+/* harmony import */ var _macro_Textarea_Textarea__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./macro/Textarea/Textarea */ "./resources/js/components/macro/Textarea/Textarea.js");
+/* harmony import */ var _Sidebar_Sidebar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Sidebar/Sidebar */ "./resources/js/components/Sidebar/Sidebar.js");
+/* harmony import */ var _Sidebar_SidebarMenu_Sidebarmenu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Sidebar/SidebarMenu/Sidebarmenu */ "./resources/js/components/Sidebar/SidebarMenu/Sidebarmenu.js");
+/* harmony import */ var _template_CenterContentComponent_CenterContentComponent__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./template/CenterContentComponent/CenterContentComponent */ "./resources/js/components/template/CenterContentComponent/CenterContentComponent.js");
+/* harmony import */ var _template_LeftContentComponent_LeftContentComponent__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./template/LeftContentComponent/LeftContentComponent */ "./resources/js/components/template/LeftContentComponent/LeftContentComponent.js");
+/* harmony import */ var _template_TitleComponent_TitleComponent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./template/TitleComponent/TitleComponent */ "./resources/js/components/template/TitleComponent/TitleComponent.js");
+/* harmony import */ var _template_Wrapper__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./template/Wrapper */ "./resources/js/components/template/Wrapper.js");
+
+
 
 
 
@@ -12339,6 +12339,90 @@ var Input = function Input(_ref) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Input);
+
+/***/ }),
+
+/***/ "./resources/js/components/macro/Selectoption/SelectOption.js":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/macro/Selectoption/SelectOption.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _SelectOption_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectOption.scss */ "./resources/js/components/macro/Selectoption/SelectOption.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var SelectOption = function SelectOption(_ref) {
+  var nama = _ref.nama,
+      data = _ref.data,
+      handle = _ref.handle;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    className: "selectoption",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+      children: nama
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("select", {
+      onChange: function onChange(e) {
+        return handle(e.target.value);
+      },
+      children: data.map(function (item, index) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+          children: item.status
+        }, index);
+      })
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SelectOption);
+
+/***/ }),
+
+/***/ "./resources/js/components/macro/Textarea/Textarea.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/macro/Textarea/Textarea.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Textarea_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Textarea.scss */ "./resources/js/components/macro/Textarea/Textarea.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var Textarea = function Textarea(_ref) {
+  var nama = _ref.nama,
+      handle = _ref.handle;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "textarea",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+        children: nama
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
+        onChange: function onChange(e) {
+          return handle(e.target.value);
+        }
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Textarea);
 
 /***/ }),
 
@@ -17950,7 +18034,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".formasset nav {\n  height: 40px;\n  background-color: #f7fafc;\n  border-bottom: solid 1px #cacbcc;\n}\n.formasset .formasset_wrapper {\n  margin-top: 20px;\n  width: 92%;\n  margin-left: 4%;\n  display: flex;\n  justify-content: space-between;\n}\n.formasset .formasset_wrapper .formasset_form {\n  flex: 0.48;\n  display: flex;\n  flex-direction: column;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input input {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  font-weight: bold;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input .wajib {\n  background-color: #fff5f5;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input select {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  font-weight: bold;\n}\n.formasset .formasset_wrapper .formasset_form .formasset_input textarea {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  height: 80px;\n  font-weight: bold;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".formasset nav {\n  height: 40px;\n  background-color: #f7fafc;\n  border-bottom: solid 1px #cacbcc;\n}\n.formasset .formasset_wrapper {\n  margin-top: 20px;\n  width: 92%;\n  margin-left: 4%;\n  display: flex;\n  justify-content: space-between;\n}\n.formasset .formasset_wrapper .formasset_form {\n  flex: 0.48;\n  display: flex;\n  flex-direction: column;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18095,6 +18179,54 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".input {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.input label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.input input {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  font-weight: bold;\n}\n.input .wajib {\n  background-color: #fff5f5;\n}\n.input select {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  font-weight: bold;\n}\n.input textarea {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  height: 80px;\n  font-weight: bold;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Selectoption/SelectOption.scss":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Selectoption/SelectOption.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".selectoption {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.selectoption label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.selectoption .wajib {\n  background-color: #fff5f5;\n}\n.selectoption select {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  font-weight: bold;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Textarea/Textarea.scss":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Textarea/Textarea.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".textarea {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.textarea label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.textarea .wajib {\n  background-color: #fff5f5;\n}\n.textarea textarea {\n  border: solid 1px #cacbcc;\n  border-radius: 5px;\n  font-size: 0.9em;\n  color: black;\n  padding-left: 2%;\n  outline-color: #757afd;\n  height: 80px;\n  font-weight: bold;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -89987,6 +90119,66 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_Input_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/macro/Selectoption/SelectOption.scss":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/macro/Selectoption/SelectOption.scss ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SelectOption_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./SelectOption.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Selectoption/SelectOption.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SelectOption_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_SelectOption_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/macro/Textarea/Textarea.scss":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/macro/Textarea/Textarea.scss ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_Textarea_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./Textarea.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[7].oneOf[1].use[3]!./resources/js/components/macro/Textarea/Textarea.scss");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_Textarea_scss__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_2_node_modules_sass_loader_dist_cjs_js_ruleSet_1_rules_7_oneOf_1_use_3_Textarea_scss__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 

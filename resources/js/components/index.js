@@ -7,6 +7,8 @@ import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
 import Formautofill from "./macro/Formautofill/Formautofill";
 import Input from "./macro/Input/Input";
+import SelectOption from "./macro/Selectoption/SelectOption";
+import Textarea from "./macro/Textarea/Textarea";
 import Sidebar from "./Sidebar/Sidebar";
 import Sidebarmenu from "./Sidebar/SidebarMenu/Sidebarmenu";
 import CenterContentComponent from "./template/CenterContentComponent/CenterContentComponent";
@@ -30,4 +32,6 @@ export {
     FormAsset,
     Formautofill,
     Input,
+    Textarea,
+    SelectOption
 };
