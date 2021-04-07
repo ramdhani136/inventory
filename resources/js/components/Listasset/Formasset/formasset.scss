@@ -29,30 +29,33 @@
                     border-radius: 5px;
                     height: 32px;
                     font-size: 0.9em;
-                    color: rgb(92, 92, 92);
+                    color:black;
                     padding-left: 2%;
                     outline-color: #757afd;
+                    font-weight: bold;
                 }
                 .wajib{
-                    border:solid 1px red;
+                    background-color:rgb(255, 245, 245);
                 }
                 select {
                     border: solid 1px rgb(202, 203, 204);
                     border-radius: 5px;
                     height: 32px;
                     font-size: 0.9em;
-                    color: rgb(92, 92, 92);
+                    color: black;
                     padding-left: 2%;
                     outline-color: #757afd;
+                    font-weight: bold;
                 }
                 textarea {
                     border: solid 1px rgb(202, 203, 204);
                     border-radius: 5px;
                     font-size: 0.9em;
-                    color: rgb(92, 92, 92);
+                    color: black;
                     padding-left: 2%;
                     outline-color: #757afd;
                     height: 80px;
+                    font-weight: bold;
                 }
             }
         }

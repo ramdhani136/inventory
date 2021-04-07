@@ -17,7 +17,7 @@ class ItemsController extends Controller
      */
     public function index()
     {
-        return ItemsResource::collection(Items::where('status', '1')->orderBy('kode', 'ASC')->get());
+        return ItemsResource::collection(Items::where('status', '1')->orderBy('id', 'ASC')->get());
     }
 
     /**

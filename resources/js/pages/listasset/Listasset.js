@@ -20,7 +20,7 @@ const Listasset = () => {
         users: {},
     };
 
-    const history= useHistory();
+    const history = useHistory();
 
     const [search, setSearch] = useState("");
     const [kategories, setKategories] = useState([]);
@@ -29,27 +29,14 @@ const Listasset = () => {
     const [filter, setFilter] = useState(defaultfilter);
 
     useEffect(() => {
-        const controlSatuan = new AbortController();
         const controlCategories = new AbortController();
 
-        const getSatuan = async () => {
-            try {
-                const api = API_URL + "satuan";
-                const resultSatuan = await fetch(api, { signal: controlSatuan.signal });
-                const getSatuan = await resultSatuan.json();
-                setSatuan(getSatuan.data);
-            } catch (error) {
-                if (error.name === "AbortError") {
-                    return null;
-                } else {
-                    throw error;
-                }
-            }
-        };
         const getKategories = async () => {
             try {
                 const api = API_URL + "kategori";
-                const resultCategories = await fetch(api, { signal: controlCategories.signal });
+                const resultCategories = await fetch(api, {
+                    signal: controlCategories.signal,
+                });
                 const getCategories = await resultCategories.json();
                 setKategories(getCategories.data);
             } catch (error) {
@@ -61,13 +48,34 @@ const Listasset = () => {
             }
         };
         getKategories();
-        getSatuan();
-
         return () => {
-            controlSatuan.abort();
             controlCategories.abort();
         };
-    }, [kategories, satuan, value]);
+    }, [kategories, value]);
+
+    useEffect(() => {
+        const controlSatuan = new AbortController();
+        const getSatuan = async () => {
+            try {
+                const api = API_URL + "satuan";
+                const resultSatuan = await fetch(api, {
+                    signal: controlSatuan.signal,
+                });
+                const getSatuan = await resultSatuan.json();
+                setSatuan(getSatuan.data);
+            } catch (error) {
+                if (error.name === "AbortError") {
+                    return null;
+                } else {
+                    throw error;
+                }
+            }
+        };
+        getSatuan();
+        return () => {
+            controlSatuan.abort();
+        };
+    }, [satuan]);
 
     return (
         <div className="asset">
@@ -80,7 +88,12 @@ const Listasset = () => {
                         placeholder="Pencarian data .."
                         onChange={(e) => setSearch(e.target.value)}
                     ></input>
-                    <button onClick={()=>history.push('/form/asset')} className="btn-purple">Input Asset</button>
+                    <button
+                        onClick={() => history.push("/form/asset")}
+                        className="btn-purple"
+                    >
+                        Input Asset
+                    </button>
                 </div>
             </div>
             <div className="asset_content">

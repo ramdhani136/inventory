@@ -14,6 +14,7 @@
         }
     }
 
+   
     .formautofill_option {
         position: relative;
         border: solid 1px rgb(202, 203, 204);
@@ -25,6 +26,10 @@
         flex-direction: column;
         overflow-y: scroll;
         border-top: none;
+        .wajib{
+            background-color:rgb(255, 245, 245);
+            border:solid 1px rgb(255, 107, 107);
+        }
 
         a {
             padding: 9px 0px 9px 3%;

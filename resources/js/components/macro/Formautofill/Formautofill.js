@@ -15,6 +15,7 @@ const Formautofill = ({ data, handle }) => {
             <div className="formautofill" onMouseLeave={() => setToggle(false)}>
                 <div className="formautofill_input">
                     <input
+                    className="wajib"
                         value={value.nama || ""}
                         style={{ border: "solid 1px #fff" }}
                         onClick={() => setToggle(true)}
