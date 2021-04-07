@@ -1,8 +1,7 @@
-import { now } from "jquery";
 import _ from "lodash";
-import React, { useEffect, useRef, useState } from "react";
-import { Formautofill } from "../..";
-import { API_URL } from "../../../utils/Utils";
+import React, { useEffect, useState } from "react";
+import { Formautofill, Input } from "../..";
+import { API_URL, Datenow, Setnomor } from "../../../utils/Utils";
 import "./formasset.scss";
 
 const FormAsset = () => {
@@ -11,13 +10,9 @@ const FormAsset = () => {
     const [kategori, setKategori] = useState([]);
     const [dataKategori, setDataKategori] = useState({});
     const [items, setItems] = useState([]);
-
-    const namaRef = useRef();
-
-    const merk = [
-        { id: 1, nama: "LG" },
-        { id: 2, nama: "Acer" },
-    ];
+    const [validNama, setValidNama] = useState("");
+    const [ValidKategori, setValidKategori] = useState("");
+    const [validSatuan, setValidSatuan] = useState("");
 
     useEffect(() => {
         const controlSatuan = new AbortController();
@@ -85,8 +80,8 @@ const FormAsset = () => {
                 }
             }
         };
-        setValue({ ...value, tanggal_item: now() });
-
+        setValue({ ...value, tanggal_item: Datenow() });
+        validasi();
         getItems();
         return () => {
             controlItems.abort();
@@ -97,23 +92,29 @@ const FormAsset = () => {
         setValue({ ...value, id_satuan: e.id });
     }
 
+    function handleNama(e) {
+        setValue({ ...value, item: e });
+    }
+
+    function handleMerk(e) {
+        setValue({ ...value, merk: e });
+    }
+
     function handleKategori(e) {
         setValue({ ...value, id_kategori: e.id });
         setDataKategori(e);
     }
 
-    function setnomor(num) {
-        if (num > 10000) {
-            return false;
-        } else if (num < 10000 && num > 999) {
-            return num.toString();
-        } else if (num < 1000 && num > 99) {
-            return "0" + num;
-        } else if (num < 100 && num > 9) {
-            return "00" + num;
-        } else {
-            return "000" + num;
-        }
+    function handleSn(e) {
+        setValue({ ...value, sn: e });
+    }
+
+    function handleType(e) {
+        setValue({ ...value, type: e });
+    }
+
+    function handleTglGaransi(e) {
+        setValue({ ...value, tgl_garansi: e });
     }
 
     const kode = () => {
@@ -125,7 +126,7 @@ const FormAsset = () => {
         if (filterItem.length > 0) {
             const selectkode = filterItem[last].kode;
             const selectnumber = selectkode.substr(selectkode.length - 4);
-            const getnumber = setnomor(parseInt(selectnumber) + parseInt(1));
+            const getnumber = Setnomor(parseInt(selectnumber) + parseInt(1));
             if (dataKategori.kode !== undefined || dataKategori.kode !== "") {
                 setValue({
                     ...value,
@@ -140,20 +141,24 @@ const FormAsset = () => {
         }
     };
 
-    const now = () => {
-        var d = new Date();
-        var month = d.getMonth() + 1;
-        var day = d.getDate();
+    const validasi = () => {
+        if (value.item === "" || value.item === undefined) {
+            setValidNama(true);
+        } else {
+            setValidNama(false);
+        }
 
-        var output =
-            d.getFullYear() +
-            "-" +
-            (month < 10 ? "0" : "") +
-            month +
-            "-" +
-            (day < 10 ? "0" : "") +
-            day;
-        return output;
+        if (value.id_kategori === "" || value.id_kategori === undefined) {
+            setValidKategori(true);
+        } else {
+            setValidKategori(false);
+        }
+
+        if (value.id_satuan === "" || value.id_satuan === undefined) {
+            setValidSatuan(true);
+        } else {
+            setValidSatuan(false);
+        }
     };
 
     return (
@@ -162,29 +167,29 @@ const FormAsset = () => {
                 <nav></nav>
                 <div className="formasset_wrapper">
                     <div className="formasset_form">
-                        <div className="formasset_input">
-                            <label>Kode Asset</label>
-                            <input
-                                value={
-                                    value.id_kategori !== undefined
-                                        ? value.kode
-                                        : ""
-                                }
-                                disabled
-                            />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Satuan</label>
-                            <Formautofill data={satuan} handle={handleSatuan} />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Type</label>
-                            <input
-                                onChange={(e) =>
-                                    setValue({ ...value, type: e.target.value })
-                                }
-                            />
-                        </div>
+                        <Input
+                            value={{
+                                nama: "Kode Asset",
+                                disabled: true,
+                                type: "text",
+                                value: value.kode,
+                            }}
+                        />
+
+                        <Formautofill
+                            nama="Satuan"
+                            data={satuan}
+                            handle={handleSatuan}
+                            valid={validSatuan}
+                        />
+                        <Input
+                            value={{
+                                nama: "Type",
+                                disabled: false,
+                                type: "text",
+                            }}
+                            handle={handleType}
+                        />
                         <div className="formasset_input">
                             <label>Kondisi</label>
                             <select
@@ -199,10 +204,14 @@ const FormAsset = () => {
                                 <option>Buruk</option>
                             </select>
                         </div>
-                        <div className="formasset_input">
-                            <label>PIC</label>
-                            <input value="Gudang" disabled />
-                        </div>
+                        <Input
+                            value={{
+                                nama: "PIC",
+                                disabled: true,
+                                type: "text",
+                                value: "Gudang",
+                            }}
+                        />
                         <div className="formasset_input">
                             <label>Catatan</label>
                             <textarea
@@ -216,56 +225,46 @@ const FormAsset = () => {
                         </div>
                     </div>
                     <div className="formasset_form">
-                        <div className="formasset_input">
-                            <label>Nama</label>
-                            <input
-                                className={
-                                    value.nama === undefined ||
-                                    value.nama === ""
-                                        ? "wajib"
-                                        : null
-                                }
-                                ref={namaRef}
-                                onChange={(e) =>
-                                    setValue({ ...value, nama: e.target.value })
-                                }
-                            />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Merk</label>
-                            <input
-                                onChange={(e) =>
-                                    setValue({ ...value, merk: e.target.value })
-                                }
-                            />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Serial Number</label>
-                            <input
-                                onChange={(e) =>
-                                    setValue({ ...value, sn: e.target.value })
-                                }
-                            />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Kategori</label>
-                            <Formautofill
-                                data={kategori}
-                                handle={handleKategori}
-                            />
-                        </div>
-                        <div className="formasset_input">
-                            <label>Tanggal Akhir Garansi</label>
-                            <input
-                                type="date"
-                                onChange={(e) =>
-                                    setValue({
-                                        ...value,
-                                        tgl_garansi: e.target.value,
-                                    })
-                                }
-                            />
-                        </div>
+                        <Input
+                            value={{
+                                nama: "Nama",
+                                disabled: false,
+                                valid: validNama,
+                                type: "text",
+                            }}
+                            handle={handleNama}
+                        />
+
+                        <Input
+                            value={{
+                                nama: "Merk",
+                                disabled: false,
+                                type: "text",
+                            }}
+                            handle={handleMerk}
+                        />
+                        <Input
+                            value={{
+                                nama: "Serial Number",
+                                disabled: false,
+                                type: "text",
+                            }}
+                            handle={handleSn}
+                        />
+                        <Formautofill
+                            data={kategori}
+                            handle={handleKategori}
+                            nama="Kategori"
+                            valid={ValidKategori}
+                        />
+                        <Input
+                            value={{
+                                nama: "Tanggal Akhir Garansi",
+                                disabled: false,
+                                type: "date",
+                            }}
+                            handle={handleTglGaransi}
+                        />
                         <div className="formasset_input">
                             <label>Keterangan Garansi</label>
                             <textarea

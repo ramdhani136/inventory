@@ -6,6 +6,7 @@ import FormAsset from "./Listasset/Formasset/FormAsset";
 import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
 import Formautofill from "./macro/Formautofill/Formautofill";
+import Input from "./macro/Input/Input";
 import Sidebar from "./Sidebar/Sidebar";
 import Sidebarmenu from "./Sidebar/SidebarMenu/Sidebarmenu";
 import CenterContentComponent from "./template/CenterContentComponent/CenterContentComponent";
@@ -27,6 +28,6 @@ export {
     CenterContentComponent,
     Wrapper,
     FormAsset,
-    Formautofill
+    Formautofill,
+    Input,
 };
-
