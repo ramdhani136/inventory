@@ -17,7 +17,7 @@ const Listasset = () => {
         kategori: {},
         satuan: {},
         kondisi: "",
-        status: "",
+        users: {},
     };
 
     const history = useHistory();
@@ -346,6 +346,7 @@ const Listasset = () => {
                 <div className="asset_content_right">
                     <Itemasset
                         value={search}
+                        filter={filter}
                         allvalue={value}
                     />
                 </div>

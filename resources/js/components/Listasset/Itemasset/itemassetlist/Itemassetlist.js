@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./itemassetlist.scss";
-import DeleteForeverTwoToneIcon from "@material-ui/icons/DeleteForeverTwoTone";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 const Itemassetlist = ({ data }) => {
@@ -8,7 +7,7 @@ const Itemassetlist = ({ data }) => {
 
     useEffect(() => {
         setItems(data);
-    }, [data, items]);
+    }, [data]);
 
     return (
         <React.Fragment>

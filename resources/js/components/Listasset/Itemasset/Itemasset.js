@@ -14,17 +14,17 @@ const Itemasset = ({ value, allvalue }) => {
             const api = API_URL + "items";
             const result = await fetch(api, { signal: control.signal });
             const getResult = await result.json();
-            setItems(
-                getResult.data.map((item) => {
-                    return {
-                        select: false,
-                        ...item,
-                    };
-                })
-            );
+            setItems(getResult.data);
         };
 
-        setFilterItems(filterdata());
+        setFilterItems(
+            filterdata().map((item) => {
+                return {
+                    select: false,
+                    ...item,
+                };
+            })
+        );
         getItems();
         return () => {
             control.abort();
@@ -67,7 +67,7 @@ const Itemasset = ({ value, allvalue }) => {
                                 name="selectitem"
                                 onChange={(e) => {
                                     let checked = e.target.checked;
-                                    setItems(
+                                    setFilterItems(
                                         items.map((item) => {
                                             item.select = checked;
                                             return item;
