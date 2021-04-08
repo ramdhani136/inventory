@@ -3529,39 +3529,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@material-ui/icons/DeleteForeverTwoTone.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@material-ui/icons/DeleteForeverTwoTone.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("path", {
-  d: "M16 9H8v10h8V9zm-.47 7.12l-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12z",
-  opacity: ".3"
-}), /*#__PURE__*/React.createElement("path", {
-  d: "M14.12 10.47L12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"
-})), 'DeleteForeverTwoTone');
-
-exports.default = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@material-ui/icons/FiberManualRecord.js":
 /*!**************************************************************!*\
   !*** ./node_modules/@material-ui/icons/FiberManualRecord.js ***!
@@ -11712,7 +11679,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _itemasset_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./itemasset.scss */ "./resources/js/components/Listasset/Itemasset/itemasset.scss");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../.. */ "./resources/js/components/index.js");
 /* harmony import */ var _utils_Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../utils/Utils */ "./resources/js/utils/Utils.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -11744,15 +11713,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 var Itemasset = function Itemasset(_ref) {
   var value = _ref.value,
-      filter = _ref.filter,
       allvalue = _ref.allvalue;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       items = _useState2[0],
       setItems = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      FilterItems = _useState4[0],
+      setFilterItems = _useState4[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     var control = new AbortController();
@@ -11796,30 +11770,37 @@ var Itemasset = function Itemasset(_ref) {
       };
     }();
 
+    setFilterItems(filterdata());
     getItems();
     return function () {
       control.abort();
     };
-  }, []);
+  }, [items]);
 
-  function search(rows) {
-    return rows.filter(function (row) {
-      return row.item.toLowerCase().indexOf(value.toLowerCase()) > -1 || row.kode.toLowerCase().indexOf(value.toLowerCase()) > -1;
+  var filterdata = function filterdata() {
+    return lodash__WEBPACK_IMPORTED_MODULE_5___default().filter(items, function (query) {
+      var kategori = allvalue.kategori.id ? query.id_kategori == allvalue.kategori.id : true,
+          satuan = allvalue.satuan.id ? query.id_satuan == allvalue.satuan.id : true,
+          status = allvalue.status ? query.status == allvalue.status : true,
+          item = value ? query.item.toLowerCase().includes(value.toLowerCase()) : true,
+          kode = value ? query.kode.toLowerCase().includes(value.toLowerCase()) : true,
+          kondisi = allvalue.kondisi ? query.kondisi == allvalue.kondisi : true;
+      return kategori && satuan && kondisi && status && (item || kode);
     });
-  }
+  };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "itemasset",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("table", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("thead", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("table", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("thead", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
             style: {
               paddingLeft: 20
             },
             children: "No"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
               type: "checkbox",
               name: "selectitem",
               onChange: function onChange(e) {
@@ -11830,28 +11811,26 @@ var Itemasset = function Itemasset(_ref) {
                 }));
               }
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
             children: "Kode Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
             children: "Item"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
-            children: "Satuan"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
-            children: "Kategori"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
-            children: "Tgl Asset"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
             children: "Status"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
-            children: "Aksi"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            children: "Satuan"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            children: "Kategori"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("th", {
+            children: "Tgl Asset"
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tbody", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Itemassetlist, {
-          data: search(items)
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("tbody", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(___WEBPACK_IMPORTED_MODULE_3__.Itemassetlist, {
+          data: FilterItems
         })
       })]
-    }), items.length < 0 || search(items).length ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+    }), FilterItems.length > 0 ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
       style: {
         textAlign: "center",
         padding: "140px 0px 0px 0px",
@@ -11880,9 +11859,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _itemassetlist_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./itemassetlist.scss */ "./resources/js/components/Listasset/Itemasset/itemassetlist/itemassetlist.scss");
-/* harmony import */ var _material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/DeleteForeverTwoTone */ "./node_modules/@material-ui/icons/DeleteForeverTwoTone.js");
-/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/FiberManualRecord */ "./node_modules/@material-ui/icons/FiberManualRecord.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -11913,17 +11891,17 @@ var Itemassetlist = function Itemassetlist(_ref) {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     setItems(data);
   }, [data, items]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: items.map(function (item, index) {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("tr", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
         className: item.select ? "item_select" : null,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           style: {
             paddingLeft: 20
           },
           children: index + 1
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             onChange: function onChange(event) {
               var checked = event.target.checked;
               setItems(items.map(function (d) {
@@ -11938,34 +11916,24 @@ var Itemassetlist = function Itemassetlist(_ref) {
             name: "checkbox",
             checked: item.select
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           children: item.kode
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           style: {
             fontSize: "0.95em",
             color: "rgb(77, 76, 76)"
           },
           children: item.item
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("td", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_2__.default, {
+            className: item.status === "0" ? "itemasset_pending" : item.status === "1" ? "itemasset_approved" : "itemasset_canceled"
+          }), item.status === "0" ? "Pending" : item.status === "1" ? "Approved" : "Canceled"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           children: item.satuan
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           children: item.kategori
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("td", {
           children: item.tanggal
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_FiberManualRecord__WEBPACK_IMPORTED_MODULE_3__.default, {
-            className: item.kondisi === "Baik" ? "itemasset_status" : "itemasset_status_none"
-          }), item.kondisi]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          style: {
-            cursor: "pointer",
-            color: "rgb(131, 130, 130)"
-          },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_material_ui_icons_DeleteForeverTwoTone__WEBPACK_IMPORTED_MODULE_4__.default, {
-            style: {
-              fontSize: 19
-            }
-          })
         })]
       }, index);
     })
@@ -13142,8 +13110,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _listasset_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./listasset.scss */ "./resources/js/pages/listasset/listasset.scss");
 /* harmony import */ var _material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/ArrowDropDown */ "./node_modules/@material-ui/icons/ArrowDropDown.js");
 /* harmony import */ var _utils_Utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/Utils */ "./resources/js/utils/Utils.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -13182,15 +13150,15 @@ var Listasset = function Listasset() {
     kategori: false,
     satuan: false,
     kondisi: false,
-    users: false
+    status: false
   };
   var defaultvalue = {
     kategori: {},
     satuan: {},
     kondisi: "",
-    users: {}
+    status: ""
   };
-  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var history = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
@@ -13338,23 +13306,23 @@ var Listasset = function Listasset() {
       controlSatuan.abort();
     };
   }, [satuan]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "asset",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "asset_title",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "asset_title_left",
         children: "List Asset"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
         className: "asset_title_right",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
           type: "text",
           value: search,
           placeholder: "Pencarian data ..",
           onChange: function onChange(e) {
             return setSearch(e.target.value);
           }
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
           onClick: function onClick() {
             return history.push("/form/asset");
           },
@@ -13362,16 +13330,16 @@ var Listasset = function Listasset() {
           children: "Input Asset"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "asset_content",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "asset_content_left",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "asset_content_left_item",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("b", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("b", {
             children: "FILTER BY"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
-            children: ["Kategori", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
+            children: ["Kategori", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
               style: {
                 fontSize: "18px",
                 marginLeft: "-1%"
@@ -13381,9 +13349,9 @@ var Listasset = function Listasset() {
                   kategori: true
                 }));
               }
-            }), filter.kategori ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            }), filter.kategori ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "asset_select",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                 onClick: function onClick() {
                   setValue(_objectSpread(_objectSpread({}, value), {}, {
                     kategori: {}
@@ -13392,7 +13360,7 @@ var Listasset = function Listasset() {
                 },
                 children: "Semua Kategori"
               }), kategories.map(function (item, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                   onClick: function onClick() {
                     setValue(_objectSpread(_objectSpread({}, value), {}, {
                       kategori: item
@@ -13402,7 +13370,7 @@ var Listasset = function Listasset() {
                   children: item.nama
                 }, index);
               })]
-            }) : null, value.kategori !== "" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h6", {
+            }) : null, value.kategori !== "" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h6", {
               style: {
                 fontSize: "1em",
                 fontStyle: "italic",
@@ -13411,8 +13379,8 @@ var Listasset = function Listasset() {
               },
               children: value.kategori.nama
             }) : null]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
-            children: ["Satuan", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
+            children: ["Satuan", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
               style: {
                 fontSize: "18px",
                 marginLeft: "-1%"
@@ -13422,9 +13390,9 @@ var Listasset = function Listasset() {
                   satuan: true
                 }));
               }
-            }), filter.satuan ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            }), filter.satuan ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "asset_select",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                 onClick: function onClick() {
                   setValue(_objectSpread(_objectSpread({}, value), {}, {
                     satuan: {}
@@ -13433,7 +13401,7 @@ var Listasset = function Listasset() {
                 },
                 children: "Semua data"
               }), satuan.map(function (item, index) {
-                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                   onClick: function onClick() {
                     setValue(_objectSpread(_objectSpread({}, value), {}, {
                       satuan: item
@@ -13443,7 +13411,7 @@ var Listasset = function Listasset() {
                   children: item.nama
                 }, index);
               })]
-            }) : null, value.satuan !== "" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h6", {
+            }) : null, value.satuan !== "" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h6", {
               style: {
                 fontSize: "1em",
                 fontStyle: "italic",
@@ -13452,8 +13420,8 @@ var Listasset = function Listasset() {
               },
               children: value.satuan.nama
             }) : null]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
-            children: ["Kondisi", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
+            children: ["Kondisi", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
               style: {
                 fontSize: "18px",
                 marginLeft: "-1%"
@@ -13463,9 +13431,9 @@ var Listasset = function Listasset() {
                   kondisi: true
                 }));
               }
-            }), filter.kondisi ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            }), filter.kondisi ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "asset_select",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                 onClick: function onClick() {
                   setValue(_objectSpread(_objectSpread({}, value), {}, {
                     kondisi: ""
@@ -13473,7 +13441,7 @@ var Listasset = function Listasset() {
                   setFilter(defaultfilter);
                 },
                 children: "Semua data"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                 onClick: function onClick() {
                   setValue(_objectSpread(_objectSpread({}, value), {}, {
                     kondisi: "Baik"
@@ -13481,7 +13449,7 @@ var Listasset = function Listasset() {
                   setFilter(defaultfilter);
                 },
                 children: "Baik"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
                 onClick: function onClick() {
                   setValue(_objectSpread(_objectSpread({}, value), {}, {
                     kondisi: "Buruk"
@@ -13490,7 +13458,7 @@ var Listasset = function Listasset() {
                 },
                 children: "Buruk"
               })]
-            }) : null, value.kondisi ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h6", {
+            }) : null, value.kondisi ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h6", {
               style: {
                 fontSize: "1em",
                 fontStyle: "italic",
@@ -13498,20 +13466,66 @@ var Listasset = function Listasset() {
               },
               children: value.kondisi
             }) : null]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
-            children: ["Users", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("a", {
+            children: ["Status", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_material_ui_icons_ArrowDropDown__WEBPACK_IMPORTED_MODULE_7__.default, {
               style: {
                 fontSize: "18px",
                 marginLeft: "-1%"
+              },
+              onClick: function onClick() {
+                return setFilter(_objectSpread(_objectSpread({}, defaultfilter), {}, {
+                  status: true
+                }));
               }
-            })]
+            }), filter.status ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              className: "asset_select",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
+                onClick: function onClick() {
+                  setValue(_objectSpread(_objectSpread({}, value), {}, {
+                    status: ""
+                  }));
+                  setFilter(defaultfilter);
+                },
+                children: "Semua data"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
+                onClick: function onClick() {
+                  setValue(_objectSpread(_objectSpread({}, value), {}, {
+                    status: "0"
+                  }));
+                  setFilter(defaultfilter);
+                },
+                children: "Pending"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
+                onClick: function onClick() {
+                  setValue(_objectSpread(_objectSpread({}, value), {}, {
+                    status: "1"
+                  }));
+                  setFilter(defaultfilter);
+                },
+                children: "Approved"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h5", {
+                onClick: function onClick() {
+                  setValue(_objectSpread(_objectSpread({}, value), {}, {
+                    status: "2"
+                  }));
+                  setFilter(defaultfilter);
+                },
+                children: "Canceled"
+              })]
+            }) : null, value.status ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h6", {
+              style: {
+                fontSize: "1em",
+                fontStyle: "italic",
+                color: "#757afd"
+              },
+              children: value.status === "0" ? "Pending" : value.status === "1" ? "Approved" : "Canceled"
+            }) : null]
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
         className: "asset_content_right",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components__WEBPACK_IMPORTED_MODULE_2__.Itemasset, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components__WEBPACK_IMPORTED_MODULE_2__.Itemasset, {
           value: search,
-          filter: filter,
           allvalue: value
         })
       })]
@@ -18221,7 +18235,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".item_select {\n  background-color: #fffdf4;\n  border-bottom: solid 1px #faf5dd;\n}\n\ntr {\n  border-bottom: solid 1px #e1e4e7;\n  height: 40px;\n}\ntr td {\n  font-size: 0.88em;\n  vertical-align: middle;\n  cursor: pointer;\n}\ntr td .itemasset_status {\n  color: #98d85b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\ntr td .itemasset_status_none {\n  color: #f85b5b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\n\ntr:hover {\n  background-color: #f0f2f5;\n  border-bottom: solid 1px #dededf;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".item_select {\n  background-color: #fffdf4;\n  border-bottom: solid 1px #faf5dd;\n}\n\ntr {\n  border-bottom: solid 1px #e1e4e7;\n  height: 40px;\n}\ntr td {\n  font-size: 0.88em;\n  vertical-align: middle;\n  cursor: pointer;\n}\ntr td .itemasset_approved {\n  color: #98d85b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\ntr td .itemasset_canceled {\n  color: #f85b5b;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\ntr td .itemasset_pending {\n  color: grey;\n  font-size: 11px;\n  margin: -2.5px 4px 0px 0px;\n}\n\ntr:hover {\n  background-color: #f0f2f5;\n  border-bottom: solid 1px #dededf;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

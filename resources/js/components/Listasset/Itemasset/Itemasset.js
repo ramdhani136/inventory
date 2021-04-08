@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./itemasset.scss";
 import { Itemassetlist } from "../..";
 import { API_URL } from "../../../utils/Utils";
+import _ from "lodash";
 
-const Itemasset = ({ value, filter, allvalue }) => {
+const Itemasset = ({ value, allvalue }) => {
     const [items, setItems] = useState([]);
+    const [FilterItems, setFilterItems] = useState([]);
 
     useEffect(() => {
         const control = new AbortController();
@@ -22,19 +24,36 @@ const Itemasset = ({ value, filter, allvalue }) => {
             );
         };
 
+        setFilterItems(filterdata());
         getItems();
         return () => {
             control.abort();
         };
-    }, []);
+    }, [items]);
 
-    function search(rows) {
-        return rows.filter(
-            (row) =>
-                row.item.toLowerCase().indexOf(value.toLowerCase()) > -1 ||
-                row.kode.toLowerCase().indexOf(value.toLowerCase()) > -1
-        );
-    }
+    const filterdata = () => {
+        return _.filter(items, function (query) {
+            var kategori = allvalue.kategori.id
+                    ? query.id_kategori == allvalue.kategori.id
+                    : true,
+                satuan = allvalue.satuan.id
+                    ? query.id_satuan == allvalue.satuan.id
+                    : true,
+                status = allvalue.status
+                    ? query.status == allvalue.status
+                    : true,
+                item = value
+                    ? query.item.toLowerCase().includes(value.toLowerCase())
+                    : true,
+                kode = value
+                    ? query.kode.toLowerCase().includes(value.toLowerCase())
+                    : true,
+                kondisi = allvalue.kondisi
+                    ? query.kondisi == allvalue.kondisi
+                    : true;
+            return kategori && satuan && kondisi && status && (item || kode);
+        });
+    };
 
     return (
         <div className="itemasset">
@@ -59,18 +78,17 @@ const Itemasset = ({ value, filter, allvalue }) => {
                         </th>
                         <th>Kode Asset</th>
                         <th>Item</th>
+                        <th>Status</th>
                         <th>Satuan</th>
                         <th>Kategori</th>
                         <th>Tgl Asset</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <Itemassetlist data={search(items)} />
+                    <Itemassetlist data={FilterItems} />
                 </tbody>
             </table>
-            {items.length < 0 || search(items).length ? null : (
+            {FilterItems.length > 0 ? null : (
                 <p
                     style={{
                         textAlign: "center",

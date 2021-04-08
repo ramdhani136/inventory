@@ -10,14 +10,14 @@ const Listasset = () => {
         kategori: false,
         satuan: false,
         kondisi: false,
-        users: false,
+        status: false,
     };
 
     const defaultvalue = {
         kategori: {},
         satuan: {},
         kondisi: "",
-        users: {},
+        status: "",
     };
 
     const history = useHistory();
@@ -267,25 +267,85 @@ const Listasset = () => {
                             ) : null}
                         </a>
                         <a>
-                            Users
+                            Status
                             <ArrowDropDownIcon
                                 style={{ fontSize: "18px", marginLeft: "-1%" }}
+                                onClick={() =>
+                                    setFilter({
+                                        ...defaultfilter,
+                                        status: true,
+                                    })
+                                }
                             />
-                            {/* <div className="asset_select">
-                                <a>Monitor</a>
-                                <a>PC</a>
-                                <a>Printer</a>
-                                <a>UPS</a>
-                                <a>Flashdisk</a>
-                                <a>Laptop</a>
-                            </div> */}
+                            {filter.status ? (
+                                <div className="asset_select">
+                                    <h5
+                                        onClick={() => {
+                                            setValue({
+                                                ...value,
+                                                status: "",
+                                            });
+                                            setFilter(defaultfilter);
+                                        }}
+                                    >
+                                        Semua data
+                                    </h5>
+                                    <h5
+                                        onClick={() => {
+                                            setValue({
+                                                ...value,
+                                                status: "0",
+                                            });
+                                            setFilter(defaultfilter);
+                                        }}
+                                    >
+                                        Pending
+                                    </h5>
+                                    <h5
+                                        onClick={() => {
+                                            setValue({
+                                                ...value,
+                                                status: "1",
+                                            });
+                                            setFilter(defaultfilter);
+                                        }}
+                                    >
+                                        Approved
+                                    </h5>
+                                    <h5
+                                        onClick={() => {
+                                            setValue({
+                                                ...value,
+                                                status: "2",
+                                            });
+                                            setFilter(defaultfilter);
+                                        }}
+                                    >
+                                        Canceled
+                                    </h5>
+                                </div>
+                            ) : null}
+                            {value.status ? (
+                                <h6
+                                    style={{
+                                        fontSize: "1em",
+                                        fontStyle: "italic",
+                                        color: "#757afd",
+                                    }}
+                                >
+                                    {value.status === "0"
+                                        ? "Pending"
+                                        : value.status === "1"
+                                        ? "Approved"
+                                        : "Canceled"}
+                                </h6>
+                            ) : null}
                         </a>
                     </div>
                 </div>
                 <div className="asset_content_right">
                     <Itemasset
                         value={search}
-                        filter={filter}
                         allvalue={value}
                     />
                 </div>

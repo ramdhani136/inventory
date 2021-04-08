@@ -8,7 +8,7 @@ const Itemassetlist = ({ data }) => {
 
     useEffect(() => {
         setItems(data);
-    }, [data,items]);
+    }, [data, items]);
 
     return (
         <React.Fragment>
@@ -42,27 +42,25 @@ const Itemassetlist = ({ data }) => {
                     >
                         {item.item}
                     </td>
-                    <td>{item.satuan}</td>
-                    <td>{item.kategori}</td>
-                    <td>{item.tanggal}</td>
                     <td>
                         <FiberManualRecordIcon
                             className={
-                                item.kondisi === "Baik"
-                                    ? "itemasset_status"
-                                    : "itemasset_status_none"
+                                item.status === "0"
+                                    ? "itemasset_pending"
+                                    : item.status === "1"
+                                    ? "itemasset_approved"
+                                    : "itemasset_canceled"
                             }
                         />
-                        {item.kondisi}
+                        {item.status === "0"
+                            ? "Pending"
+                            : item.status === "1"
+                            ? "Approved"
+                            : "Canceled"}
                     </td>
-                    <td
-                        style={{
-                            cursor: "pointer",
-                            color: "rgb(131, 130, 130)",
-                        }}
-                    >
-                        <DeleteForeverTwoToneIcon style={{ fontSize: 19 }} />
-                    </td>
+                    <td>{item.satuan}</td>
+                    <td>{item.kategori}</td>
+                    <td>{item.tanggal}</td>
                 </tr>
             ))}
         </React.Fragment>
