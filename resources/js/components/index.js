@@ -33,5 +33,5 @@ export {
     Formautofill,
     Input,
     Textarea,
-    SelectOption
+    SelectOption,
 };

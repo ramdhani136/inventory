@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./titlecomponent.scss";
 
-const TitleComponent = ({ value, input, title, aksi, name }) => {
-
+const TitleComponent = ({ value, input, title, name, handleSubmit }) => {
     const [search, setSearch] = useState(value);
 
     return (
@@ -17,10 +16,7 @@ const TitleComponent = ({ value, input, title, aksi, name }) => {
                         onChange={(e) => setSearch(e.target.value)}
                     ></input>
                 ) : null}
-                <button
-                    onClick={aksi}
-                    className="btn-purple"
-                >
+                <button onClick={handleSubmit} className="btn-purple">
                     {name}
                 </button>
             </div>

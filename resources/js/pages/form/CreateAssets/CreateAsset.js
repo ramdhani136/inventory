@@ -1,12 +1,104 @@
-import { formatMs } from "@material-ui/core";
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { FormAsset, TitleComponent, Wrapper } from "../../../components";
-import { setleftContent } from "../../../features/dataSlice";
+import { useSelector } from "react-redux";
+import { TitleComponent, Wrapper } from "../../../components";
+import { selectValue } from "../../../features/valueSlice";
 import "./createasset.scss";
+import Swal from "sweetalert2";
+import { useHistory } from "react-router";
+import axios from "axios";
+import { API_URL } from "../../../utils/Utils";
 
 const CreateAsset = () => {
-    const dispatch = useDispatch();
+    const value = useSelector(selectValue);
+    const history = useHistory();
+
+    const validasi = () => {
+        if (
+            value.asset.item === "" ||
+            value.asset.item === undefined ||
+            value.asset.id_kategori === "" ||
+            value.asset.id_kategori === undefined ||
+            value.asset.id_satuan === "" ||
+            value.asset.id_satuan === undefined
+        ) {
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    const handleSubmit = () => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn ml-2 btn-success",
+                cancelButton: "btn btn-danger",
+            },
+            buttonsStyling: false,
+        });
+
+        swalWithBootstrapButtons
+            .fire({
+                title: "Apakah anda yakin?",
+                text: "Ingin menambahkan asset ini!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Iya, Yakin!",
+                cancelButtonText: "Tidak!",
+                reverseButtons: true,
+            })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    if (validasi()) {
+                        axios
+                            .post(API_URL + "items", value.asset)
+                            .then((res) => {
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: "top-end",
+                                    showConfirmButton: false,
+                                    timer: 1500,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener(
+                                            "mouseenter",
+                                            Swal.stopTimer
+                                        );
+                                        toast.addEventListener(
+                                            "mouseleave",
+                                            Swal.resumeTimer
+                                        );
+                                    },
+                                });
+
+                                Toast.fire({
+                                    icon: "success",
+                                    title: "Saving ..",
+                                }).then((res) => {
+                                    history.push("/asset");
+                                });
+                            });
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            showConfirmButton: false,
+                            text: "Periksa kembali data anda!",
+                            timer: 1200,
+                        });
+                    }
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Canceled",
+                        showConfirmButton: false,
+                        text: "Batal menyimpan data!",
+                        timer: 1200,
+                    });
+                }
+            });
+    };
 
     // useEffect(() => {
     //     dispatch(
@@ -31,7 +123,11 @@ const CreateAsset = () => {
 
     return (
         <div>
-            <TitleComponent name="Save" title="Input Asset" />
+            <TitleComponent
+                handleSubmit={handleSubmit}
+                name="Save"
+                title="Input Asset"
+            />
             <Wrapper />
         </div>
     );

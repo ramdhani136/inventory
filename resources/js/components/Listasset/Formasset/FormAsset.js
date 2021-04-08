@@ -1,6 +1,8 @@
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Formautofill, Input, SelectOption, Textarea } from "../..";
+import { getValue } from "../../../features/valueSlice";
 import { API_URL, Datenow, Setnomor } from "../../../utils/Utils";
 import "./formasset.scss";
 
@@ -13,6 +15,7 @@ const FormAsset = () => {
     const [validNama, setValidNama] = useState("");
     const [ValidKategori, setValidKategori] = useState("");
     const [validSatuan, setValidSatuan] = useState("");
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const controlSatuan = new AbortController();
@@ -83,6 +86,7 @@ const FormAsset = () => {
         setValue({ ...value, tanggal_item: Datenow() });
         validasi();
         getItems();
+        dispatch(getValue({asset: value }));
         return () => {
             controlItems.abort();
         };
@@ -265,7 +269,6 @@ const FormAsset = () => {
                     </div>
                 </div>
             </div>
-            {console.log(value)}
         </React.Fragment>
     );
 };

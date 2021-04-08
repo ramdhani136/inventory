@@ -25,7 +25,12 @@ const Formautofill = ({ data, handle, nama, valid }) => {
                     className="formautofill"
                     onMouseLeave={() => setToggle(false)}
                 >
-                    <div className="formautofill_input">
+                    <div
+                        className="formautofill_input"
+                        onMouseMove={() => {
+                            setToggle(true);
+                        }}
+                    >
                         <input
                             className={valid ? "wajib" : null}
                             style={{ border: "solid 1px #fff" }}
@@ -33,6 +38,7 @@ const Formautofill = ({ data, handle, nama, valid }) => {
                             onClick={() => {
                                 setToggle(true);
                                 setValueSearch("");
+                                handle({});
                             }}
                             onChange={(e) => setValueSearch(e.target.value)}
                         ></input>
