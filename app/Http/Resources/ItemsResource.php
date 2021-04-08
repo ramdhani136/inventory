@@ -25,6 +25,7 @@ class ItemsResource extends JsonResource
                 'sn' => $this->sn,
                 'qty' => $this->qty,
                 'kondisi' => $this->kondisi,
+                'pic' => $this->pic,
                 'garansi' => $this->garansi,
                 'tgl_garansi' => $this->tgl_garansi,
                 'keterangan' => $this->keterangan,

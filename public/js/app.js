@@ -12233,19 +12233,28 @@ var Formautofill = function Formautofill(_ref) {
       nama = _ref.nama,
       valid = _ref.valid;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({}),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setValue = _useState2[1];
+      Datafilter = _useState2[0],
+      setDatafilter = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
       toggle = _useState4[0],
       setToggle = _useState4[1];
 
-  var seacrinput = function seacrinput(e) {
-    setValue({
-      nama: e
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(" "),
+      _useState6 = _slicedToArray(_useState5, 2),
+      valueSearch = _useState6[0],
+      setValueSearch = _useState6[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    setDatafilter(datafilter);
+  }, [valueSearch]);
+
+  var datafilter = function datafilter() {
+    return data.filter(function (row) {
+      return row.nama.toLowerCase().indexOf(valueSearch.toLowerCase()) > -1;
     });
   };
 
@@ -12263,25 +12272,26 @@ var Formautofill = function Formautofill(_ref) {
           className: "formautofill_input",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
             className: valid ? "wajib" : null,
-            value: value.nama || "",
             style: {
               border: "solid 1px #fff"
             },
+            value: valueSearch,
             onClick: function onClick() {
-              return setToggle(true);
+              setToggle(true);
+              setValueSearch("");
             },
             onChange: function onChange(e) {
-              return seacrinput(e.target.value);
+              return setValueSearch(e.target.value);
             }
           })
         }), toggle ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
           className: "formautofill_option",
-          children: data.map(function (list, index) {
+          children: Datafilter.map(function (list, index) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
               onClick: function onClick() {
-                setValue(list);
                 setToggle(false);
                 handle(list);
+                setValueSearch(list.nama);
               },
               children: list.nama
             }, index);
@@ -12900,14 +12910,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components */ "./resources/js/components/index.js");
 /* harmony import */ var _home_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.scss */ "./resources/js/pages/home/home.scss");
-/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
-/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
-/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
-/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
-/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
-/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
-/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Assignment */ "./node_modules/@material-ui/icons/Assignment.js");
+/* harmony import */ var _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/CompareArrows */ "./node_modules/@material-ui/icons/CompareArrows.js");
+/* harmony import */ var _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AssignmentTurnedIn */ "./node_modules/@material-ui/icons/AssignmentTurnedIn.js");
+/* harmony import */ var _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/History */ "./node_modules/@material-ui/icons/History.js");
+/* harmony import */ var _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Assessment */ "./node_modules/@material-ui/icons/Assessment.js");
+/* harmony import */ var _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/Category */ "./node_modules/@material-ui/icons/Category.js");
+/* harmony import */ var _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/RecentActors */ "./node_modules/@material-ui/icons/RecentActors.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -12922,38 +12932,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "home",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("p", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       children: "MODULES"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Daftar Asset",
       link: "/asset",
-      Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_3__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Assignment__WEBPACK_IMPORTED_MODULE_4__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Mutasi Asset",
       link: "/mutasiasset",
-      Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_4__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_CompareArrows__WEBPACK_IMPORTED_MODULE_5__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Stock Opname",
       link: "/stockoptanme",
-      Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_5__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_AssignmentTurnedIn__WEBPACK_IMPORTED_MODULE_6__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "History",
       link: "/history",
-      Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_6__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_History__WEBPACK_IMPORTED_MODULE_7__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Laporan",
       link: "/laporan",
-      Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_7__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Assessment__WEBPACK_IMPORTED_MODULE_8__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Kategori",
       link: "/kategori",
-      Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_8__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
+      Icon: _material_ui_icons_Category__WEBPACK_IMPORTED_MODULE_9__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.Listmenu, {
       nama: "Data Users",
       link: "/users",
-      Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_9__.default
+      Icon: _material_ui_icons_RecentActors__WEBPACK_IMPORTED_MODULE_10__.default
     })]
   });
 };
@@ -18154,7 +18164,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.form label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.form .formautofill .formautofill_input {\n  border: solid 1px #cacbcc;\n  background-color: #fff;\n  height: 40px;\n}\n.form .formautofill .formautofill_input input {\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  width: 99%;\n  z-index: 2;\n  margin-top: 3px;\n  margin-left: 0.5%;\n  font-weight: bold;\n}\n.form .formautofill .formautofill_input .wajib {\n  background-color: #fff5f5;\n  border: solid 1px #ff6b6b;\n}\n.form .formautofill .formautofill_option {\n  position: relative;\n  border: solid 1px #cacbcc;\n  max-height: 200px;\n  height: auto;\n  z-index: 1;\n  background-color: #fff;\n  display: flex;\n  flex-direction: column;\n  overflow-y: scroll;\n  border-top: none;\n}\n.form .formautofill .formautofill_option a {\n  padding: 9px 0px 9px 3%;\n  font-size: 0.85em;\n  cursor: pointer;\n  color: #636161;\n}\n.form .formautofill .formautofill_option a:hover {\n  background-color: #f6f7fb;\n  border-top: solid 1px #ebebeb;\n  border-bottom: solid 1px #ebebeb;\n  color: #636161;\n}\n.form .formautofill .formautofill_option .select {\n  background-color: #f6f7fb;\n  border-top: solid 1px #ebebeb;\n  border-bottom: solid 1px #ebebeb;\n  color: #636161;\n  text-decoration: none;\n  font-style: none;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".form {\n  height: 40px;\n  margin-bottom: 20px;\n  display: flex;\n  flex-direction: column;\n  height: auto;\n}\n.form label {\n  font-size: 0.9em;\n  color: #8d8d8f;\n}\n.form .formautofill .formautofill_input {\n  border: solid 1px #cacbcc;\n  background-color: #fff;\n  height: 40px;\n}\n.form .formautofill .formautofill_input input {\n  height: 32px;\n  font-size: 0.9em;\n  color: black;\n  width: 99%;\n  z-index: 2;\n  margin-top: 3px;\n  margin-left: 0.5%;\n  font-weight: bold;\n  padding-left: 2%;\n}\n.form .formautofill .formautofill_input .wajib {\n  background-color: #fff5f5;\n  border: solid 1px #ff6b6b;\n}\n.form .formautofill .formautofill_option {\n  position: relative;\n  border: solid 1px #cacbcc;\n  max-height: 200px;\n  height: auto;\n  z-index: 1;\n  background-color: #fff;\n  display: flex;\n  flex-direction: column;\n  overflow-y: scroll;\n  border-top: none;\n}\n.form .formautofill .formautofill_option a {\n  padding: 9px 0px 9px 3%;\n  font-size: 0.85em;\n  cursor: pointer;\n  color: #636161;\n}\n.form .formautofill .formautofill_option a:hover {\n  background-color: #f6f7fb;\n  border-top: solid 1px #ebebeb;\n  border-bottom: solid 1px #ebebeb;\n  color: #636161;\n  text-decoration: none;\n}\n.form .formautofill .formautofill_option .select {\n  background-color: #f6f7fb;\n  border-top: solid 1px #ebebeb;\n  border-bottom: solid 1px #ebebeb;\n  color: #636161;\n  text-decoration: none;\n  font-style: none;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
