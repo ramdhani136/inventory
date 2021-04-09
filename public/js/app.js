@@ -11187,16 +11187,450 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _FormViewAsset_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormViewAsset.scss */ "./resources/js/components/Listasset/FormViewAsset/FormViewAsset.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../.. */ "./resources/js/components/index.js");
+/* harmony import */ var _features_valueSlice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../features/valueSlice */ "./resources/js/features/valueSlice.js");
+/* harmony import */ var _utils_Utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../utils/Utils */ "./resources/js/utils/Utils.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
 
 
 
 
 var FormViewAsset = function FormViewAsset() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: "tes"
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      satuan = _useState2[0],
+      setSatuan = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      kategori = _useState4[0],
+      setKategori = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({}),
+      _useState6 = _slicedToArray(_useState5, 2),
+      value = _useState6[0],
+      setValue = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      validNama = _useState8[0],
+      setValidNama = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
+      _useState10 = _slicedToArray(_useState9, 2),
+      ValidKategori = _useState10[0],
+      setValidKategori = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
+      _useState12 = _slicedToArray(_useState11, 2),
+      validSatuan = _useState12[0],
+      setValidSatuan = _useState12[1];
+
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({}),
+      _useState14 = _slicedToArray(_useState13, 2),
+      dataKategori = _useState14[0],
+      setDataKategori = _useState14[1];
+
+  var _useParams = (0,react_router__WEBPACK_IMPORTED_MODULE_7__.useParams)(),
+      kode = _useParams.kode;
+
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    var controlSatuan = new AbortController();
+    var controlKategori = new AbortController();
+
+    var getSatuan = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var api, resultSatuan, _getSatuan;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.prev = 0;
+                api = _utils_Utils__WEBPACK_IMPORTED_MODULE_6__.API_URL + "satuan";
+                _context.next = 4;
+                return fetch(api, {
+                  signal: controlSatuan.signal
+                });
+
+              case 4:
+                resultSatuan = _context.sent;
+                _context.next = 7;
+                return resultSatuan.json();
+
+              case 7:
+                _getSatuan = _context.sent;
+                setSatuan(_getSatuan.data);
+                _context.next = 18;
+                break;
+
+              case 11:
+                _context.prev = 11;
+                _context.t0 = _context["catch"](0);
+
+                if (!(_context.t0.name === "AbortError")) {
+                  _context.next = 17;
+                  break;
+                }
+
+                return _context.abrupt("return", null);
+
+              case 17:
+                throw _context.t0;
+
+              case 18:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[0, 11]]);
+      }));
+
+      return function getSatuan() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    var getKategories = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var api, resultCategories, getCategories;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.prev = 0;
+                api = _utils_Utils__WEBPACK_IMPORTED_MODULE_6__.API_URL + "kategori";
+                _context2.next = 4;
+                return fetch(api, {
+                  signal: controlKategori.signal
+                });
+
+              case 4:
+                resultCategories = _context2.sent;
+                _context2.next = 7;
+                return resultCategories.json();
+
+              case 7:
+                getCategories = _context2.sent;
+                setKategori(getCategories.data);
+                _context2.next = 18;
+                break;
+
+              case 11:
+                _context2.prev = 11;
+                _context2.t0 = _context2["catch"](0);
+
+                if (!(_context2.t0.name === "AbortError")) {
+                  _context2.next = 17;
+                  break;
+                }
+
+                return _context2.abrupt("return", null);
+
+              case 17:
+                throw _context2.t0;
+
+              case 18:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, null, [[0, 11]]);
+      }));
+
+      return function getKategories() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+
+    getKategories();
+    getSatuan();
+    return function () {
+      controlSatuan.abort();
+      controlKategori.abort();
+    };
+  }, [kategori, satuan]);
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    var controlItems = new AbortController();
+
+    var getItems = /*#__PURE__*/function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+        var api, resultItems, _getItems;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                _context3.prev = 0;
+                api = _utils_Utils__WEBPACK_IMPORTED_MODULE_6__.API_URL + "items/" + kode;
+                _context3.next = 4;
+                return fetch(api, {
+                  signal: controlItems.signal
+                });
+
+              case 4:
+                resultItems = _context3.sent;
+                _context3.next = 7;
+                return resultItems.json();
+
+              case 7:
+                _getItems = _context3.sent;
+                setValue(_getItems.data[0]);
+                _context3.next = 18;
+                break;
+
+              case 11:
+                _context3.prev = 11;
+                _context3.t0 = _context3["catch"](0);
+
+                if (!(_context3.t0.name === "AbortError")) {
+                  _context3.next = 17;
+                  break;
+                }
+
+                return _context3.abrupt("return", null);
+
+              case 17:
+                throw _context3.t0;
+
+              case 18:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, null, [[0, 11]]);
+      }));
+
+      return function getItems() {
+        return _ref3.apply(this, arguments);
+      };
+    }();
+
+    validasi();
+    getItems();
+    dispatch((0,_features_valueSlice__WEBPACK_IMPORTED_MODULE_5__.getValue)({
+      asset: value
+    }));
+    return function () {
+      controlItems.abort();
+    };
+  }, []);
+
+  function handleSatuan(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      id_satuan: e.id
+    }));
+  }
+
+  function handleNama(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      item: e
+    }));
+  }
+
+  function handleMerk(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      merk: e
+    }));
+  }
+
+  function handleKategori(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      id_kategori: e.id
+    }));
+    setDataKategori(e);
+  }
+
+  function handleSn(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      sn: e
+    }));
+  }
+
+  function handleType(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      type: e
+    }));
+  }
+
+  function handleTglGaransi(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      tgl_garansi: e
+    }));
+  }
+
+  function handleGaransi(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      garansi: e
+    }));
+  }
+
+  function handleCatatan(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      keterangan: e
+    }));
+  }
+
+  function handleKondisi(e) {
+    setValue(_objectSpread(_objectSpread({}, value), {}, {
+      kondisi: e
+    }));
+  }
+
+  var validasi = function validasi() {
+    if (value.item === "" || value.item === undefined) {
+      setValidNama(true);
+    } else {
+      setValidNama(false);
+    }
+
+    if (value.id_kategori === "" || value.id_kategori === undefined) {
+      setValidKategori(true);
+    } else {
+      setValidKategori(false);
+    }
+
+    if (value.id_satuan === "" || value.id_satuan === undefined) {
+      setValidSatuan(true);
+    } else {
+      setValidSatuan(false);
+    }
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      className: "FormViewAsset",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("nav", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "FormViewAsset_wrapper",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "FormViewAsset_form",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Kode Asset",
+              disabled: true,
+              type: "text",
+              value: value.kode
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Formautofill, {
+            nama: "Satuan",
+            data: satuan,
+            handle: handleSatuan,
+            valid: validSatuan
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Type",
+              disabled: false,
+              type: "text",
+              value: value.type
+            },
+            handle: handleType
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.SelectOption, {
+            nama: "Kondisi",
+            data: [{
+              status: "Baik"
+            }, {
+              status: "Buruk"
+            }],
+            handle: handleKondisi,
+            value: value.kondisi
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "PIC",
+              disabled: true,
+              type: "text",
+              value: value.pic
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Textarea, {
+            nama: "Catatan",
+            handle: handleCatatan,
+            value: value.keterangan
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          className: "FormViewAsset_form",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Nama",
+              disabled: false,
+              valid: validNama,
+              type: "text",
+              value: value.item
+            },
+            handle: handleNama
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Merk",
+              disabled: false,
+              type: "text",
+              value: value.merk
+            },
+            handle: handleMerk
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Serial Number",
+              disabled: false,
+              type: "text",
+              value: value.sn
+            },
+            handle: handleSn
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Formautofill, {
+            nama: "Kategori",
+            data: kategori,
+            handle: handleKategori,
+            valid: ValidKategori
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Input, {
+            value: {
+              nama: "Tanggal Akhir Garansi",
+              disabled: false,
+              type: "date",
+              value: value.tgl_garansi
+            },
+            handle: handleTglGaransi
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(___WEBPACK_IMPORTED_MODULE_4__.Textarea, {
+            nama: "Keterangan Garansi",
+            handle: handleGaransi,
+            value: value.garansi
+          })]
+        })]
+      })]
+    })
   });
 };
 
@@ -12390,7 +12824,8 @@ __webpack_require__.r(__webpack_exports__);
 var SelectOption = function SelectOption(_ref) {
   var nama = _ref.nama,
       data = _ref.data,
-      handle = _ref.handle;
+      handle = _ref.handle,
+      value = _ref.value;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "selectoption",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
@@ -12399,6 +12834,7 @@ var SelectOption = function SelectOption(_ref) {
       onChange: function onChange(e) {
         return handle(e.target.value);
       },
+      value: value,
       children: data.map(function (item, index) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
           children: item.status
@@ -12433,13 +12869,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var Textarea = function Textarea(_ref) {
   var nama = _ref.nama,
-      handle = _ref.handle;
+      handle = _ref.handle,
+      value = _ref.value;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "textarea",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
         children: nama
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("textarea", {
+        value: value,
         onChange: function onChange(e) {
           return handle(e.target.value);
         }
@@ -18372,7 +18810,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".FormViewAsset nav {\n  height: 40px;\n  background-color: #f7fafc;\n  border-bottom: solid 1px #cacbcc;\n}\n.FormViewAsset .FormViewAsset_wrapper {\n  margin-top: 20px;\n  width: 92%;\n  margin-left: 4%;\n  display: flex;\n  justify-content: space-between;\n}\n.FormViewAsset .FormViewAsset_wrapper .FormViewAsset_form {\n  flex: 0.48;\n  display: flex;\n  flex-direction: column;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

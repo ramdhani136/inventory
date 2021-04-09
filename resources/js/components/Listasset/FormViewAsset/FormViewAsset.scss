@@ -1,0 +1,19 @@
+.FormViewAsset {
+    nav {
+        height: 40px;
+        background-color: #f7fafc;
+        border-bottom: solid 1px rgb(202, 203, 204);
+    }
+    .FormViewAsset_wrapper {
+        margin-top: 20px;
+        width: 92%;
+        margin-left: 4%;
+        display: flex;
+        justify-content: space-between;
+        .FormViewAsset_form {
+            flex: 0.48;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

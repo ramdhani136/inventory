@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Input.scss";
 
 const Input = ({ value, handle }) => {
     const inputRef = useRef();
 
     useEffect(() => {
-        inputRef.current.disabled=value.disabled;
-    },[]);
+        inputRef.current.disabled = value.disabled;
+    }, []);
 
     return (
         <div className="input">
