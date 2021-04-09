@@ -6,7 +6,6 @@ import _ from "lodash";
 
 const Itemasset = ({ value, allvalue }) => {
     const [items, setItems] = useState([]);
-    const [FilterItems, setFilterItems] = useState([]);
 
     useEffect(() => {
         const control = new AbortController();
@@ -14,25 +13,23 @@ const Itemasset = ({ value, allvalue }) => {
             const api = API_URL + "items";
             const result = await fetch(api, { signal: control.signal });
             const getResult = await result.json();
-            setItems(getResult.data);
+            setItems(
+                getResult.data.map((item) => {
+                    return {
+                        select: false,
+                        ...item,
+                    };
+                })
+            );
         };
-
-        setFilterItems(
-            filterdata().map((item) => {
-                return {
-                    select: false,
-                    ...item,
-                };
-            })
-        );
         getItems();
         return () => {
             control.abort();
         };
-    }, [items]);
+    }, [value, allvalue]);
 
-    const filterdata = () => {
-        return _.filter(items, function (query) {
+    const filterdata = (a) => {
+        return _.filter(a, function (query) {
             var kategori = allvalue.kategori.id
                     ? query.id_kategori == allvalue.kategori.id
                     : true,
@@ -67,7 +64,7 @@ const Itemasset = ({ value, allvalue }) => {
                                 name="selectitem"
                                 onChange={(e) => {
                                     let checked = e.target.checked;
-                                    setFilterItems(
+                                    setItems(
                                         items.map((item) => {
                                             item.select = checked;
                                             return item;
@@ -85,10 +82,10 @@ const Itemasset = ({ value, allvalue }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Itemassetlist data={FilterItems} />
+                    <Itemassetlist data={filterdata(items)} />
                 </tbody>
             </table>
-            {FilterItems.length > 0 ? null : (
+            {filterdata(items).length > 0 ? null : (
                 <p
                     style={{
                         textAlign: "center",

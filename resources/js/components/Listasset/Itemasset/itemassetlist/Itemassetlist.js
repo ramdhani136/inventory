@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./itemassetlist.scss";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import { useHistory } from "react-router";
 
 const Itemassetlist = ({ data }) => {
     const [items, setItems] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         setItems(data);
@@ -32,8 +34,13 @@ const Itemassetlist = ({ data }) => {
                             checked={item.select}
                         />
                     </td>
-                    <td>{item.kode}</td>
                     <td
+                        onClick={() => history.push(`/view/asset/${item.kode}`)}
+                    >
+                        {item.kode}
+                    </td>
+                    <td
+                        onClick={() => history.push(`/view/asset/${item.kode}`)}
                         style={{
                             fontSize: "0.95em",
                             color: "rgb(77, 76, 76)",

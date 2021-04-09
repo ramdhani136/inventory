@@ -1,11 +1,12 @@
 import React from "react";
-import { FormAsset, FormInput } from "../..";
+import { FormAsset, FormViewAsset } from "../..";
 import "./centercontentcomponent.scss";
 
-const CenterContentComponent = ({ }) => {
+const CenterContentComponent = ({ page }) => {
     return (
         <div className="centerContent">
-            <FormAsset/>
+            {page === "FormAsset" ? <FormAsset /> : null}
+            {page === "FormViewAsset" ? <FormViewAsset /> : null}
         </div>
     );
 };

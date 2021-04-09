@@ -1,11 +1,11 @@
 import React from "react";
 import { CenterContentComponent, LeftContentComponent } from "..";
 
-const Wrapper = ({type}) => {
+const Wrapper = ({page}) => {
     return (
         <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
             <LeftContentComponent />
-            <CenterContentComponent type={type} />
+            <CenterContentComponent page={page} />
         </div>
     );
 };

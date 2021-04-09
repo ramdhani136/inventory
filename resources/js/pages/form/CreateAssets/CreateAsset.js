@@ -125,10 +125,10 @@ const CreateAsset = () => {
         <div>
             <TitleComponent
                 handleSubmit={handleSubmit}
-                name="Save"
+                btnName={{ submit: "save" }}
                 title="Input Asset"
             />
-            <Wrapper />
+            <Wrapper page="FormAsset" />
         </div>
     );
 };

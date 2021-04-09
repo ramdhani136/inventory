@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Headeritem from "./Header/HeaderItem/Headeritem";
 import Listmenu from "./Home/Listmenu/Listmenu";
 import FormAsset from "./Listasset/Formasset/FormAsset";
+import FormViewAsset from "./Listasset/FormViewAsset/FormViewAsset";
 import Itemasset from "./Listasset/Itemasset/Itemasset";
 import Itemassetlist from "./Listasset/Itemasset/itemassetlist/Itemassetlist";
 import Formautofill from "./macro/Formautofill/Formautofill";
@@ -34,4 +35,5 @@ export {
     Input,
     Textarea,
     SelectOption,
+    FormViewAsset,
 };

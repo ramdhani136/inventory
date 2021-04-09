@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./header.scss";
 import SearchIcon from "@material-ui/icons/Search";

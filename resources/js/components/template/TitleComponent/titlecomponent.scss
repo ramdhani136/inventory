@@ -16,6 +16,15 @@
         color: #36414c;
         font-weight: bold;
         font-size: 1.5em;
+        .green {
+            color: RGB(153, 216, 91);
+        }
+        .grey {
+            color: RGB(54, 65, 76);
+        }
+        .red {
+            color: RGB(254, 88, 88);
+        }
     }
     .title_right {
         flex: 0.3;
@@ -35,6 +44,19 @@
         .btn-purple:hover {
             border: solid 1px #474dfd;
             background-color: #5258fd;
+        }
+        .btn-grey {
+            border: solid 1px #f0f0f1;
+            background-color: #f0f4f7;
+            color: rgb(71, 71, 71);
+            height: 32px;
+            border-radius: 5px;
+            padding: 0px 10px 0px 10px;
+            font-size: 0.8em;
+        }
+        .btn-grey:hover {
+            border: solid 1px #c8c9ca;
+            background-color: #e0e1e2;
         }
         input {
             flex: 1;
