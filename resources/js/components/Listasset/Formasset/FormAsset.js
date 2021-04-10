@@ -93,7 +93,7 @@ const FormAsset = () => {
     }, [items]);
 
     function handleSatuan(e) {
-        setValue({ ...value, id_satuan: e.id });
+        setValue({ ...value, id_satuan: e.id,satuan:e.nama });
     }
 
     function handleNama(e) {
@@ -105,7 +105,7 @@ const FormAsset = () => {
     }
 
     function handleKategori(e) {
-        setValue({ ...value, id_kategori: e.id });
+        setValue({ ...value, id_kategori: e.id, kategori:e.nama });
         setDataKategori(e);
     }
 
@@ -197,6 +197,7 @@ const FormAsset = () => {
                             data={satuan}
                             handle={handleSatuan}
                             valid={validSatuan}
+                            value={value.satuan}
                         />
                         <Input
                             value={{
@@ -253,6 +254,7 @@ const FormAsset = () => {
                             handle={handleKategori}
                             nama="Kategori"
                             valid={ValidKategori}
+                            value={value.kategori}
                         />
                         <Input
                             value={{

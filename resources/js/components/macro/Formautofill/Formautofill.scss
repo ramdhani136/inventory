@@ -24,11 +24,23 @@
                 margin-left: 0.5%;
                 font-weight: bold;
                 padding-left: 2%;
+                outline-color: #757afd;
             }
             .wajib {
                 background-color: rgb(255, 245, 245);
                 border: solid 1px rgb(255, 107, 107);
             }
+            a {
+                font-weight: bold;
+                width: 100%;
+                padding-left: 2%;
+                float: left;
+                margin-top: 8px;
+            }
+        }
+        .wajib {
+            background-color: rgb(255, 245, 245);
+            border: solid 1px rgb(255, 107, 107);
         }
 
         .formautofill_option {

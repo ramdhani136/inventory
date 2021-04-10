@@ -91,7 +91,7 @@ const FormViewAsset = () => {
     }, []);
 
     function handleSatuan(e) {
-        setValue({ ...value, id_satuan: e.id });
+        setValue({ ...value, id_satuan: e.id, satuan: e.nama });
     }
 
     function handleNama(e) {
@@ -103,7 +103,7 @@ const FormViewAsset = () => {
     }
 
     function handleKategori(e) {
-        setValue({ ...value, id_kategori: e.id });
+        setValue({ ...value, id_kategori: e.id, kategori: e.nama });
         setDataKategori(e);
     }
 
@@ -171,6 +171,7 @@ const FormViewAsset = () => {
                             data={satuan}
                             handle={handleSatuan}
                             valid={validSatuan}
+                            value={value.satuan}
                         />
                         <Input
                             value={{
@@ -195,7 +196,11 @@ const FormViewAsset = () => {
                                 value: value.pic,
                             }}
                         />
-                        <Textarea nama="Catatan" handle={handleCatatan} value={value.keterangan} />
+                        <Textarea
+                            nama="Catatan"
+                            handle={handleCatatan}
+                            value={value.keterangan}
+                        />
                     </div>
                     <div className="FormViewAsset_form">
                         <Input
@@ -232,6 +237,7 @@ const FormViewAsset = () => {
                             data={kategori}
                             handle={handleKategori}
                             valid={ValidKategori}
+                            value={value.kategori}
                         />
                         <Input
                             value={{
