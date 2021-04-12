@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Textarea.scss";
 
-const Textarea = ({ nama, handle, value }) => {
+const Textarea = ({ nama, handle, value, disabled }) => {
+    const textRef = useRef();
+
+    useEffect(() => {
+        textRef.current.disabled =disabled;
+    }, []);
+
     return (
         <React.Fragment>
             <div className="textarea">
                 <label>{nama}</label>
-                <textarea value={value} onChange={(e) => handle(e.target.value)}>
-                   
-                </textarea>
+                <textarea
+                    ref={textRef}
+                    value={value}
+                    onChange={(e) => handle(e.target.value)}
+                ></textarea>
             </div>
-            
         </React.Fragment>
     );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Formautofill.scss";
 
-const Formautofill = ({ data, handle, nama, valid, value }) => {
+const Formautofill = ({ data, handle, nama, valid, value, disabled }) => {
     const [Datafilter, setDatafilter] = useState([]);
     const [toggle, setToggle] = useState({ value: true, input: false });
     const [valueSearch, setValueSearch] = useState(" ");
@@ -32,20 +32,29 @@ const Formautofill = ({ data, handle, nama, valid, value }) => {
                 >
                     <div
                         className={
-                            value
+                            disabled
+                                ? "formautofill_input disabled"
+                                : value
                                 ? "formautofill_input"
                                 : "formautofill_input wajib"
                         }
                         onClick={() => {
-                            setToggle({ value: false, input: true });
-                            setValueSearch("");
+                            if (disabled === false) {
+                                setToggle({ value: false, input: true });
+                                setValueSearch("");
+                            }
                         }}
                     >
                         {toggle.value ? (
                             <a
                                 onClick={() => {
-                                    setToggle({ value: false, input: true });
-                                    setValueSearch("");
+                                    if (disabled === false) {
+                                        setToggle({
+                                            value: false,
+                                            input: true,
+                                        });
+                                        setValueSearch("");
+                                    }
                                 }}
                             >
                                 {value}

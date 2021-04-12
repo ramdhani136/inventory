@@ -16,7 +16,7 @@ const Input = ({ value, handle }) => {
                 value={value.value}
                 type={value.type}
                 onChange={(e) => handle(e.target.value)}
-                className={value.valid ? "wajib" : ""}
+                className={value.valid ? "wajib " : ""}
             />
         </div>
     );

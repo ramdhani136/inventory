@@ -49,7 +49,12 @@ const Header = () => {
     };
 
     function search(rows) {
-        return rows.filter((row) => row.nama.toLowerCase().indexOf(main.searchheader.toLowerCase()) > -1);
+        return rows.filter(
+            (row) =>
+                row.nama
+                    .toLowerCase()
+                    .indexOf(main.searchheader.toLowerCase()) > -1
+        );
     }
 
     const menuHeader = [
@@ -97,7 +102,18 @@ const Header = () => {
                 <MenuIcon onClick={buttonSlider} className="header__burger" />
             )}
             <div className="header__menu">
-                <div className="header__mid">
+                <div
+                    className="header__mid"
+                    onMouseLeave={() =>
+                        dispatch(
+                            toggleSlider({
+                                slider: false,
+                                search: false,
+                                searchheader: "",
+                            })
+                        )
+                    }
+                >
                     <div className="header__search">
                         <input
                             onClick={inputSeacrh}
