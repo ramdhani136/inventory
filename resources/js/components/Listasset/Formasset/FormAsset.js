@@ -198,6 +198,7 @@ const FormAsset = () => {
                             handle={handleSatuan}
                             valid={validSatuan}
                             value={value.satuan}
+                            disabled={false}
                         />
                         <Input
                             value={{
@@ -255,6 +256,7 @@ const FormAsset = () => {
                             nama="Kategori"
                             valid={ValidKategori}
                             value={value.kategori}
+                            disabled={false}
                         />
                         <Input
                             value={{

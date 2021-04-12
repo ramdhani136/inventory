@@ -49,10 +49,7 @@ const Formautofill = ({ data, handle, nama, valid, value, disabled }) => {
                             <a
                                 onClick={() => {
                                     if (disabled === false) {
-                                        setToggle({
-                                            value: false,
-                                            input: true,
-                                        });
+                                        setToggle({ value: false, input: true });
                                         setValueSearch("");
                                     }
                                 }}

@@ -17,6 +17,38 @@ const FormViewAsset = () => {
     const [dataKategori, setDataKategori] = useState({});
     const { kode } = useParams();
 
+    const defaultDisabled = {
+        kode: true,
+        item: true,
+        satuan: true,
+        merk: true,
+        type: true,
+        sn: true,
+        kondisi: true,
+        kategori: true,
+        pic: true,
+        tgl_garansi: true,
+        keterangan: true,
+        garansi: true,
+    };
+
+    const defaultAktif = {
+        kode: true,
+        item: false,
+        satuan: false,
+        merk: false,
+        type: false,
+        sn: false,
+        kondisi: false,
+        kategori: false,
+        pic: true,
+        tgl_garansi: false,
+        keterangan: false,
+        garansi: false,
+    };
+
+    const [disabled, setDisabled] = useState(defaultDisabled);
+
     useEffect(() => {
         const controlSatuan = new AbortController();
         const controlKategori = new AbortController();
@@ -88,7 +120,7 @@ const FormViewAsset = () => {
         return () => {
             controlItems.abort();
         };
-    }, []);
+    }, [value]);
 
     function handleSatuan(e) {
         setValue({ ...value, id_satuan: e.id, satuan: e.nama });
@@ -160,7 +192,7 @@ const FormViewAsset = () => {
                         <Input
                             value={{
                                 nama: "Kode Asset",
-                                disabled: true,
+                                disabled: disabled.kode,
                                 type: "text",
                                 value: value.kode,
                             }}
@@ -172,12 +204,12 @@ const FormViewAsset = () => {
                             handle={handleSatuan}
                             valid={validSatuan}
                             value={value.satuan}
-                            disabled="true"
+                            disabled={disabled.satuan}
                         />
                         <Input
                             value={{
                                 nama: "Type",
-                                disabled: true,
+                                disabled: disabled.type,
                                 type: "text",
                                 value: value.type,
                             }}
@@ -187,13 +219,13 @@ const FormViewAsset = () => {
                             nama="Kondisi"
                             data={[{ status: "Baik" }, { status: "Buruk" }]}
                             handle={handleKondisi}
-                            disabled="true"
+                            disabled={disabled.kondisi}
                             value={value.kondisi}
                         />
                         <Input
                             value={{
                                 nama: "PIC",
-                                disabled: true,
+                                disabled: disabled.pic,
                                 type: "text",
                                 value: value.pic,
                             }}
@@ -202,14 +234,14 @@ const FormViewAsset = () => {
                             nama="Catatan"
                             handle={handleCatatan}
                             value={value.keterangan}
-                            disabled="true"
+                            disabled={disabled.keterangan}
                         />
                     </div>
                     <div className="FormViewAsset_form">
                         <Input
                             value={{
                                 nama: "Nama",
-                                disabled: true,
+                                disabled: disabled.item,
                                 valid: validNama,
                                 type: "text",
                                 value: value.item,
@@ -220,7 +252,7 @@ const FormViewAsset = () => {
                         <Input
                             value={{
                                 nama: "Merk",
-                                disabled: true,
+                                disabled:disabled.merk,
                                 type: "text",
                                 value: value.merk,
                             }}
@@ -229,7 +261,7 @@ const FormViewAsset = () => {
                         <Input
                             value={{
                                 nama: "Serial Number",
-                                disabled: true,
+                                disabled: disabled.sn,
                                 type: "text",
                                 value: value.sn,
                             }}
@@ -241,12 +273,12 @@ const FormViewAsset = () => {
                             handle={handleKategori}
                             valid={ValidKategori}
                             value={value.kategori}
-                            disabled="true"
+                            disabled={disabled.kategori}
                         />
                         <Input
                             value={{
                                 nama: "Tanggal Akhir Garansi",
-                                disabled: true,
+                                disabled: disabled.tgl_garansi,
                                 type: "date",
                                 value: value.tgl_garansi,
                             }}
@@ -256,7 +288,7 @@ const FormViewAsset = () => {
                             nama="Keterangan Garansi"
                             handle={handleGaransi}
                             value={value.garansi}
-                            disabled="true"
+                            disabled={disabled.garansi}
                         />
                     </div>
                 </div>
