@@ -38,7 +38,6 @@
             color: #fff;
             height: 32px;
             border-radius: 5px;
-            padding: 0px 10px 0px 10px;
             font-size: 0.8em;
         }
         .btn-purple:hover {
@@ -51,7 +50,6 @@
             color: rgb(71, 71, 71);
             height: 32px;
             border-radius: 5px;
-            padding: 0px 10px 0px 10px;
             font-size: 0.8em;
         }
         .btn-grey:hover {
@@ -69,6 +67,14 @@
         }
         ::placeholder {
             color: #ccc;
+        }
+        .title_list{
+            position: absolute;
+            width: 15%;
+            background-color: #fff;
+            margin-top: 4px;
+            border: solid 1px #bbbcbd;
+            height: 200px;
         }
     }
 }

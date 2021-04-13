@@ -61,20 +61,34 @@ const TitleComponent = ({
                     </button>
                 ) : null}
                 {handleMenu ? (
-                    <button onClick={handleMenu} className="btn-grey">
-                        {btnName.menu}
-                        <ArrowDropDownIcon
-                            style={{ fontSize: "20px", marginTop: "-2px" }}
-                        />
-                    </button>
+                    <div>
+                        <button onClick={handleMenu} className="btn-grey">
+                            {btnName.menu}
+                            <ArrowDropDownIcon
+                                style={{ fontSize: "20px", marginTop: "-2px" }}
+                            />
+                        </button>
+                        {/* <div style={{marginLeft:'-10%'}} className="title_list">tes</div> */}
+                    </div>
                 ) : null}
                 {handleAction ? (
-                    <button onClick={handleAction} className="btn-purple ml-1">
-                        {btnName.action}
-                        <ArrowDropDownIcon
-                            style={{ fontSize: "20px", marginTop: "-2px" }}
-                        />
-                    </button>
+                    <div>
+                        <button
+                            onClick={handleAction}
+                            className="btn-purple ml-1"
+                        >
+                            {btnName.action}
+                            <ArrowDropDownIcon
+                                style={{ fontSize: "20px", marginTop: "-2px" }}
+                            />
+                        </button>
+                        <div
+                            style={{ marginLeft: "-9%" }}
+                            className="title_list"
+                        >
+                            tes
+                        </div>
+                    </div>
                 ) : null}
             </div>
         </div>
