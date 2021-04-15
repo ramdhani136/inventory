@@ -117,7 +117,7 @@ const FormViewAsset = () => {
         validasi();
         getItems();
         if (value.status !== undefined) {
-            if (value.status !== "0") {
+        if (value.status !== "0") {
                 setDisabled(defaultDisabled)
             }
         }
@@ -127,6 +127,7 @@ const FormViewAsset = () => {
         };
     }, [value]);
 
+    
     function handleSatuan(e) {
         setValue({ ...value, id_satuan: e.id, satuan: e.nama });
     }

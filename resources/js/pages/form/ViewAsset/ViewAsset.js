@@ -7,14 +7,18 @@ import "./ViewAsset.scss";
 
 const ViewAsset = () => {
     const { kode } = useParams();
-    const handleMenu = () => {
-        alert("menu");
-    };
+
     const [item, setItem] = useState([]);
+    const [aktifMenu, setAktifMenu] = useState({ menu: false, aksi: false });
 
     const handleAction = () => {
-        alert("aksi");
+        setAktifMenu({ menu: false, aksi: !aktifMenu.aksi });
     };
+
+    const handleMenu = () => {
+        setAktifMenu({ menu: !aktifMenu.menu, aksi: false });
+    };
+
 
     const getItem = () => {
         axios.get(API_URL + "items/" + kode).then((res) => {
@@ -24,15 +28,12 @@ const ViewAsset = () => {
 
     useEffect(() => {
         getItem();
-        return () => {
-            setItem([]);
-        };
     }, []);
 
     const getStatus = () => {
         if (item.length > 0) {
             if (item[0].status === "0") {
-                return "Pending";
+                return "Draft";
             } else if (item[0].status === "1") {
                 return "Approved";
             } else {
@@ -44,13 +45,15 @@ const ViewAsset = () => {
     return (
         <div>
             <TitleComponent
+                // handleSubmit={}
                 handleMenu={handleMenu}
                 handleAction={handleAction}
+                aktifMenu={aktifMenu}
                 btnName={{ menu: "Menu", action: "Actions" }}
                 title={item.length > 0 ? item[0].item : null}
                 status={getStatus()}
             />
-            <Wrapper page="FormViewAsset"/>
+            <Wrapper page="FormViewAsset" />
         </div>
     );
 };

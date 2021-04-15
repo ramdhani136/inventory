@@ -12,6 +12,8 @@ const TitleComponent = ({
     handleMenu,
     handleAction,
     status,
+    actionSubmit,
+    aktifMenu,
 }) => {
     const [search, setSearch] = useState(value);
 
@@ -61,18 +63,26 @@ const TitleComponent = ({
                     </button>
                 ) : null}
                 {handleMenu ? (
-                    <div>
+                    <div onMouseLeave={handleMenu}>
                         <button onClick={handleMenu} className="btn-grey">
                             {btnName.menu}
                             <ArrowDropDownIcon
                                 style={{ fontSize: "20px", marginTop: "-2px" }}
                             />
                         </button>
-                        {/* <div style={{marginLeft:'-10%'}} className="title_list">tes</div> */}
+                        {aktifMenu.menu ? (
+                            <div
+                                style={{ marginLeft: "-10%" }}
+                                className="title_list"
+                            >
+                                {status === "Approved" ? <a>Print</a> : null}
+                                {status !== "Approved" ? <a>Print</a> : null}
+                            </div>
+                        ) : null}
                     </div>
                 ) : null}
                 {handleAction ? (
-                    <div>
+                    <div onMouseLeave={handleAction}>
                         <button
                             onClick={handleAction}
                             className="btn-purple ml-1"
@@ -82,12 +92,19 @@ const TitleComponent = ({
                                 style={{ fontSize: "20px", marginTop: "-2px" }}
                             />
                         </button>
-                        <div
-                            style={{ marginLeft: "-9%" }}
-                            className="title_list"
-                        >
-                            tes
-                        </div>
+                        {aktifMenu.aksi ? (
+                            <div
+                                style={{ marginLeft: "-9%" }}
+                                className="title_list"
+                            >
+                                {status === "Approved" ? <a>Cancel</a> : null}
+                                {status === "Draft" ? <a>Save</a> : null}
+                                {status === "Draft" ? <a>Delete</a> : null}
+                                {status === "Draft" ? <a>Submit</a> : null}
+                                {status === "Canceled" ? <a>Amend</a> : null}
+                                {status === "Canceled" ? <a>Delete</a> : null}
+                            </div>
+                        ) : null}
                     </div>
                 ) : null}
             </div>
