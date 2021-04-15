@@ -6,7 +6,7 @@ const SelectOption = ({ nama, data, handle, value, disabled }) => {
 
     useEffect(() => {
         selectRef.current.disabled = disabled;
-    }, []);
+    }, [disabled]);
 
     return (
         <div className="selectoption">

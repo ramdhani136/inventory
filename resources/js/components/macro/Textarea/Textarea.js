@@ -6,7 +6,7 @@ const Textarea = ({ nama, handle, value, disabled }) => {
 
     useEffect(() => {
         textRef.current.disabled =disabled;
-    }, []);
+    }, [disabled]);
 
     return (
         <React.Fragment>

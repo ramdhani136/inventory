@@ -6,7 +6,7 @@ const Input = ({ value, handle }) => {
 
     useEffect(() => {
         inputRef.current.disabled = value.disabled;
-    }, []);
+    },[value]);
 
     return (
         <div className="input">
@@ -18,6 +18,7 @@ const Input = ({ value, handle }) => {
                 onChange={(e) => handle(e.target.value)}
                 className={value.valid ? "wajib " : ""}
             />
+           
         </div>
     );
 };

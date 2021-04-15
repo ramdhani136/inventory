@@ -47,7 +47,7 @@ const FormViewAsset = () => {
         garansi: false,
     };
 
-    const [disabled, setDisabled] = useState(defaultDisabled);
+    const [disabled, setDisabled] = useState(defaultAktif);
 
     useEffect(() => {
         const controlSatuan = new AbortController();
@@ -116,6 +116,11 @@ const FormViewAsset = () => {
         };
         validasi();
         getItems();
+        if (value.status !== undefined) {
+            if (value.status !== "0") {
+                setDisabled(defaultDisabled)
+            }
+        }
         dispatch(getValue({ asset: value }));
         return () => {
             controlItems.abort();
@@ -252,7 +257,7 @@ const FormViewAsset = () => {
                         <Input
                             value={{
                                 nama: "Merk",
-                                disabled:disabled.merk,
+                                disabled: disabled.merk,
                                 type: "text",
                                 value: value.merk,
                             }}
