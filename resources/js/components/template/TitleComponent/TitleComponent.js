@@ -12,8 +12,12 @@ const TitleComponent = ({
     handleMenu,
     handleAction,
     status,
-    actionSubmit,
     aktifMenu,
+    actionCancel,
+    actionSave,
+    actionDelete,
+    actionSubmit,
+    actionAmend,
 }) => {
     const [search, setSearch] = useState(value);
 
@@ -33,7 +37,7 @@ const TitleComponent = ({
                                 ? "btn-grey"
                                 : status === "Approved"
                                 ? "green"
-                                : "btn-red"
+                                : "red"
                         }
                     />
                 ) : null}
@@ -57,13 +61,9 @@ const TitleComponent = ({
                         onChange={(e) => setSearch(e.target.value)}
                     ></input>
                 ) : null}
-                {handleSubmit ? (
-                    <button onClick={handleSubmit} className="btn-purple">
-                        {btnName.submit}
-                    </button>
-                ) : null}
+
                 {handleMenu ? (
-                    <div onMouseLeave={handleMenu}>
+                    <div>
                         <button onClick={handleMenu} className="btn-grey">
                             {btnName.menu}
                             <ArrowDropDownIcon
@@ -82,7 +82,7 @@ const TitleComponent = ({
                     </div>
                 ) : null}
                 {handleAction ? (
-                    <div onMouseLeave={handleAction}>
+                    <div>
                         <button
                             onClick={handleAction}
                             className="btn-purple ml-1"
@@ -97,15 +97,36 @@ const TitleComponent = ({
                                 style={{ marginLeft: "-9%" }}
                                 className="title_list"
                             >
-                                {status === "Approved" ? <a>Cancel</a> : null}
-                                {status === "Draft" ? <a>Save</a> : null}
-                                {status === "Draft" ? <a>Delete</a> : null}
-                                {status === "Draft" ? <a>Submit</a> : null}
-                                {status === "Canceled" ? <a>Amend</a> : null}
-                                {status === "Canceled" ? <a>Delete</a> : null}
+                                {status === "Approved" ? (
+                                    <a onClick={actionCancel}>Cancel</a>
+                                ) : null}
+                                {status === "Pending" ? (
+                                    <a onClick={actionSave}>Save</a>
+                                ) : null}
+                                {status === "Pending" ? (
+                                    <a onClick={actionDelete}>Delete</a>
+                                ) : null}
+                                {status === "Pending" ? (
+                                    <a onClick={actionSubmit}>Submit</a>
+                                ) : null}
+                                {status === "Canceled" ? (
+                                    <a onClick={actionAmend}>Amend</a>
+                                ) : null}
+                                {status === "Canceled" ? (
+                                    <a onClick={actionDelete}>Delete</a>
+                                ) : null}
                             </div>
                         ) : null}
                     </div>
+                ) : null}
+                {handleSubmit ? (
+                    <button
+                        style={{ paddingLeft: "5%", paddingRight: "5%" }}
+                        onClick={handleSubmit}
+                        className="btn-purple"
+                    >
+                        {btnName.submit}
+                    </button>
                 ) : null}
             </div>
         </div>

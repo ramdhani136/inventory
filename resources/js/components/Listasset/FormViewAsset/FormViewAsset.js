@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Formautofill, Input, SelectOption, Textarea } from "../..";
 import { getValue } from "../../../features/valueSlice";
-import { API_URL, Datenow } from "../../../utils/Utils";
+import { API_URL, Datenow, Setnomor } from "../../../utils/Utils";
 import { useParams } from "react-router";
+import axios from "axios";
 
 const FormViewAsset = () => {
     const [satuan, setSatuan] = useState([]);
     const [kategori, setKategori] = useState([]);
+    const [item, setItem] = useState({ item: "  " });
     const [value, setValue] = useState({ item: "  " });
     const [validNama, setValidNama] = useState();
     const [ValidKategori, setValidKategori] = useState("");
@@ -16,6 +18,7 @@ const FormViewAsset = () => {
     const dispatch = useDispatch();
     const [dataKategori, setDataKategori] = useState({});
     const { kode } = useParams();
+    const [items, setItems] = useState([]);
 
     const defaultDisabled = {
         kode: true,
@@ -89,6 +92,7 @@ const FormViewAsset = () => {
 
         getKategories();
         getSatuan();
+        kodes();
 
         return () => {
             controlSatuan.abort();
@@ -105,6 +109,7 @@ const FormViewAsset = () => {
                     signal: controlItems.signal,
                 });
                 const getItems = await resultItems.json();
+                setItem(getItems.data[0]);
                 setValue(getItems.data[0]);
             } catch (error) {
                 if (error.name === "AbortError") {
@@ -114,20 +119,81 @@ const FormViewAsset = () => {
                 }
             }
         };
-        validasi();
         getItems();
-        if (value.status !== undefined) {
-        if (value.status !== "0") {
-                setDisabled(defaultDisabled)
-            }
-        }
-        dispatch(getValue({ asset: value }));
         return () => {
             controlItems.abort();
         };
+    }, []);
+
+    useEffect(() => {
+        dispatch(getValue({ asset: { ...value, update: isChange(), kodelama:item.kode } }));
+        if (value.status !== undefined) {
+            if (value.status !== "0") {
+                setDisabled(defaultDisabled);
+            }
+        }
+        validasi();
     }, [value]);
 
-    
+    useEffect(() => {
+        axios.get(API_URL + "items").then((res) => {
+            setItems(res.data.data);
+        });
+        return () => {
+            setItems([]);
+        };
+    }, [item]);
+
+    const isChange = () => {
+        if (JSON.stringify(item) == JSON.stringify(value)) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    const isChangeKategori = () => {
+        if (value.id_kategori === item.id_kategori) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    const kodes = () => {
+        if (isChangeKategori()===false) {
+            const filterItem = items.filter(
+                (item) => item.id_kategori === dataKategori.id
+            );
+            const last = filterItem.length - 1;
+
+            if (filterItem.length > 0) {
+                const selectkode = filterItem[last].kode;
+                const selectnumber = selectkode.substr(selectkode.length - 4);
+                const getnumber = Setnomor(
+                    parseInt(selectnumber) + parseInt(1)
+                );
+                if (
+                    dataKategori.kode !== undefined ||
+                    dataKategori.kode !== ""
+                ) {
+                    setValue({
+                        ...value,
+                        kode: "EKB-" + dataKategori.kode + "-" + getnumber,
+                    });
+                }
+            } else if (
+                filterItem.length < 1 &&
+                value.id_kategori !== undefined
+            ) {
+                setValue({
+                    ...value,
+                    kode: "EKB-" + dataKategori.kode + "-0001",
+                });
+            }
+        }
+    };
+
     function handleSatuan(e) {
         setValue({ ...value, id_satuan: e.id, satuan: e.nama });
     }
