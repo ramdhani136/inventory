@@ -137,6 +137,9 @@ const FormViewAsset = () => {
             }
         }
         validasi();
+        return () => {
+            setDisabled({});
+        };
     }, [value]);
 
     useEffect(() => {
@@ -153,7 +156,7 @@ const FormViewAsset = () => {
                 controlItems.abort();
             };
         };
-    }, [items]);
+    }, []);
 
     const isChange = () => {
         if (JSON.stringify(item) == JSON.stringify(value)) {
