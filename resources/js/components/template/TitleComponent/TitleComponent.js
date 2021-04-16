@@ -14,7 +14,6 @@ const TitleComponent = ({
     status,
     aktifMenu,
     actionCancel,
-    actionSave,
     actionDelete,
     actionSubmit,
     actionAmend,
@@ -99,9 +98,6 @@ const TitleComponent = ({
                             >
                                 {status === "Approved" ? (
                                     <a onClick={actionCancel}>Cancel</a>
-                                ) : null}
-                                {status === "Pending" ? (
-                                    <a onClick={actionSave}>Save</a>
                                 ) : null}
                                 {status === "Pending" ? (
                                     <a onClick={actionDelete}>Delete</a>

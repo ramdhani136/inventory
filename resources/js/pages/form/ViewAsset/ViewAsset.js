@@ -109,10 +109,6 @@ const ViewAsset = () => {
             });
     };
 
-    const actionSave = () => {
-        alert("tes");
-    };
-
     const actionAmend = () => {
         axios.put(API_URL + "items/" + kode, { status: "0" }).then((res) => {
             window.location.reload();
@@ -154,7 +150,6 @@ const ViewAsset = () => {
                 title={item.length > 0 ? item[0].item : null}
                 status={getStatus()}
                 actionCancel={actionCancel}
-                actionSave={actionSave}
                 actionDelete={actionDelete}
                 actionSubmit={actionSubmit}
                 actionAmend={actionAmend}
