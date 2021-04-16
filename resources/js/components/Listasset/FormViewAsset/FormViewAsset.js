@@ -126,7 +126,11 @@ const FormViewAsset = () => {
     }, []);
 
     useEffect(() => {
-        dispatch(getValue({ asset: { ...value, update: isChange(), kodelama:item.kode } }));
+        dispatch(
+            getValue({
+                asset: { ...value, update: isChange(), kodelama: item.kode },
+            })
+        );
         if (value.status !== undefined) {
             if (value.status !== "0") {
                 setDisabled(defaultDisabled);
@@ -136,13 +140,20 @@ const FormViewAsset = () => {
     }, [value]);
 
     useEffect(() => {
-        axios.get(API_URL + "items").then((res) => {
-            setItems(res.data.data);
-        });
+        const controlItems = new AbortController();
+        axios
+            .get(API_URL + "items", {
+                signal: controlItems.signal,
+            })
+            .then((res) => {
+                setItems(res.data.data);
+            });
         return () => {
-            setItems([]);
+            return () => {
+                controlItems.abort();
+            };
         };
-    }, [item]);
+    }, [items]);
 
     const isChange = () => {
         if (JSON.stringify(item) == JSON.stringify(value)) {
@@ -161,7 +172,7 @@ const FormViewAsset = () => {
     };
 
     const kodes = () => {
-        if (isChangeKategori()===false) {
+        if (isChangeKategori() === false) {
             const filterItem = items.filter(
                 (item) => item.id_kategori === dataKategori.id
             );
