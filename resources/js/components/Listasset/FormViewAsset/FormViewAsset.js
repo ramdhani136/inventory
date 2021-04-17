@@ -137,26 +137,22 @@ const FormViewAsset = () => {
             }
         }
         validasi();
-        return () => {
-            setDisabled({});
-        };
     }, [value]);
 
     useEffect(() => {
-        const controlItems = new AbortController();
+        const controlItemsnew = new AbortController();
         axios
             .get(API_URL + "items", {
-                signal: controlItems.signal,
+                signal: controlItemsnew.signal,
             })
             .then((res) => {
                 setItems(res.data.data);
             });
+
         return () => {
-            return () => {
-                controlItems.abort();
-            };
+            controlItemsnew.abort();
         };
-    }, []);
+    }, [items]);
 
     const isChange = () => {
         if (JSON.stringify(item) == JSON.stringify(value)) {
