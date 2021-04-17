@@ -140,17 +140,25 @@ const FormViewAsset = () => {
     }, [value]);
 
     useEffect(() => {
-        const controlItemsnew = new AbortController();
-        axios
-            .get(API_URL + "items", {
-                signal: controlItemsnew.signal,
-            })
-            .then((res) => {
-                setItems(res.data.data);
-            });
-
+        const controlItems = new AbortController();
+        const getItems = async () => {
+            try {
+                const api = API_URL + "items";
+                const resultItems = await fetch(api, {
+                    signal: controlItems.signal,
+                });
+                const getItems = await resultItems.json();
+                setItems(getItems.data);
+            } catch (error) {
+                if (error.name === "AbortError") {
+                    return null;
+                } else {
+                    throw error;
+                }
+            }
+        };
         return () => {
-            controlItemsnew.abort();
+            controlItems.abort();
         };
     }, [items]);
 
@@ -276,7 +284,7 @@ const FormViewAsset = () => {
                                 nama: "Kode Asset",
                                 disabled: disabled.kode,
                                 type: "text",
-                                value: value.kode,
+                                value: value.kode ? value.kode : "",
                             }}
                         />
 
@@ -285,7 +293,7 @@ const FormViewAsset = () => {
                             data={satuan}
                             handle={handleSatuan}
                             valid={validSatuan}
-                            value={value.satuan}
+                            value={value.satuan ? value.satuan : ""}
                             disabled={disabled.satuan}
                         />
                         <Input
@@ -293,7 +301,7 @@ const FormViewAsset = () => {
                                 nama: "Type",
                                 disabled: disabled.type,
                                 type: "text",
-                                value: value.type,
+                                value: value.type ? value.type : "",
                             }}
                             handle={handleType}
                         />
@@ -302,20 +310,20 @@ const FormViewAsset = () => {
                             data={[{ status: "Baik" }, { status: "Buruk" }]}
                             handle={handleKondisi}
                             disabled={disabled.kondisi}
-                            value={value.kondisi}
+                            value={value.kondisi ? value.kondisi : ""}
                         />
                         <Input
                             value={{
                                 nama: "PIC",
                                 disabled: disabled.pic,
                                 type: "text",
-                                value: value.pic,
+                                value: value.pic ? value.pic : "",
                             }}
                         />
                         <Textarea
                             nama="Catatan"
                             handle={handleCatatan}
-                            value={value.keterangan}
+                            value={value.keterangan ? value.keterangan : ""}
                             disabled={disabled.keterangan}
                         />
                     </div>
@@ -326,7 +334,7 @@ const FormViewAsset = () => {
                                 disabled: disabled.item,
                                 valid: validNama,
                                 type: "text",
-                                value: value.item,
+                                value: value.item ? value.item : "",
                             }}
                             handle={handleNama}
                         />
@@ -336,7 +344,7 @@ const FormViewAsset = () => {
                                 nama: "Merk",
                                 disabled: disabled.merk,
                                 type: "text",
-                                value: value.merk,
+                                value: value.merk ? value.merk : "",
                             }}
                             handle={handleMerk}
                         />
@@ -345,7 +353,7 @@ const FormViewAsset = () => {
                                 nama: "Serial Number",
                                 disabled: disabled.sn,
                                 type: "text",
-                                value: value.sn,
+                                value: value.sn ? value.sn : "",
                             }}
                             handle={handleSn}
                         />
@@ -354,7 +362,7 @@ const FormViewAsset = () => {
                             data={kategori}
                             handle={handleKategori}
                             valid={ValidKategori}
-                            value={value.kategori}
+                            value={value.kategori ? value.kategori : ""}
                             disabled={disabled.kategori}
                         />
                         <Input
@@ -362,14 +370,16 @@ const FormViewAsset = () => {
                                 nama: "Tanggal Akhir Garansi",
                                 disabled: disabled.tgl_garansi,
                                 type: "date",
-                                value: value.tgl_garansi,
+                                value: value.tgl_garansi
+                                    ? value.tgl_garansi
+                                    : "",
                             }}
                             handle={handleTglGaransi}
                         />
                         <Textarea
                             nama="Keterangan Garansi"
                             handle={handleGaransi}
-                            value={value.garansi}
+                            value={value.garansi ? value.garansi : ""}
                             disabled={disabled.garansi}
                         />
                     </div>

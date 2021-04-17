@@ -1,10 +1,10 @@
 import React from "react";
 import { CenterContentComponent, LeftContentComponent } from "..";
 
-const Wrapper = ({page}) => {
+const Wrapper = ({page,qrcode}) => {
     return (
         <div style={{ width: "100%", display: "flex", flexDirection: "row" }}>
-            <LeftContentComponent />
+            <LeftContentComponent qrcode={qrcode} />
             <CenterContentComponent page={page} />
         </div>
     );

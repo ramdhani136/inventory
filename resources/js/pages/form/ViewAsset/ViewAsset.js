@@ -154,7 +154,10 @@ const ViewAsset = () => {
                 actionSubmit={actionSubmit}
                 actionAmend={actionAmend}
             />
-            <Wrapper page="FormViewAsset" />
+            <Wrapper
+                page="FormViewAsset"
+                qrcode={value !== undefined ? value.asset.kode : ""}
+            />
         </div>
     );
 };

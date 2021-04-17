@@ -3,8 +3,9 @@ import "./leftcontentcomponent.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { selectLeftContent } from "../../../features/dataSlice";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import QRCode from "qrcode.react";
 
-const LeftContentComponent = () => {
+const LeftContentComponent = ({ qrcode }) => {
     const data = useSelector(selectLeftContent);
     const [sort, setSort] = useState("");
 
@@ -42,7 +43,33 @@ const LeftContentComponent = () => {
                     ))}
                 </div>
             ) : (
-                <div className="leftContent"></div>
+                <div className="leftContent">
+                    {qrcode ? (
+                        <div className="leftContent_qrcode">
+                            <QRCode
+                                value={qrcode}
+                                className="qrcode"
+                                includeMargin={true}
+                                bgColor={"#ffffff"}
+                                size={150}
+                                imageSettings={{
+                                    src: "http://etm.digitalasiasolusindo.com/assets/erpnext/images/erp-icon.svg",
+                                    x: null,
+                                    y: null,
+                                    height: 24,
+                                    width: 24,
+                                    excavate: true,
+                                }}
+                            />
+                            <div
+                                style={{ fontSize: "0.9em" }}
+                                className="qrcode_title"
+                            >
+                                {qrcode}
+                            </div>
+                        </div>
+                    ) : null}
+                </div>
             )}
         </React.Fragment>
     );

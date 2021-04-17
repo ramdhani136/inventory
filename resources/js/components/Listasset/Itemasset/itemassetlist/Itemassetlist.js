@@ -3,13 +3,18 @@ import "./itemassetlist.scss";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { useHistory } from "react-router";
 
-const Itemassetlist = ({ data }) => {
+const Itemassetlist = ({ data, itemSelect }) => {
     const [items, setItems] = useState([]);
     const history = useHistory();
 
     useEffect(() => {
         setItems(data);
+        itemSelect(items);
     }, [data]);
+
+    useEffect(() => {
+        itemSelect(items);
+    }, [items]);
 
     return (
         <React.Fragment>

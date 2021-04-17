@@ -34,9 +34,22 @@
                 padding-left: 5%;
                 cursor: pointer;
             }
-            h5:hover{
+            h5:hover {
                 color: #8b8b8b;
             }
+        }
+    }
+    .leftContent_qrcode {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .qrcode{
+            margin-bottom: 5px;
+            border:solid 3px black;
+        }
+        .qrcode_title{
+            font-weight: bold;
         }
     }
 }

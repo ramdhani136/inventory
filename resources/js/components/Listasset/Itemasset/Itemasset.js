@@ -4,7 +4,7 @@ import { Itemassetlist } from "../..";
 import { API_URL } from "../../../utils/Utils";
 import _ from "lodash";
 
-const Itemasset = ({ value, allvalue }) => {
+const Itemasset = ({ value, allvalue,itemSelect }) => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -82,7 +82,7 @@ const Itemasset = ({ value, allvalue }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <Itemassetlist data={filterdata(items)} />
+                    <Itemassetlist itemSelect={itemSelect} data={filterdata(items)} />
                 </tbody>
             </table>
             {filterdata(items).length > 0 ? null : (

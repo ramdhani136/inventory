@@ -27,6 +27,7 @@ const Listasset = () => {
     const [satuan, setSatuan] = useState([]);
     const [value, setValue] = useState(defaultvalue);
     const [filter, setFilter] = useState(defaultfilter);
+    const [isSelect, setIsSelect] = useState(false);
 
     useEffect(() => {
         const controlCategories = new AbortController();
@@ -77,6 +78,20 @@ const Listasset = () => {
         };
     }, [satuan]);
 
+    const itemSelect = (setItemSelect) => {
+        if (setItemSelect.length > 0) {
+            const itemSelect = () => {
+                return setItemSelect.filter((item) => item.select === true);
+            };
+
+            if (itemSelect().length > 0) {
+                setIsSelect(true);
+            } else {
+                setIsSelect(false);
+            }
+        }
+    };
+
     return (
         <div className="asset">
             <div className="asset_title">
@@ -88,12 +103,24 @@ const Listasset = () => {
                         placeholder="Pencarian data .."
                         onChange={(e) => setSearch(e.target.value)}
                     ></input>
-                    <button
-                        onClick={() => history.push("/form/asset")}
-                        className="btn-purple"
-                    >
-                        Input Asset
-                    </button>
+                    {isSelect === false ? (
+                        <button
+                            style={{ paddingLeft: "3%", paddingRight: "3%" }}
+                            onClick={() => history.push("/form/asset")}
+                            className="btn-purple"
+                        >
+                            New
+                        </button>
+                    ) : null}
+                    {isSelect ? (
+                        <button
+                            style={{ paddingRight: "3px", paddingLeft: "10px" }}
+                            className="btn-purple"
+                        >
+                            Action
+                            <ArrowDropDownIcon />
+                        </button>
+                    ) : null}
                 </div>
             </div>
             <div className="asset_content">
@@ -348,6 +375,7 @@ const Listasset = () => {
                         value={search}
                         filter={filter}
                         allvalue={value}
+                        itemSelect={itemSelect}
                     />
                 </div>
             </div>
