@@ -33,6 +33,7 @@ const Itemassetlist = ({ data, itemSelect }) => {
                                         return d;
                                     })
                                 );
+                                console.log(items.filter(item => item.select==true));
                             }}
                             type="checkbox"
                             name="checkbox"

@@ -99,6 +99,7 @@ const Itemasset = ({ value, allvalue,itemSelect }) => {
             )}
         </div>
     );
+                
 };
 
 export default Itemasset;

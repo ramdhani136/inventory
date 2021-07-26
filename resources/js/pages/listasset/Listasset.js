@@ -92,6 +92,10 @@ const Listasset = () => {
         }
     };
 
+    const actionMenu =()=>{
+       console.log('d')
+    }
+
     return (
         <div className="asset">
             <div className="asset_title">
@@ -114,6 +118,7 @@ const Listasset = () => {
                     ) : null}
                     {isSelect ? (
                         <button
+                            onClick={actionMenu}
                             style={{ paddingRight: "3px", paddingLeft: "10px" }}
                             className="btn-purple"
                         >

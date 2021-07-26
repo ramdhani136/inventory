@@ -271,6 +271,7 @@ const FormAsset = () => {
                             handle={handleGaransi}
                         />
                     </div>
+                   
                 </div>
             </div>
         </React.Fragment>

@@ -23,6 +23,7 @@ function Main() {
 
     return (
         <div>
+            {/* <Router basename={'/inventory/public'}> */}
             <Router>
                 <Provider store={store}>
                     <Header />
